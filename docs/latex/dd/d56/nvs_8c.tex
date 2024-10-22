@@ -1,0 +1,327 @@
+\hypertarget{nvs_8c}{}\doxysection{main/nvs.c File Reference}
+\label{nvs_8c}\index{main/nvs.c@{main/nvs.c}}
+
+
+This file contains the functions responsible for the initialization and update of the NVS storage portion of the device.  
+
+
+{\ttfamily \#include \char`\"{}libs.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{nvs_8c_aaeadc002fec54a5457b4957508b009ce}{nvs\+\_\+save\+\_\+wifi\+\_\+credentials}} (char $\ast$ssid, char $\ast$password, bool provisioned)
+\begin{DoxyCompactList}\small\item\em Save the wifi credentials received during provision. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{nvs_8c_a5276470f0e280c2ef9c38d60646202d5}{nvs\+\_\+load\+\_\+wifi\+\_\+credentials}} (void)
+\begin{DoxyCompactList}\small\item\em Load the wifi credentials from the NVS storage space. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{nvs_8c_a23bacddca1d0f118f627740adc1a4c61}{nvs\+\_\+clear\+\_\+wifi\+\_\+credentials}} ()
+\begin{DoxyCompactList}\small\item\em Delete the Wifi credentials namespaces from the NVS. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{nvs_8c_a83840534f4f60b1baf3bbeea49e1eabd}{nvs\+\_\+save\+\_\+calibration}} (int no\+\_\+deposit, int full\+\_\+deposit, bool is\+\_\+stable, int stock)
+\begin{DoxyCompactList}\small\item\em Save the calibration information on the NVS. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{nvs_8c_a04fbdd42e564f5cc1277c7587fe8f781}{nvs\+\_\+load\+\_\+calibration}} ()
+\begin{DoxyCompactList}\small\item\em Load the device calibration values from the NVS storage. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{nvs_8c_a67f83440e81739b89eba86bb67df07e8}{nvs\+\_\+save\+\_\+order\+\_\+mode}} (char order\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Save the device order mode on the NVS. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{nvs_8c_aedc62fdad7e71d9383e08d9502d78de9}{nvs\+\_\+load\+\_\+order\+\_\+mode}} ()
+\begin{DoxyCompactList}\small\item\em Load device order mode from the NVS. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{nvs_8c_a09db8c3c30fc734356383ed1dd04f118}{nvs\+\_\+save\+\_\+connection\+\_\+type}} (char connection\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Save the device connection type on the NVS. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{nvs_8c_a821f04d67fbc9fb92d65fa71015ea612}{nvs\+\_\+load\+\_\+connection\+\_\+type}} ()
+\begin{DoxyCompactList}\small\item\em Load the device connection type from the NVS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the functions responsible for the initialization and update of the NVS storage portion of the device. 
+
+\begin{DoxyAuthor}{Author}
+David Abreu @ Quantum Leap (\href{mailto:david@quleap.com}{\texttt{ david@quleap.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/10-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{nvs_8c_a23bacddca1d0f118f627740adc1a4c61}\label{nvs_8c_a23bacddca1d0f118f627740adc1a4c61}} 
+\index{nvs.c@{nvs.c}!nvs\_clear\_wifi\_credentials@{nvs\_clear\_wifi\_credentials}}
+\index{nvs\_clear\_wifi\_credentials@{nvs\_clear\_wifi\_credentials}!nvs.c@{nvs.c}}
+\doxysubsubsection{\texorpdfstring{nvs\_clear\_wifi\_credentials()}{nvs\_clear\_wifi\_credentials()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t nvs\+\_\+clear\+\_\+wifi\+\_\+credentials (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Delete the Wifi credentials namespaces from the NVS. 
+
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t -\/ Result of the operations on storage 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em ESP\+\_\+\+OK} & Credentials saved successfully \\
+\hline
+{\em Other} & Error on NVS \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{nvs_8c_a04fbdd42e564f5cc1277c7587fe8f781}\label{nvs_8c_a04fbdd42e564f5cc1277c7587fe8f781}} 
+\index{nvs.c@{nvs.c}!nvs\_load\_calibration@{nvs\_load\_calibration}}
+\index{nvs\_load\_calibration@{nvs\_load\_calibration}!nvs.c@{nvs.c}}
+\doxysubsubsection{\texorpdfstring{nvs\_load\_calibration()}{nvs\_load\_calibration()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t nvs\+\_\+load\+\_\+calibration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load the device calibration values from the NVS storage. 
+
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t -\/ Result of the operations on storage 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em ESP\+\_\+\+OK} & Credentials saved successfully \\
+\hline
+{\em Other} & Error on NVS \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{nvs_8c_a821f04d67fbc9fb92d65fa71015ea612}\label{nvs_8c_a821f04d67fbc9fb92d65fa71015ea612}} 
+\index{nvs.c@{nvs.c}!nvs\_load\_connection\_type@{nvs\_load\_connection\_type}}
+\index{nvs\_load\_connection\_type@{nvs\_load\_connection\_type}!nvs.c@{nvs.c}}
+\doxysubsubsection{\texorpdfstring{nvs\_load\_connection\_type()}{nvs\_load\_connection\_type()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t nvs\+\_\+load\+\_\+connection\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load the device connection type from the NVS. 
+
+\DoxyHorRuler{0}
+\hypertarget{nvs_8c_autotoc_md3}{}\doxyparagraph{Namespaces}\label{nvs_8c_autotoc_md3}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Variable }&\cellcolor{\tableheadbgcolor}\textbf{ NVS Namespace  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Variable }&\cellcolor{\tableheadbgcolor}\textbf{ NVS Namespace  }\\\cline{1-2}
+\endhead
+Connection type &connection\+\_\+type  \\\cline{1-2}
+\end{longtabu}
+
+
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t -\/ Result of the operations on storage 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em ESP\+\_\+\+OK} & Credentials saved successfully \\
+\hline
+{\em Other} & Error on NVS \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{nvs_8c_aedc62fdad7e71d9383e08d9502d78de9}\label{nvs_8c_aedc62fdad7e71d9383e08d9502d78de9}} 
+\index{nvs.c@{nvs.c}!nvs\_load\_order\_mode@{nvs\_load\_order\_mode}}
+\index{nvs\_load\_order\_mode@{nvs\_load\_order\_mode}!nvs.c@{nvs.c}}
+\doxysubsubsection{\texorpdfstring{nvs\_load\_order\_mode()}{nvs\_load\_order\_mode()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t nvs\+\_\+load\+\_\+order\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load device order mode from the NVS. 
+
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t -\/ Result of the operations on storage 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em ESP\+\_\+\+OK} & Credentials saved successfully \\
+\hline
+{\em Other} & Error on NVS \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{nvs_8c_a5276470f0e280c2ef9c38d60646202d5}\label{nvs_8c_a5276470f0e280c2ef9c38d60646202d5}} 
+\index{nvs.c@{nvs.c}!nvs\_load\_wifi\_credentials@{nvs\_load\_wifi\_credentials}}
+\index{nvs\_load\_wifi\_credentials@{nvs\_load\_wifi\_credentials}!nvs.c@{nvs.c}}
+\doxysubsubsection{\texorpdfstring{nvs\_load\_wifi\_credentials()}{nvs\_load\_wifi\_credentials()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t nvs\+\_\+load\+\_\+wifi\+\_\+credentials (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Load the wifi credentials from the NVS storage space. 
+
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t -\/ Result of the operations on storage 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em ESP\+\_\+\+OK} & Credentials saved successfully \\
+\hline
+{\em Other} & Error on NVS \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{nvs_8c_a83840534f4f60b1baf3bbeea49e1eabd}\label{nvs_8c_a83840534f4f60b1baf3bbeea49e1eabd}} 
+\index{nvs.c@{nvs.c}!nvs\_save\_calibration@{nvs\_save\_calibration}}
+\index{nvs\_save\_calibration@{nvs\_save\_calibration}!nvs.c@{nvs.c}}
+\doxysubsubsection{\texorpdfstring{nvs\_save\_calibration()}{nvs\_save\_calibration()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t nvs\+\_\+save\+\_\+calibration (\begin{DoxyParamCaption}\item[{int}]{no\+\_\+deposit,  }\item[{int}]{full\+\_\+deposit,  }\item[{bool}]{is\+\_\+stable,  }\item[{int}]{stock }\end{DoxyParamCaption})}
+
+
+
+Save the calibration information on the NVS. 
+
+\DoxyHorRuler{0}
+\hypertarget{nvs_8c_autotoc_md1}{}\doxyparagraph{Namespaces}\label{nvs_8c_autotoc_md1}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Variable }&\cellcolor{\tableheadbgcolor}\textbf{ NVS Namespace  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Variable }&\cellcolor{\tableheadbgcolor}\textbf{ NVS Namespace  }\\\cline{1-2}
+\endhead
+No deposit &no\+\_\+deposit  \\\cline{1-2}
+Full deposit &full\+\_\+deposit  \\\cline{1-2}
+Device stable &is\+\_\+stable  \\\cline{1-2}
+Stock &stock  \\\cline{1-2}
+\end{longtabu}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em no\+\_\+deposit} & \{int\} -\/ No deposit raw value \\
+\hline
+{\em full\+\_\+deposit} & \{int\} -\/ Full deposit raw value \\
+\hline
+{\em is\+\_\+stable} & \{boolean\} -\/ Sensor is stable \\
+\hline
+{\em stock} & \{int\} -\/ Stock\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t -\/ Result of the operations on storage 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em ESP\+\_\+\+OK} & Credentials saved successfully \\
+\hline
+{\em Other} & Error on NVS \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{nvs_8c_a09db8c3c30fc734356383ed1dd04f118}\label{nvs_8c_a09db8c3c30fc734356383ed1dd04f118}} 
+\index{nvs.c@{nvs.c}!nvs\_save\_connection\_type@{nvs\_save\_connection\_type}}
+\index{nvs\_save\_connection\_type@{nvs\_save\_connection\_type}!nvs.c@{nvs.c}}
+\doxysubsubsection{\texorpdfstring{nvs\_save\_connection\_type()}{nvs\_save\_connection\_type()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t nvs\+\_\+save\+\_\+connection\+\_\+type (\begin{DoxyParamCaption}\item[{char}]{connection\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Save the device connection type on the NVS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection\+\_\+type} & \{char\} -\/ Connection type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t -\/ Result of the operations on storage 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em ESP\+\_\+\+OK} & Credentials saved successfully \\
+\hline
+{\em Other} & Error on NVS \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{nvs_8c_a67f83440e81739b89eba86bb67df07e8}\label{nvs_8c_a67f83440e81739b89eba86bb67df07e8}} 
+\index{nvs.c@{nvs.c}!nvs\_save\_order\_mode@{nvs\_save\_order\_mode}}
+\index{nvs\_save\_order\_mode@{nvs\_save\_order\_mode}!nvs.c@{nvs.c}}
+\doxysubsubsection{\texorpdfstring{nvs\_save\_order\_mode()}{nvs\_save\_order\_mode()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t nvs\+\_\+save\+\_\+order\+\_\+mode (\begin{DoxyParamCaption}\item[{char}]{order\+\_\+mode }\end{DoxyParamCaption})}
+
+
+
+Save the device order mode on the NVS. 
+
+\DoxyHorRuler{0}
+\hypertarget{nvs_8c_autotoc_md2}{}\doxyparagraph{Namespaces}\label{nvs_8c_autotoc_md2}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Variable }&\cellcolor{\tableheadbgcolor}\textbf{ NVS Namespace  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Variable }&\cellcolor{\tableheadbgcolor}\textbf{ NVS Namespace  }\\\cline{1-2}
+\endhead
+Order mode &order\+\_\+mode  \\\cline{1-2}
+\end{longtabu}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+\_\+mode} & \{char\} -\/ Device order mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t -\/ Result of the operations on storage 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em ESP\+\_\+\+OK} & Credentials saved successfully \\
+\hline
+{\em Other} & Error on NVS \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{nvs_8c_aaeadc002fec54a5457b4957508b009ce}\label{nvs_8c_aaeadc002fec54a5457b4957508b009ce}} 
+\index{nvs.c@{nvs.c}!nvs\_save\_wifi\_credentials@{nvs\_save\_wifi\_credentials}}
+\index{nvs\_save\_wifi\_credentials@{nvs\_save\_wifi\_credentials}!nvs.c@{nvs.c}}
+\doxysubsubsection{\texorpdfstring{nvs\_save\_wifi\_credentials()}{nvs\_save\_wifi\_credentials()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t nvs\+\_\+save\+\_\+wifi\+\_\+credentials (\begin{DoxyParamCaption}\item[{char $\ast$}]{ssid,  }\item[{char $\ast$}]{password,  }\item[{bool}]{provisioned }\end{DoxyParamCaption})}
+
+
+
+Save the wifi credentials received during provision. 
+
+\DoxyHorRuler{0}
+\hypertarget{nvs_8c_autotoc_md0}{}\doxyparagraph{Namespaces}\label{nvs_8c_autotoc_md0}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Variable }&\cellcolor{\tableheadbgcolor}\textbf{ NVS Namespace  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Variable }&\cellcolor{\tableheadbgcolor}\textbf{ NVS Namespace  }\\\cline{1-2}
+\endhead
+SSID &ssid  \\\cline{1-2}
+Password &password  \\\cline{1-2}
+\end{longtabu}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em ssid} & \{String\} -\/ Network SSID \\
+\hline
+{\em password} & \{String\} -\/ Network password \\
+\hline
+{\em provisioned} & \{boolean\} -\/ Device provisioned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t -\/ Result of the operations on storage 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em ESP\+\_\+\+OK} & Credentials saved successfully \\
+\hline
+{\em Other} & Error on NVS \\
+\hline
+\end{DoxyRetVals}

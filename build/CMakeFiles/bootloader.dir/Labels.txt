@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/mateus-ql/Documents/SmartRing_FV_FW/build/CMakeFiles/bootloader
+/home/mateus-ql/Documents/SmartRing_FV_FW/build/CMakeFiles/bootloader.rule
+/home/mateus-ql/Documents/SmartRing_FV_FW/build/CMakeFiles/bootloader-complete.rule
+/home/mateus-ql/Documents/SmartRing_FV_FW/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/mateus-ql/Documents/SmartRing_FV_FW/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/mateus-ql/Documents/SmartRing_FV_FW/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/mateus-ql/Documents/SmartRing_FV_FW/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/mateus-ql/Documents/SmartRing_FV_FW/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/mateus-ql/Documents/SmartRing_FV_FW/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/mateus-ql/Documents/SmartRing_FV_FW/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

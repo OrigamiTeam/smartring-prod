@@ -1,0 +1,153 @@
+\hypertarget{calibration_8c}{}\doxysection{components/smart\+\_\+ring\+\_\+ui/menus/calibration.c File Reference}
+\label{calibration_8c}\index{components/smart\_ring\_ui/menus/calibration.c@{components/smart\_ring\_ui/menus/calibration.c}}
+
+
+Responsible for the calibration screns.  
+
+
+{\ttfamily \#include \char`\"{}calibration.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsmart__ring__ui__calibration__progress__container__t}{smart\+\_\+ring\+\_\+ui\+\_\+calibration\+\_\+progress\+\_\+container\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{calibration_8c_a1f6dda552072d90c6666c07143f61f13}{calibration\+\_\+create\+\_\+no\+\_\+bottle\+\_\+screen}} (lv\+\_\+obj\+\_\+t $\ast$parent, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\begin{DoxyCompactList}\small\item\em Create the calibration screen to ask the user to confirm that there is no bottle inserted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{calibration_8c_a2c4259ff74ceeb7d88fdb77da1f4352e}{calibration\+\_\+create\+\_\+full\+\_\+bottle\+\_\+screen}} (lv\+\_\+obj\+\_\+t $\ast$parent, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\begin{DoxyCompactList}\small\item\em Create the calibration screen to ask the user to confirm that there is a full bottle inserted. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{calibration_8c_a57b487f95aed1450732db52f45b8772b}\label{calibration_8c_a57b487f95aed1450732db52f45b8772b}} 
+void {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+calibration\+\_\+update\+\_\+progress\+\_\+screen} (bool finished)
+\item 
+void \mbox{\hyperlink{calibration_8c_acd36383ff8d2e5170b477d3f902efc23}{calibration\+\_\+create\+\_\+progress\+\_\+screen}} (lv\+\_\+obj\+\_\+t $\ast$parent, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\begin{DoxyCompactList}\small\item\em Create in progress screen to show during the calibration step. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{calibration_8c_a96a8a940aada2e542024788ff8ad2f1b}{calibration\+\_\+create\+\_\+finished\+\_\+screen}} (lv\+\_\+obj\+\_\+t $\ast$parent, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\begin{DoxyCompactList}\small\item\em Create the finished calibration screen to inform the user if the calibration was successful. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{calibration_8c_a7d18b8121ee53dcb3236cacdea52932a}\label{calibration_8c_a7d18b8121ee53dcb3236cacdea52932a}} 
+struct \mbox{\hyperlink{structsmart__ring__ui__calibration__progress__container__t}{smart\+\_\+ring\+\_\+ui\+\_\+calibration\+\_\+progress\+\_\+container\+\_\+t}} {\bfseries container\+\_\+progress}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Responsible for the calibration screns. 
+
+\begin{DoxyAuthor}{Author}
+David Abreu @ Quantum Leap (\href{mailto:david@quleap.com}{\texttt{ david@quleap.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/06-\/24
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{calibration_8c_a96a8a940aada2e542024788ff8ad2f1b}\label{calibration_8c_a96a8a940aada2e542024788ff8ad2f1b}} 
+\index{calibration.c@{calibration.c}!calibration\_create\_finished\_screen@{calibration\_create\_finished\_screen}}
+\index{calibration\_create\_finished\_screen@{calibration\_create\_finished\_screen}!calibration.c@{calibration.c}}
+\doxysubsubsection{\texorpdfstring{calibration\_create\_finished\_screen()}{calibration\_create\_finished\_screen()}}
+{\footnotesize\ttfamily void calibration\+\_\+create\+\_\+finished\+\_\+screen (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t $\ast$}]{parent,  }\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller }\end{DoxyParamCaption})}
+
+
+
+Create the finished calibration screen to inform the user if the calibration was successful. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & Screen object \\
+\hline
+{\em $\ast$ui\+\_\+controller} & UI controller object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{calibration_8c_a2c4259ff74ceeb7d88fdb77da1f4352e}\label{calibration_8c_a2c4259ff74ceeb7d88fdb77da1f4352e}} 
+\index{calibration.c@{calibration.c}!calibration\_create\_full\_bottle\_screen@{calibration\_create\_full\_bottle\_screen}}
+\index{calibration\_create\_full\_bottle\_screen@{calibration\_create\_full\_bottle\_screen}!calibration.c@{calibration.c}}
+\doxysubsubsection{\texorpdfstring{calibration\_create\_full\_bottle\_screen()}{calibration\_create\_full\_bottle\_screen()}}
+{\footnotesize\ttfamily void calibration\+\_\+create\+\_\+full\+\_\+bottle\+\_\+screen (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t $\ast$}]{parent,  }\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller }\end{DoxyParamCaption})}
+
+
+
+Create the calibration screen to ask the user to confirm that there is a full bottle inserted. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & Screen object \\
+\hline
+{\em $\ast$ui\+\_\+controller} & UI controller object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{calibration_8c_a1f6dda552072d90c6666c07143f61f13}\label{calibration_8c_a1f6dda552072d90c6666c07143f61f13}} 
+\index{calibration.c@{calibration.c}!calibration\_create\_no\_bottle\_screen@{calibration\_create\_no\_bottle\_screen}}
+\index{calibration\_create\_no\_bottle\_screen@{calibration\_create\_no\_bottle\_screen}!calibration.c@{calibration.c}}
+\doxysubsubsection{\texorpdfstring{calibration\_create\_no\_bottle\_screen()}{calibration\_create\_no\_bottle\_screen()}}
+{\footnotesize\ttfamily void calibration\+\_\+create\+\_\+no\+\_\+bottle\+\_\+screen (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t $\ast$}]{parent,  }\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller }\end{DoxyParamCaption})}
+
+
+
+Create the calibration screen to ask the user to confirm that there is no bottle inserted. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & Screen object \\
+\hline
+{\em $\ast$ui\+\_\+controller} & UI controller object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{calibration_8c_acd36383ff8d2e5170b477d3f902efc23}\label{calibration_8c_acd36383ff8d2e5170b477d3f902efc23}} 
+\index{calibration.c@{calibration.c}!calibration\_create\_progress\_screen@{calibration\_create\_progress\_screen}}
+\index{calibration\_create\_progress\_screen@{calibration\_create\_progress\_screen}!calibration.c@{calibration.c}}
+\doxysubsubsection{\texorpdfstring{calibration\_create\_progress\_screen()}{calibration\_create\_progress\_screen()}}
+{\footnotesize\ttfamily void calibration\+\_\+create\+\_\+progress\+\_\+screen (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t $\ast$}]{parent,  }\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller }\end{DoxyParamCaption})}
+
+
+
+Create in progress screen to show during the calibration step. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & Screen object \\
+\hline
+{\em $\ast$ui\+\_\+controller} & UI controller object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,118 @@
+\hypertarget{modal_8h}{}\doxysection{components/smart\+\_\+ring\+\_\+ui/menus/modal.h File Reference}
+\label{modal_8h}\index{components/smart\_ring\_ui/menus/modal.h@{components/smart\_ring\_ui/menus/modal.h}}
+
+
+Modal screens header.  
+
+
+{\ttfamily \#include \char`\"{}smart\+\_\+ring\+\_\+ui.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{modal_8h_a02d8baa6ef8639c497c6a899f836d0cd}{modal\+\_\+create\+\_\+provision}} (lv\+\_\+obj\+\_\+t $\ast$parent, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\begin{DoxyCompactList}\small\item\em Create the provisioning modal with the network name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modal_8h_a461e8b38e27c2bcd1bcbdd7b1b290c20}{modal\+\_\+create\+\_\+template}} (lv\+\_\+obj\+\_\+t $\ast$parent, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller, char $\ast$title, char $\ast$subheader, bool spinner)
+\begin{DoxyCompactList}\small\item\em Create a modal using the parameters defined. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modal_8h_ae43f72df41cb1b42930bad1921e4d1fc}{modal\+\_\+complete\+\_\+progress}} (struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller, bool successfull, char $\ast$error\+\_\+message)
+\begin{DoxyCompactList}\small\item\em Change the modal information as the operation was completed successfully. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Modal screens header. 
+
+\begin{DoxyAuthor}{Author}
+David Abreu @ Quantum Leap (\href{mailto:david@quleap.com}{\texttt{ david@quleap.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/06-\/23
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{modal_8h_ae43f72df41cb1b42930bad1921e4d1fc}\label{modal_8h_ae43f72df41cb1b42930bad1921e4d1fc}} 
+\index{modal.h@{modal.h}!modal\_complete\_progress@{modal\_complete\_progress}}
+\index{modal\_complete\_progress@{modal\_complete\_progress}!modal.h@{modal.h}}
+\doxysubsubsection{\texorpdfstring{modal\_complete\_progress()}{modal\_complete\_progress()}}
+{\footnotesize\ttfamily void modal\+\_\+complete\+\_\+progress (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller,  }\item[{bool}]{successfull,  }\item[{char $\ast$}]{error\+\_\+message }\end{DoxyParamCaption})}
+
+
+
+Change the modal information as the operation was completed successfully. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$ui\+\_\+controller} & UI controller object \\
+\hline
+{\em successfull} & If the operation was successfull \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{modal_8h_a02d8baa6ef8639c497c6a899f836d0cd}\label{modal_8h_a02d8baa6ef8639c497c6a899f836d0cd}} 
+\index{modal.h@{modal.h}!modal\_create\_provision@{modal\_create\_provision}}
+\index{modal\_create\_provision@{modal\_create\_provision}!modal.h@{modal.h}}
+\doxysubsubsection{\texorpdfstring{modal\_create\_provision()}{modal\_create\_provision()}}
+{\footnotesize\ttfamily void modal\+\_\+create\+\_\+provision (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t $\ast$}]{parent,  }\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller }\end{DoxyParamCaption})}
+
+
+
+Create the provisioning modal with the network name. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & Screen object \\
+\hline
+{\em $\ast$ui\+\_\+controller} & UI controller object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{modal_8h_a461e8b38e27c2bcd1bcbdd7b1b290c20}\label{modal_8h_a461e8b38e27c2bcd1bcbdd7b1b290c20}} 
+\index{modal.h@{modal.h}!modal\_create\_template@{modal\_create\_template}}
+\index{modal\_create\_template@{modal\_create\_template}!modal.h@{modal.h}}
+\doxysubsubsection{\texorpdfstring{modal\_create\_template()}{modal\_create\_template()}}
+{\footnotesize\ttfamily void modal\+\_\+create\+\_\+template (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t $\ast$}]{parent,  }\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller,  }\item[{char $\ast$}]{title,  }\item[{char $\ast$}]{subheader,  }\item[{bool}]{spinner }\end{DoxyParamCaption})}
+
+
+
+Create a modal using the parameters defined. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & Screen object \\
+\hline
+{\em $\ast$ui\+\_\+controller} & UI controller object \\
+\hline
+{\em $\ast$title} & Title for the modal \\
+\hline
+{\em $\ast$subheader} & Text for the modal \\
+\hline
+{\em spinner} & If the modal uses a spinner \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

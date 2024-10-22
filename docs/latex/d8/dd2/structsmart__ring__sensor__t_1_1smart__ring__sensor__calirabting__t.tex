@@ -1,0 +1,87 @@
+\hypertarget{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t}{}\doxysection{smart\+\_\+ring\+\_\+sensor\+\_\+t\+::smart\+\_\+ring\+\_\+sensor\+\_\+calirabting\+\_\+t Struct Reference}
+\label{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t}\index{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t@{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t}}
+
+
+Calibrating process structure.  
+
+
+
+
+{\ttfamily \#include $<$vars.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t_ae7a6eaa65f389cd251e13bf289907f99}{timestamp}}
+\begin{DoxyCompactList}\small\item\em Used to detect stability, only after 10 seconds of stability we consider the step valid. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t_aa7b7b0c0071dbb5644f3929948ca55bc}{sum\+\_\+of\+\_\+readings}}
+\begin{DoxyCompactList}\small\item\em Sum of raw readings from the sensor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t_a723fe961e1332f1e5f9e7078125f397c}{number\+\_\+of\+\_\+readings}}
+\begin{DoxyCompactList}\small\item\em Number of raw readings from the sensor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t_ab5a576cb44199bd57b1e2fb9c39b3b7f}{calibrating}}\+: 1
+\begin{DoxyCompactList}\small\item\em Flag signaling the device is calibrating. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t_a60c6cae0fa63e5fe3a83c71627c3b654}{step}}
+\begin{DoxyCompactList}\small\item\em Step of calibration (No deposit, Full deposit) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Calibrating process structure. 
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t_ab5a576cb44199bd57b1e2fb9c39b3b7f}\label{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t_ab5a576cb44199bd57b1e2fb9c39b3b7f}} 
+\index{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t@{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t}!calibrating@{calibrating}}
+\index{calibrating@{calibrating}!smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t@{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t}}
+\doxysubsubsection{\texorpdfstring{calibrating}{calibrating}}
+{\footnotesize\ttfamily int smart\+\_\+ring\+\_\+sensor\+\_\+t\+::smart\+\_\+ring\+\_\+sensor\+\_\+calirabting\+\_\+t\+::calibrating}
+
+
+
+Flag signaling the device is calibrating. 
+
+\mbox{\Hypertarget{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t_a723fe961e1332f1e5f9e7078125f397c}\label{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t_a723fe961e1332f1e5f9e7078125f397c}} 
+\index{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t@{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t}!number\_of\_readings@{number\_of\_readings}}
+\index{number\_of\_readings@{number\_of\_readings}!smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t@{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t}}
+\doxysubsubsection{\texorpdfstring{number\_of\_readings}{number\_of\_readings}}
+{\footnotesize\ttfamily int smart\+\_\+ring\+\_\+sensor\+\_\+t\+::smart\+\_\+ring\+\_\+sensor\+\_\+calirabting\+\_\+t\+::number\+\_\+of\+\_\+readings}
+
+
+
+Number of raw readings from the sensor. 
+
+\mbox{\Hypertarget{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t_a60c6cae0fa63e5fe3a83c71627c3b654}\label{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t_a60c6cae0fa63e5fe3a83c71627c3b654}} 
+\index{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t@{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t}!step@{step}}
+\index{step@{step}!smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t@{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t}}
+\doxysubsubsection{\texorpdfstring{step}{step}}
+{\footnotesize\ttfamily uint8\+\_\+t smart\+\_\+ring\+\_\+sensor\+\_\+t\+::smart\+\_\+ring\+\_\+sensor\+\_\+calirabting\+\_\+t\+::step}
+
+
+
+Step of calibration (No deposit, Full deposit) 
+
+\mbox{\Hypertarget{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t_aa7b7b0c0071dbb5644f3929948ca55bc}\label{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t_aa7b7b0c0071dbb5644f3929948ca55bc}} 
+\index{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t@{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t}!sum\_of\_readings@{sum\_of\_readings}}
+\index{sum\_of\_readings@{sum\_of\_readings}!smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t@{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t}}
+\doxysubsubsection{\texorpdfstring{sum\_of\_readings}{sum\_of\_readings}}
+{\footnotesize\ttfamily int smart\+\_\+ring\+\_\+sensor\+\_\+t\+::smart\+\_\+ring\+\_\+sensor\+\_\+calirabting\+\_\+t\+::sum\+\_\+of\+\_\+readings}
+
+
+
+Sum of raw readings from the sensor. 
+
+\mbox{\Hypertarget{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t_ae7a6eaa65f389cd251e13bf289907f99}\label{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t_ae7a6eaa65f389cd251e13bf289907f99}} 
+\index{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t@{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t@{smart\_ring\_sensor\_t::smart\_ring\_sensor\_calirabting\_t}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily long smart\+\_\+ring\+\_\+sensor\+\_\+t\+::smart\+\_\+ring\+\_\+sensor\+\_\+calirabting\+\_\+t\+::timestamp}
+
+
+
+Used to detect stability, only after 10 seconds of stability we consider the step valid. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/include/\mbox{\hyperlink{vars_8h}{vars.\+h}}\end{DoxyCompactItemize}

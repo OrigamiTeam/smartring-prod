@@ -1,0 +1,79 @@
+\hypertarget{pin_8c}{}\doxysection{components/smart\+\_\+ring\+\_\+ui/menus/pin.c File Reference}
+\label{pin_8c}\index{components/smart\_ring\_ui/menus/pin.c@{components/smart\_ring\_ui/menus/pin.c}}
+
+
+Responsible for the creation of the pin insertion screen.  
+
+
+{\ttfamily \#include \char`\"{}pin.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{pin_8c_aa26094c5263491b24dfdf769305273c2}{pin\+\_\+get\+\_\+inserted\+\_\+pin}} ()
+\begin{DoxyCompactList}\small\item\em Pin screen header. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pin_8c_a205201f4b003cbe83e441700fa55f7b9}\label{pin_8c_a205201f4b003cbe83e441700fa55f7b9}} 
+void {\bfseries pin\+\_\+sign\+\_\+in\+\_\+handler} (lv\+\_\+obj\+\_\+t $\ast$button, lv\+\_\+event\+\_\+t $\ast$event)
+\item 
+\mbox{\Hypertarget{pin_8c_a21079f0f223a8194e16395641d6cc81f}\label{pin_8c_a21079f0f223a8194e16395641d6cc81f}} 
+void {\bfseries pin\+\_\+cancel\+\_\+sign\+\_\+in\+\_\+handler} (lv\+\_\+obj\+\_\+t $\ast$button, lv\+\_\+event\+\_\+t $\ast$event)
+\item 
+void \mbox{\hyperlink{pin_8c_a4a36c52274fd7a57b66568bad95a4c99}{create\+\_\+insert\+\_\+pin\+\_\+screen}} (lv\+\_\+obj\+\_\+t $\ast$parent, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\begin{DoxyCompactList}\small\item\em Create the pin screen with the keyboard. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Responsible for the creation of the pin insertion screen. 
+
+\begin{DoxyAuthor}{Author}
+David Abreu @ Quantum Leap (\href{mailto:david@quleap.com}{\texttt{ david@quleap.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/06-\/23
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pin_8c_a4a36c52274fd7a57b66568bad95a4c99}\label{pin_8c_a4a36c52274fd7a57b66568bad95a4c99}} 
+\index{pin.c@{pin.c}!create\_insert\_pin\_screen@{create\_insert\_pin\_screen}}
+\index{create\_insert\_pin\_screen@{create\_insert\_pin\_screen}!pin.c@{pin.c}}
+\doxysubsubsection{\texorpdfstring{create\_insert\_pin\_screen()}{create\_insert\_pin\_screen()}}
+{\footnotesize\ttfamily void create\+\_\+insert\+\_\+pin\+\_\+screen (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t $\ast$}]{parent,  }\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller }\end{DoxyParamCaption})}
+
+
+
+Create the pin screen with the keyboard. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & Screen object \\
+\hline
+{\em $\ast$ui\+\_\+controller} & UI controller object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{pin_8c_aa26094c5263491b24dfdf769305273c2}\label{pin_8c_aa26094c5263491b24dfdf769305273c2}} 
+\index{pin.c@{pin.c}!pin\_get\_inserted\_pin@{pin\_get\_inserted\_pin}}
+\index{pin\_get\_inserted\_pin@{pin\_get\_inserted\_pin}!pin.c@{pin.c}}
+\doxysubsubsection{\texorpdfstring{pin\_get\_inserted\_pin()}{pin\_get\_inserted\_pin()}}
+{\footnotesize\ttfamily char $\ast$ pin\+\_\+get\+\_\+inserted\+\_\+pin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pin screen header. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}

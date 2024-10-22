@@ -1,0 +1,255 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 1rem;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+img {
+  pointer-events: none;
+}
+
+#logo_ql {
+  height: auto;
+  width: 7rem;
+}
+
+#logo_fv {
+  height: auto;
+  width: 12rem;
+  margin: 5rem auto 0;
+}
+
+p, label {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form1 {
+  margin: 4rem auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form1 .redes {
+  margin: 2rem 0 3rem;
+  border: 2px solid #eee;
+  width: 15rem;
+  height: 15rem;
+  overflow: scroll;
+  border-radius: 5px;
+  overflow-x: hidden;
+}
+
+.form1 .redes::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+.form1 .redes::-webkit-scrollbar:hover {
+  width: 0.6rem;
+}
+
+.form1 .redes::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 50px;
+}
+
+.form1 .redes::-webkit-scrollbar-thumb:hover {
+  width: 0.6rem;
+}
+
+.form1 .redes::-webkit-scrollbar-thumb:active {
+  background-color: #999;
+}
+
+.form1 .redes p {
+  text-align: center;
+  padding: 1rem;
+}
+
+.form1 .redes p.active {
+  background-color: rgba(0, 169, 224, 0.2);
+}
+
+.form1 button {
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #00A9E0;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form2 {
+  margin: 4rem auto 0;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.form2 #wifi {
+  margin: 0.5rem 0 4rem;
+  font-weight: bolder;
+}
+
+.form2 .input {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.form2 .input .password {
+  position: relative;
+}
+
+.form2 .input .password input[type="password"],
+.form2 .input .password input[type="text"] {
+  background-color: #eee;
+  border: 1px solid transparent;
+  outline: none;
+  line-height: 1.2rem;
+  padding: 0.3rem;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.form2 .input .password input[type="password"]:focus~label,
+.form2 .input .password input[type="password"]:valid~label,
+.form2 .input .password input[type="text"]:focus~label,
+.form2 .input .password input[type="text"]:valid~label {
+  top: -200%;
+  opacity: 1;
+}
+
+.form2 .input .password input[type="password"]:focus,
+.form2 .input .password input[type="text"]:focus {
+  border: 1px solid #00A9E0;
+}
+
+.form2 .input .password label {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  opacity: 0.7;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.form2 .input .reveal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 0.7rem;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.form2 .input .reveal label {
+  position: relative;
+  margin-left: 0.2rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.85rem;
+}
+
+.form2 .input button {
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #00A9E0;
+  color: white;
+  border-radius: 5px;
+  margin: 0.4rem 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.form2 .input button:nth-child(even) {
+  background-color: #EB1D36;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.9rem;
+}
+
+.form2 .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.form2 .result #state {
+  margin: 0.8rem 0 2rem;
+  font-weight: bolder;
+}
+
+.form2 .result #final {
+  word-wrap: break-word;
+  width: 50vw;
+  text-align: center;
+  opacity: 0;
+}
+/*# sourceMappingURL=index.css.map */

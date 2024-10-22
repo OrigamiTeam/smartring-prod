@@ -1,0 +1,85 @@
+\hypertarget{structsmart__ring__connection__controller__t}{}\doxysection{smart\+\_\+ring\+\_\+connection\+\_\+controller\+\_\+t Struct Reference}
+\label{structsmart__ring__connection__controller__t}\index{smart\_ring\_connection\_controller\_t@{smart\_ring\_connection\_controller\_t}}
+
+
+Main structures that groups the entire connection information of the device.  
+
+
+
+
+{\ttfamily \#include $<$vars.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsmart__ring__wifi__controller__t}{smart\+\_\+ring\+\_\+wifi\+\_\+controller\+\_\+t}} \mbox{\hyperlink{structsmart__ring__connection__controller__t_aa9ad4f43a94b5e578693f0e55d511bcd}{wifi\+\_\+controller}}
+\begin{DoxyCompactList}\small\item\em Wifi interface controller object. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmqtt__controller__t}{mqtt\+\_\+controller\+\_\+t}} \mbox{\hyperlink{structsmart__ring__connection__controller__t_aff347b4f77c52d6ffc5b15e483641005}{mqtt\+\_\+controller}}
+\begin{DoxyCompactList}\small\item\em MQTT interface controller object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsmart__ring__connection__controller__t_a47696e0e3713c39d54f16b9ffc60c235}{is\+\_\+connected}}\+: 1
+\begin{DoxyCompactList}\small\item\em Bitfield to detect if a connection is established. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsmart__ring__connection__controller__t_a5955c1e24b470d117097d55469950f91}{is\+\_\+provisioned}}\+: 1
+\begin{DoxyCompactList}\small\item\em Bitfield to detect if the device is provisioned. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structsmart__ring__connection__controller__t_af693b57e20e00224a0dca868a5544c28}{type}}
+\begin{DoxyCompactList}\small\item\em Type of connection -\/ Wi\+Fi (w), GSM (g) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main structures that groups the entire connection information of the device. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structsmart__ring__connection__controller__t_a47696e0e3713c39d54f16b9ffc60c235}\label{structsmart__ring__connection__controller__t_a47696e0e3713c39d54f16b9ffc60c235}} 
+\index{smart\_ring\_connection\_controller\_t@{smart\_ring\_connection\_controller\_t}!is\_connected@{is\_connected}}
+\index{is\_connected@{is\_connected}!smart\_ring\_connection\_controller\_t@{smart\_ring\_connection\_controller\_t}}
+\doxysubsubsection{\texorpdfstring{is\_connected}{is\_connected}}
+{\footnotesize\ttfamily int smart\+\_\+ring\+\_\+connection\+\_\+controller\+\_\+t\+::is\+\_\+connected}
+
+
+
+Bitfield to detect if a connection is established. 
+
+\mbox{\Hypertarget{structsmart__ring__connection__controller__t_a5955c1e24b470d117097d55469950f91}\label{structsmart__ring__connection__controller__t_a5955c1e24b470d117097d55469950f91}} 
+\index{smart\_ring\_connection\_controller\_t@{smart\_ring\_connection\_controller\_t}!is\_provisioned@{is\_provisioned}}
+\index{is\_provisioned@{is\_provisioned}!smart\_ring\_connection\_controller\_t@{smart\_ring\_connection\_controller\_t}}
+\doxysubsubsection{\texorpdfstring{is\_provisioned}{is\_provisioned}}
+{\footnotesize\ttfamily int smart\+\_\+ring\+\_\+connection\+\_\+controller\+\_\+t\+::is\+\_\+provisioned}
+
+
+
+Bitfield to detect if the device is provisioned. 
+
+\mbox{\Hypertarget{structsmart__ring__connection__controller__t_aff347b4f77c52d6ffc5b15e483641005}\label{structsmart__ring__connection__controller__t_aff347b4f77c52d6ffc5b15e483641005}} 
+\index{smart\_ring\_connection\_controller\_t@{smart\_ring\_connection\_controller\_t}!mqtt\_controller@{mqtt\_controller}}
+\index{mqtt\_controller@{mqtt\_controller}!smart\_ring\_connection\_controller\_t@{smart\_ring\_connection\_controller\_t}}
+\doxysubsubsection{\texorpdfstring{mqtt\_controller}{mqtt\_controller}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structmqtt__controller__t}{mqtt\+\_\+controller\+\_\+t}} smart\+\_\+ring\+\_\+connection\+\_\+controller\+\_\+t\+::mqtt\+\_\+controller}
+
+
+
+MQTT interface controller object. 
+
+\mbox{\Hypertarget{structsmart__ring__connection__controller__t_af693b57e20e00224a0dca868a5544c28}\label{structsmart__ring__connection__controller__t_af693b57e20e00224a0dca868a5544c28}} 
+\index{smart\_ring\_connection\_controller\_t@{smart\_ring\_connection\_controller\_t}!type@{type}}
+\index{type@{type}!smart\_ring\_connection\_controller\_t@{smart\_ring\_connection\_controller\_t}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily char smart\+\_\+ring\+\_\+connection\+\_\+controller\+\_\+t\+::type}
+
+
+
+Type of connection -\/ Wi\+Fi (w), GSM (g) 
+
+\mbox{\Hypertarget{structsmart__ring__connection__controller__t_aa9ad4f43a94b5e578693f0e55d511bcd}\label{structsmart__ring__connection__controller__t_aa9ad4f43a94b5e578693f0e55d511bcd}} 
+\index{smart\_ring\_connection\_controller\_t@{smart\_ring\_connection\_controller\_t}!wifi\_controller@{wifi\_controller}}
+\index{wifi\_controller@{wifi\_controller}!smart\_ring\_connection\_controller\_t@{smart\_ring\_connection\_controller\_t}}
+\doxysubsubsection{\texorpdfstring{wifi\_controller}{wifi\_controller}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structsmart__ring__wifi__controller__t}{smart\+\_\+ring\+\_\+wifi\+\_\+controller\+\_\+t}} smart\+\_\+ring\+\_\+connection\+\_\+controller\+\_\+t\+::wifi\+\_\+controller}
+
+
+
+Wifi interface controller object. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/include/\mbox{\hyperlink{vars_8h}{vars.\+h}}\end{DoxyCompactItemize}

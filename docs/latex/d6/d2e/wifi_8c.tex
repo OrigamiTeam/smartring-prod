@@ -1,0 +1,77 @@
+\hypertarget{wifi_8c}{}\doxysection{main/wifi.c File Reference}
+\label{wifi_8c}\index{main/wifi.c@{main/wifi.c}}
+
+
+This file contains the functions responsible for the configuration and control of the wifi interface.  
+
+
+{\ttfamily \#include \char`\"{}libs.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{wifi_8c_ae5b34d2e88e58b1c000eca9b3b13ccb3}{wifi\+\_\+interface\+\_\+start}} (struct \mbox{\hyperlink{structsmart__ring__connection__controller__t}{smart\+\_\+ring\+\_\+connection\+\_\+controller\+\_\+t}} $\ast$connection\+\_\+controller)
+\begin{DoxyCompactList}\small\item\em Initialize the wifi interface and thread for the wireless communication. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{wifi_8c_a5f668ae8c3379b44cf6d7ac7c2874801}{wifi\+\_\+get\+\_\+rssi}} ()
+\begin{DoxyCompactList}\small\item\em Get the wifi rssi level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wifi_8c_a17ffc8fb3b05c122630879b3020801af}{wifi\+\_\+reset\+\_\+device}} ()
+\begin{DoxyCompactList}\small\item\em Delete the wifi credentials from the NVS storage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the functions responsible for the configuration and control of the wifi interface. 
+
+\begin{DoxyAuthor}{Author}
+David Abreu @ Quantum Leap (\href{mailto:david@quleap.com}{\texttt{ david@quleap.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/10-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{wifi_8c_a5f668ae8c3379b44cf6d7ac7c2874801}\label{wifi_8c_a5f668ae8c3379b44cf6d7ac7c2874801}} 
+\index{wifi.c@{wifi.c}!wifi\_get\_rssi@{wifi\_get\_rssi}}
+\index{wifi\_get\_rssi@{wifi\_get\_rssi}!wifi.c@{wifi.c}}
+\doxysubsubsection{\texorpdfstring{wifi\_get\_rssi()}{wifi\_get\_rssi()}}
+{\footnotesize\ttfamily int8\+\_\+t wifi\+\_\+get\+\_\+rssi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the wifi rssi level. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em rssi} & RSSI level of the device \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{wifi_8c_ae5b34d2e88e58b1c000eca9b3b13ccb3}\label{wifi_8c_ae5b34d2e88e58b1c000eca9b3b13ccb3}} 
+\index{wifi.c@{wifi.c}!wifi\_interface\_start@{wifi\_interface\_start}}
+\index{wifi\_interface\_start@{wifi\_interface\_start}!wifi.c@{wifi.c}}
+\doxysubsubsection{\texorpdfstring{wifi\_interface\_start()}{wifi\_interface\_start()}}
+{\footnotesize\ttfamily void wifi\+\_\+interface\+\_\+start (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsmart__ring__connection__controller__t}{smart\+\_\+ring\+\_\+connection\+\_\+controller\+\_\+t}} $\ast$}]{connection\+\_\+controller }\end{DoxyParamCaption})}
+
+
+
+Initialize the wifi interface and thread for the wireless communication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$connection\+\_\+controller} & Connection object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{wifi_8c_a17ffc8fb3b05c122630879b3020801af}\label{wifi_8c_a17ffc8fb3b05c122630879b3020801af}} 
+\index{wifi.c@{wifi.c}!wifi\_reset\_device@{wifi\_reset\_device}}
+\index{wifi\_reset\_device@{wifi\_reset\_device}!wifi.c@{wifi.c}}
+\doxysubsubsection{\texorpdfstring{wifi\_reset\_device()}{wifi\_reset\_device()}}
+{\footnotesize\ttfamily void wifi\+\_\+reset\+\_\+device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Delete the wifi credentials from the NVS storage. 
+

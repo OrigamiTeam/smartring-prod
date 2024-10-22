@@ -1,0 +1,25 @@
+/*******************************************************************************
+ * File: chaneglog.txt                                                         *
+ * Project: smart_ring_ui                                                      *
+ * File Created: Tuesday, 18th August 2020 5:28:52 pm                          *
+ * Author: bfonseca (bfonseca@quleap.com)                                      *
+ * -----                                                                       *
+ * Last Modified: Thursday, 27th August 2020 1:11:56 pm                        *
+ * Modified By: bfonseca (bfonseca@quleap.com>)                                *
+ * -----                                                                       *
+ * 2020-08-18	BF	Updated LVGL to 7.3.1
+ * 2020-08-18	BF	Updated for new API   
+ * 2020-08-19	BF	Implemented 'set_text_fmt' on some labels
+ * 2020-08-20	BF	Reworked "New Delivery Menu"
+ * 2020-08-20	BF	Added SIMULATOR_MODE precompiler conditions in 
+ *                  smart_ring_ui_init()
+ * 2020-08-21	BF	Added 'device' icon
+ * 2020-08-21	BF	Reworked PIN menu
+ * 2020-08-21	BF	Added 'logout' icon
+ * 2020-08-21	BF	Added 'auto' icon
+ * 2020-08-2x	BF	Reworked screens 
+ * 2020-08-2x	BF	Added function to prevent focus loss in new_delivery and in stock
+ * 2020-08-2x	BF	Small bugfixes
+ * 2020-08-27	BF	Added Blank Screeen
+ * 2020-08-27	BF	Added set/get functions for smart_ring_ui_flags
+ *******************************************************************************/

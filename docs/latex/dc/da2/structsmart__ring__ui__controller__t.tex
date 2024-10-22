@@ -1,0 +1,166 @@
+\hypertarget{structsmart__ring__ui__controller__t}{}\doxysection{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t Struct Reference}
+\label{structsmart__ring__ui__controller__t}\index{smart\_ring\_ui\_controller\_t@{smart\_ring\_ui\_controller\_t}}
+
+
+Controller that has the main information needed about the UI system, to prevent unnecessary functions.  
+
+
+
+
+{\ttfamily \#include $<$smart\+\_\+ring\+\_\+ui.\+h$>$}
+
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionsmart__ring__ui__controller__t_1_1map}{map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a3a25642cc6486d07aeb1c889be660b5f}\label{structsmart__ring__ui__controller__t_a3a25642cc6486d07aeb1c889be660b5f}} 
+lv\+\_\+obj\+\_\+t $\ast$ {\bfseries screen}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_aa4978032f26ee6e035dc0f6a979ef676}\label{structsmart__ring__ui__controller__t_aa4978032f26ee6e035dc0f6a979ef676}} 
+uint16\+\_\+t {\bfseries menu}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a626de3516c91152ebf3d0e4d2413d4ee}\label{structsmart__ring__ui__controller__t_a626de3516c91152ebf3d0e4d2413d4ee}} 
+enum \mbox{\hyperlink{smart__ring__ui_8h_a595709b215c99f9fd590e8057ec80d99}{smart\+\_\+ring\+\_\+ui\+\_\+state\+\_\+machine\+\_\+t}} {\bfseries state}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_ae2a9d87ad467472c8f57dab2caa1f413}\label{structsmart__ring__ui__controller__t_ae2a9d87ad467472c8f57dab2caa1f413}} 
+enum \mbox{\hyperlink{smart__ring__ui_8h_a595709b215c99f9fd590e8057ec80d99}{smart\+\_\+ring\+\_\+ui\+\_\+state\+\_\+machine\+\_\+t}} {\bfseries old\+\_\+state}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a36bd4c0a2c6fb00d6957e24dce311c0c}\label{structsmart__ring__ui__controller__t_a36bd4c0a2c6fb00d6957e24dce311c0c}} 
+union \mbox{\hyperlink{unionsmart__ring__ui__controller__t_1_1map}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t\+::map}} {\bfseries flags}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_ad5991de6ae5dd6894a9532a74c8d7176}\label{structsmart__ring__ui__controller__t_ad5991de6ae5dd6894a9532a74c8d7176}} 
+enum \mbox{\hyperlink{smart__ring__ui_8h_a43d6e8cef5b37d8eeb14b61edd993555}{smart\+\_\+ring\+\_\+ui\+\_\+timer\+\_\+type\+\_\+t}} {\bfseries timer\+\_\+type}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a1457aea1eee8e04b15209b4f3a0138e2}\label{structsmart__ring__ui__controller__t_a1457aea1eee8e04b15209b4f3a0138e2}} 
+esp\+\_\+timer\+\_\+handle\+\_\+t {\bfseries timer}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_abbc4467705b3eeed2e043660059ad4f9}\label{structsmart__ring__ui__controller__t_abbc4467705b3eeed2e043660059ad4f9}} 
+enum \mbox{\hyperlink{smart__ring__ui_8h_a43d6e8cef5b37d8eeb14b61edd993555}{smart\+\_\+ring\+\_\+ui\+\_\+timer\+\_\+type\+\_\+t}} {\bfseries standby\+\_\+timer\+\_\+type}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a7562960e38c9898a64dd917d9aae9bbb}\label{structsmart__ring__ui__controller__t_a7562960e38c9898a64dd917d9aae9bbb}} 
+esp\+\_\+timer\+\_\+handle\+\_\+t {\bfseries standby\+\_\+timer}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a07792bb44db385c86f798e8b7b0ebe52}\label{structsmart__ring__ui__controller__t_a07792bb44db385c86f798e8b7b0ebe52}} 
+char {\bfseries firmware\+\_\+version} \mbox{[}9\mbox{]}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a33739f84535cd45bd04ea1cada0b7029}\label{structsmart__ring__ui__controller__t_a33739f84535cd45bd04ea1cada0b7029}} 
+char {\bfseries device\+\_\+name} \mbox{[}32\mbox{]}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_aac279e52ed2b152f19aac1b933dfe7b4}\label{structsmart__ring__ui__controller__t_aac279e52ed2b152f19aac1b933dfe7b4}} 
+char {\bfseries mac\+\_\+address} \mbox{[}18\mbox{]}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a820916d77cce14031b37d93f7e72c715}\label{structsmart__ring__ui__controller__t_a820916d77cce14031b37d93f7e72c715}} 
+struct \mbox{\hyperlink{structsmart__ring__ui__styles__t}{smart\+\_\+ring\+\_\+ui\+\_\+styles\+\_\+t}} {\bfseries styles}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a20a92c9e1cb693ae4cba5254a7db115e}\label{structsmart__ring__ui__controller__t_a20a92c9e1cb693ae4cba5254a7db115e}} 
+uint8\+\_\+t {\bfseries stock}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_adbcf3ea57066d047d4c427068eed428b}\label{structsmart__ring__ui__controller__t_adbcf3ea57066d047d4c427068eed428b}} 
+uint8\+\_\+t {\bfseries updated\+\_\+stock}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_af597c83004b4e0fe43e7fa4a3284b330}\label{structsmart__ring__ui__controller__t_af597c83004b4e0fe43e7fa4a3284b330}} 
+uint8\+\_\+t {\bfseries support\+\_\+type}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_af21204f9ad6c689ce93c16aafaad6ad3}\label{structsmart__ring__ui__controller__t_af21204f9ad6c689ce93c16aafaad6ad3}} 
+char {\bfseries order\+\_\+mode}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a88152b2be29ada79785c2b3889d2a5dc}\label{structsmart__ring__ui__controller__t_a88152b2be29ada79785c2b3889d2a5dc}} 
+char {\bfseries updated\+\_\+order\+\_\+mode}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_acac9841ae91bd63437b628fe97b08fd7}\label{structsmart__ring__ui__controller__t_acac9841ae91bd63437b628fe97b08fd7}} 
+char {\bfseries ssid} \mbox{[}32\mbox{]}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a77e0425e0e5dccbd69fe1e7aa797f430}\label{structsmart__ring__ui__controller__t_a77e0425e0e5dccbd69fe1e7aa797f430}} 
+char {\bfseries connection\+\_\+type}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a5b4a12363b13b1f9a140c31b0accfb35}\label{structsmart__ring__ui__controller__t_a5b4a12363b13b1f9a140c31b0accfb35}} 
+int {\bfseries no\+\_\+deposit}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_aca992ba2bd2035a2c990892ffb870030}\label{structsmart__ring__ui__controller__t_aca992ba2bd2035a2c990892ffb870030}} 
+int {\bfseries full\+\_\+deposit}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a769b9d3b9acbcba30f9c73276a2642bc}\label{structsmart__ring__ui__controller__t_a769b9d3b9acbcba30f9c73276a2642bc}} 
+int {\bfseries current\+\_\+deposit}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_ac334134e93062c1a680584b5664e126c}\label{structsmart__ring__ui__controller__t_ac334134e93062c1a680584b5664e126c}} 
+bool {\bfseries is\+\_\+stable}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_aeb2799b4a5efa63e6a1ecc407516e110}\label{structsmart__ring__ui__controller__t_aeb2799b4a5efa63e6a1ecc407516e110}} 
+uint8\+\_\+t {\bfseries rssi\+\_\+level}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a6eb05e21dd37bb89385d7f7b41157578}\label{structsmart__ring__ui__controller__t_a6eb05e21dd37bb89385d7f7b41157578}} 
+bool {\bfseries is\+\_\+admin}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_abd7a88f4c66401fe0e6ac735b14992c7}\label{structsmart__ring__ui__controller__t_abd7a88f4c66401fe0e6ac735b14992c7}} 
+bool {\bfseries is\+\_\+master}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_aca8de4417aa09f83d92d3838e2f46820}\label{structsmart__ring__ui__controller__t_aca8de4417aa09f83d92d3838e2f46820}} 
+struct \mbox{\hyperlink{structsmart__ring__ui__delivery__t}{smart\+\_\+ring\+\_\+ui\+\_\+delivery\+\_\+t}} $\ast$ {\bfseries deliveries}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_abf35a51008468439b3dcdd276d9f35c0}\label{structsmart__ring__ui__controller__t_abf35a51008468439b3dcdd276d9f35c0}} 
+int {\bfseries number\+\_\+of\+\_\+deliveries}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a6d63b99d2413634bd3abd33f939fc6d8}\label{structsmart__ring__ui__controller__t_a6d63b99d2413634bd3abd33f939fc6d8}} 
+struct \mbox{\hyperlink{structsmart__ring__ui__order__t}{smart\+\_\+ring\+\_\+ui\+\_\+order\+\_\+t}} {\bfseries order}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a17d9bdc5e9bbb79af9400ff55ad213f4}\label{structsmart__ring__ui__controller__t_a17d9bdc5e9bbb79af9400ff55ad213f4}} 
+uint8\+\_\+t {\bfseries calibration\+\_\+step}
+\item 
+\mbox{\Hypertarget{structsmart__ring__ui__controller__t_a03adcd8c5651c46cc5df590aa29eb4b7}\label{structsmart__ring__ui__controller__t_a03adcd8c5651c46cc5df590aa29eb4b7}} 
+struct \mbox{\hyperlink{structsmart__ring__ui__standby__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+standby\+\_\+controller\+\_\+t}} {\bfseries standby\+\_\+controller}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controller that has the main information needed about the UI system, to prevent unnecessary functions. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & Current screen object \\
+\hline
+{\em menu} & Current menu id \\
+\hline
+{\em state} & Current state of the state machine \\
+\hline
+{\em has\+\_\+flags} & Inform the controller that there are flags, to prevent running the checks every cycle \\
+\hline
+{\em flags} & Flags for the operation of the controller \\
+\hline
+{\em timer} & Timer used for timeouts or flow control \\
+\hline
+{\em firmware\+\_\+version} & Firmware version \\
+\hline
+{\em device\+\_\+name} & Device name to present on main screen \\
+\hline
+{\em mac\+\_\+address} & Mac address of the device \\
+\hline
+{\em styles} & Styles to be used on the device screens \\
+\hline
+{\em stock} & Bottle stock to show the user \\
+\hline
+{\em support\+\_\+type} & Support type to communicate with the back-\/end \\
+\hline
+{\em order\+\_\+mode} & Type of order -\/ Manual (m) or Automatic (a) \\
+\hline
+{\em ssid} & SSID network to present to the user \\
+\hline
+{\em connection\+\_\+type} & Type of connection -\/ Wi\+Fi (w), Lora (l) or GSM (g) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/smart\+\_\+ring\+\_\+ui/\mbox{\hyperlink{smart__ring__ui_8h}{smart\+\_\+ring\+\_\+ui.\+h}}\end{DoxyCompactItemize}

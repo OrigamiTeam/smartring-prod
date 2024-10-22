@@ -1,0 +1,99 @@
+\hypertarget{sensors_8h}{}\doxysection{main/include/sensors.h File Reference}
+\label{sensors_8h}\index{main/include/sensors.h@{main/include/sensors.h}}
+
+
+This file contains the functions responsible for the configuration and reading of the loadcells.  
+
+
+{\ttfamily \#include \char`\"{}libs.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sensors_8h_a3f617f825917381259610fb6e8594b41}{ACCEPTED\+\_\+\+INTERVAL}}~240
+\begin{DoxyCompactList}\small\item\em need to differ from the last\+\_\+sensor\+\_\+sent by ACCEPTED\+\_\+\+INTERVAL The value {\bfseries{240}} is considered as about 1 Liter as requested by Marco Dias. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sensors_8h_a3ab54f046b7191d4ae5c72eccda3dbc1}{STATIC\+\_\+\+MAX\+\_\+\+COUNTER}}~15
+\item 
+\#define \mbox{\hyperlink{sensors_8h_a5b21274ebb370a8d8799ae66ae83551f}{STABILIZED\+\_\+\+INTERVAL}}~15
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sensors_8h_a4945a36f50e7e9c54ba85c70be9bade7}{smart\+\_\+ring\+\_\+sensors\+\_\+task}} (void $\ast$pv\+Parameter)
+\begin{DoxyCompactList}\small\item\em Thread resposible for controlling the reading of the sensors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the functions responsible for the configuration and reading of the loadcells. 
+
+\begin{DoxyAuthor}{Author}
+David Abreu (\href{mailto:david@quleap.com}{\texttt{ david@quleap.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/10-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sensors_8h_a3f617f825917381259610fb6e8594b41}\label{sensors_8h_a3f617f825917381259610fb6e8594b41}} 
+\index{sensors.h@{sensors.h}!ACCEPTED\_INTERVAL@{ACCEPTED\_INTERVAL}}
+\index{ACCEPTED\_INTERVAL@{ACCEPTED\_INTERVAL}!sensors.h@{sensors.h}}
+\doxysubsubsection{\texorpdfstring{ACCEPTED\_INTERVAL}{ACCEPTED\_INTERVAL}}
+{\footnotesize\ttfamily \#define ACCEPTED\+\_\+\+INTERVAL~240}
+
+
+
+need to differ from the last\+\_\+sensor\+\_\+sent by ACCEPTED\+\_\+\+INTERVAL The value {\bfseries{240}} is considered as about 1 Liter as requested by Marco Dias. 
+
+\DoxyHorRuler{0}
+
+
+Considering\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Full tank (Raw value) : 89711}
+\DoxyCodeLine{Empty tank (Raw value) : 85179}
+\DoxyCodeLine{}
+\DoxyCodeLine{Difference = 89711 -\/ 85179 = 4532}
+\DoxyCodeLine{}
+\DoxyCodeLine{1 Bottle = 18.9 Liters = 4532}
+\DoxyCodeLine{}
+\DoxyCodeLine{1 Liter = 4532 / 18.9 = 239.78 = 240 (Raw)}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{sensors_8h_a5b21274ebb370a8d8799ae66ae83551f}\label{sensors_8h_a5b21274ebb370a8d8799ae66ae83551f}} 
+\index{sensors.h@{sensors.h}!STABILIZED\_INTERVAL@{STABILIZED\_INTERVAL}}
+\index{STABILIZED\_INTERVAL@{STABILIZED\_INTERVAL}!sensors.h@{sensors.h}}
+\doxysubsubsection{\texorpdfstring{STABILIZED\_INTERVAL}{STABILIZED\_INTERVAL}}
+{\footnotesize\ttfamily \#define STABILIZED\+\_\+\+INTERVAL~15}
+
+The value is considered stable if the variation is below the STABILIZED\+\_\+\+INTERVAL \mbox{\Hypertarget{sensors_8h_a3ab54f046b7191d4ae5c72eccda3dbc1}\label{sensors_8h_a3ab54f046b7191d4ae5c72eccda3dbc1}} 
+\index{sensors.h@{sensors.h}!STATIC\_MAX\_COUNTER@{STATIC\_MAX\_COUNTER}}
+\index{STATIC\_MAX\_COUNTER@{STATIC\_MAX\_COUNTER}!sensors.h@{sensors.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_MAX\_COUNTER}{STATIC\_MAX\_COUNTER}}
+{\footnotesize\ttfamily \#define STATIC\+\_\+\+MAX\+\_\+\+COUNTER~15}
+
+The device needs to stay the same STATIC\+\_\+\+MAX\+\_\+\+COUNTER times in a row to be re-\/sent 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sensors_8h_a4945a36f50e7e9c54ba85c70be9bade7}\label{sensors_8h_a4945a36f50e7e9c54ba85c70be9bade7}} 
+\index{sensors.h@{sensors.h}!smart\_ring\_sensors\_task@{smart\_ring\_sensors\_task}}
+\index{smart\_ring\_sensors\_task@{smart\_ring\_sensors\_task}!sensors.h@{sensors.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_sensors\_task()}{smart\_ring\_sensors\_task()}}
+{\footnotesize\ttfamily void smart\+\_\+ring\+\_\+sensors\+\_\+task (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameter }\end{DoxyParamCaption})}
+
+
+
+Thread resposible for controlling the reading of the sensors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pv\+Parameter} & \\
+\hline
+\end{DoxyParams}

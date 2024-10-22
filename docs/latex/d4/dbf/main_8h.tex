@@ -1,0 +1,227 @@
+\hypertarget{main_8h}{}\doxysection{components/smart\+\_\+ring\+\_\+ui/menus/main.h File Reference}
+\label{main_8h}\index{components/smart\_ring\_ui/menus/main.h@{components/smart\_ring\_ui/menus/main.h}}
+
+
+Main screen header.  
+
+
+{\ttfamily \#include \char`\"{}lvgl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}smart\+\_\+ring\+\_\+ui.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsmart__ring__support__option__t}{smart\+\_\+ring\+\_\+support\+\_\+option\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8h_ab825ba6f9f7ef4ee6d9517bed30d8cf3}\label{main_8h_ab825ba6f9f7ef4ee6d9517bed30d8cf3}} 
+enum {\bfseries smart\+\_\+ring\+\_\+support\+\_\+type\+\_\+t} \{ \newline
+{\bfseries BAD\+\_\+\+TASTE\+\_\+\+WATER}
+, {\bfseries BOTH\+\_\+\+TAPS\+\_\+\+COLD}
+, {\bfseries NO\+\_\+\+COLD}
+, {\bfseries LEAKING\+\_\+\+WATER}
+, \newline
+{\bfseries OTHER}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8h_aacc9f2b114fa5e43bdcd514ff52a2d96}\label{main_8h_aacc9f2b114fa5e43bdcd514ff52a2d96}} 
+void {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+check\+\_\+handler} (lv\+\_\+obj\+\_\+t $\ast$button, lv\+\_\+event\+\_\+t event)
+\item 
+\mbox{\Hypertarget{main_8h_a222f149c1ab7a46b91c786d641559339}\label{main_8h_a222f149c1ab7a46b91c786d641559339}} 
+void {\bfseries main\+\_\+logout\+\_\+handler} (lv\+\_\+obj\+\_\+t $\ast$button, lv\+\_\+event\+\_\+t event)
+\item 
+\mbox{\Hypertarget{main_8h_a3f64d8c34803ea259e60326a2c6a09a1}\label{main_8h_a3f64d8c34803ea259e60326a2c6a09a1}} 
+void {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+main\+\_\+update\+\_\+stock\+\_\+value} (int stock)
+\item 
+void \mbox{\hyperlink{main_8h_a20791444c5e414136e8f63cfaff07b5e}{main\+\_\+create\+\_\+screen}} (lv\+\_\+obj\+\_\+t $\ast$parent, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\begin{DoxyCompactList}\small\item\em Create the main screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8h_a78134d3d2fab911a3f47eae729d473ba}{main\+\_\+create\+\_\+dashboard\+\_\+menu}} (lv\+\_\+obj\+\_\+t $\ast$parent, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\begin{DoxyCompactList}\small\item\em Create the dashboard screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8h_a6ca596a2c1e8bc915a44424bc1f019ab}\label{main_8h_a6ca596a2c1e8bc915a44424bc1f019ab}} 
+void {\bfseries smart\+\_\+ring\+\_\+main\+\_\+debug\+\_\+update\+\_\+sensor\+\_\+values} (int old\+\_\+value, int new\+\_\+value, bool stable)
+\item 
+void \mbox{\hyperlink{main_8h_a64294fa9afe784b30f5e7f431fa12293}{main\+\_\+create\+\_\+debug\+\_\+menu}} (lv\+\_\+obj\+\_\+t $\ast$parent, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\begin{DoxyCompactList}\small\item\em Create the debug screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8h_ac55ae64967a0190aa36254e2e90a7187}{main\+\_\+create\+\_\+reset\+\_\+menu}} (lv\+\_\+obj\+\_\+t $\ast$parent, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\begin{DoxyCompactList}\small\item\em Create the reset device or wifi menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8h_a4d6e11073cb975fa5dcf3e60cc09fb29}{main\+\_\+create\+\_\+info\+\_\+screen}} (lv\+\_\+obj\+\_\+t $\ast$parent, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\begin{DoxyCompactList}\small\item\em Create the device information screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8h_af60d483d6e98a004991b19b29c669734}\label{main_8h_af60d483d6e98a004991b19b29c669734}} 
+void {\bfseries main\+\_\+home\+\_\+handler} (lv\+\_\+obj\+\_\+t $\ast$button, lv\+\_\+event\+\_\+t event)
+\item 
+\mbox{\Hypertarget{main_8h_a372735b3425ddc0ae75bb31dbdb86526}\label{main_8h_a372735b3425ddc0ae75bb31dbdb86526}} 
+void {\bfseries main\+\_\+update\+\_\+rssi\+\_\+signal} (uint8\+\_\+t rssi\+\_\+level)
+\item 
+\mbox{\Hypertarget{main_8h_adf1868a362c49e37137f2f154ef2c35e}\label{main_8h_adf1868a362c49e37137f2f154ef2c35e}} 
+void {\bfseries main\+\_\+update\+\_\+device\+\_\+name} (char $\ast$device\+\_\+name)
+\item 
+\mbox{\Hypertarget{main_8h_a4c7614273ddb9ee73ca11202e4be9143}\label{main_8h_a4c7614273ddb9ee73ca11202e4be9143}} 
+void {\bfseries main\+\_\+update\+\_\+eta\+\_\+information} (char $\ast$information)
+\item 
+\mbox{\Hypertarget{main_8h_a40f6fb6e1502ef1b60154c408ca590e1}\label{main_8h_a40f6fb6e1502ef1b60154c408ca590e1}} 
+void {\bfseries main\+\_\+update\+\_\+bottle\+\_\+icon} (struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\item 
+\mbox{\Hypertarget{main_8h_a6ceff22a517283f401628256785d55bf}\label{main_8h_a6ceff22a517283f401628256785d55bf}} 
+void {\bfseries main\+\_\+update\+\_\+stock} (int stock)
+\item 
+\mbox{\Hypertarget{main_8h_a290c920dff22ea663ebca17f283e3e0d}\label{main_8h_a290c920dff22ea663ebca17f283e3e0d}} 
+void {\bfseries main\+\_\+update\+\_\+order\+\_\+mode} (char order\+\_\+mode)
+\item 
+\mbox{\Hypertarget{main_8h_aefd46ea75880ccab465ca70b2e26e89e}\label{main_8h_aefd46ea75880ccab465ca70b2e26e89e}} 
+void {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+create\+\_\+sleep\+\_\+screen} (lv\+\_\+obj\+\_\+t $\ast$parent, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\item 
+\mbox{\Hypertarget{main_8h_adb09d15294cba426c20eebdf225e69b0}\label{main_8h_adb09d15294cba426c20eebdf225e69b0}} 
+void {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+main\+\_\+update\+\_\+next\+\_\+eta} ()
+\item 
+\mbox{\Hypertarget{main_8h_a4134f9d8767f15f5f11b6d1b86d4d5fa}\label{main_8h_a4134f9d8767f15f5f11b6d1b86d4d5fa}} 
+void {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+main\+\_\+clear\+\_\+next\+\_\+eta} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main screen header. 
+
+\begin{DoxyAuthor}{Author}
+David Abreu @ Quantum Leap (\href{mailto:david@quleap.com}{\texttt{ david@quleap.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/06-\/23
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8h_a78134d3d2fab911a3f47eae729d473ba}\label{main_8h_a78134d3d2fab911a3f47eae729d473ba}} 
+\index{main.h@{main.h}!main\_create\_dashboard\_menu@{main\_create\_dashboard\_menu}}
+\index{main\_create\_dashboard\_menu@{main\_create\_dashboard\_menu}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{main\_create\_dashboard\_menu()}{main\_create\_dashboard\_menu()}}
+{\footnotesize\ttfamily void main\+\_\+create\+\_\+dashboard\+\_\+menu (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t $\ast$}]{parent,  }\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller }\end{DoxyParamCaption})}
+
+
+
+Create the dashboard screen. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & Screen object \\
+\hline
+{\em $\ast$ui\+\_\+controller} & UI controller object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8h_a64294fa9afe784b30f5e7f431fa12293}\label{main_8h_a64294fa9afe784b30f5e7f431fa12293}} 
+\index{main.h@{main.h}!main\_create\_debug\_menu@{main\_create\_debug\_menu}}
+\index{main\_create\_debug\_menu@{main\_create\_debug\_menu}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{main\_create\_debug\_menu()}{main\_create\_debug\_menu()}}
+{\footnotesize\ttfamily void main\+\_\+create\+\_\+debug\+\_\+menu (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t $\ast$}]{parent,  }\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller }\end{DoxyParamCaption})}
+
+
+
+Create the debug screen. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & Screen object \\
+\hline
+{\em $\ast$ui\+\_\+controller} & UI controller object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8h_a4d6e11073cb975fa5dcf3e60cc09fb29}\label{main_8h_a4d6e11073cb975fa5dcf3e60cc09fb29}} 
+\index{main.h@{main.h}!main\_create\_info\_screen@{main\_create\_info\_screen}}
+\index{main\_create\_info\_screen@{main\_create\_info\_screen}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{main\_create\_info\_screen()}{main\_create\_info\_screen()}}
+{\footnotesize\ttfamily void main\+\_\+create\+\_\+info\+\_\+screen (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t $\ast$}]{parent,  }\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller }\end{DoxyParamCaption})}
+
+
+
+Create the device information screen. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & Screen object \\
+\hline
+{\em $\ast$ui\+\_\+controller} & UI controller object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+TODO\+: add GSM and Lo\+RA\mbox{\Hypertarget{main_8h_ac55ae64967a0190aa36254e2e90a7187}\label{main_8h_ac55ae64967a0190aa36254e2e90a7187}} 
+\index{main.h@{main.h}!main\_create\_reset\_menu@{main\_create\_reset\_menu}}
+\index{main\_create\_reset\_menu@{main\_create\_reset\_menu}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{main\_create\_reset\_menu()}{main\_create\_reset\_menu()}}
+{\footnotesize\ttfamily void main\+\_\+create\+\_\+reset\+\_\+menu (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t $\ast$}]{parent,  }\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller }\end{DoxyParamCaption})}
+
+
+
+Create the reset device or wifi menu. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & Screen object \\
+\hline
+{\em $\ast$ui\+\_\+controller} & UI controller object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8h_a20791444c5e414136e8f63cfaff07b5e}\label{main_8h_a20791444c5e414136e8f63cfaff07b5e}} 
+\index{main.h@{main.h}!main\_create\_screen@{main\_create\_screen}}
+\index{main\_create\_screen@{main\_create\_screen}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{main\_create\_screen()}{main\_create\_screen()}}
+{\footnotesize\ttfamily void main\+\_\+create\+\_\+screen (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t $\ast$}]{parent,  }\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller }\end{DoxyParamCaption})}
+
+
+
+Create the main screen. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & Screen object \\
+\hline
+{\em $\ast$ui\+\_\+controller} & UI controller object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

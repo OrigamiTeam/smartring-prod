@@ -1,0 +1,9 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "esp_system.h": "c",
+        "spi_master.h": "c",
+        "gpio_struct.h": "c",
+        "*.ipp": "cpp"
+    }
+}

@@ -1,0 +1,9 @@
+# Name,   Type, SubType, Offset,    Size,   Flags
+nvs,      data, nvs,     ,          0x3000,
+otadata,  data, ota,     ,          0x2000,
+#eeprom,   data, 0x99,    ,          0x1000 ,
+ota0,     app,  ota_0,   ,          0x1E0000,
+ota1,     app,  ota_1,   ,          0x1E0000,
+storage,   data, spiffs,  ,          0x26000,
+
+# Total (nvs+otadata+ota0+ota1+storage): 3.977.216 bytes = 3,793 Mbytes

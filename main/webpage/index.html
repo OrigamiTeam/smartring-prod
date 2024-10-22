@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="app.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>SmartRing</title>
+</head>
+<body>
+   
+    <img id="logo_ql" src="quantum_leap.png" alt="Quantum Leap">
+
+    <img id="logo_fv" src="fonte_viva.png" alt="Fonte Viva">
+
+    <div class="form1">
+        <p>Redes WiFi</p>
+        <div class="redes">
+            <p>A analisar...</p>
+        </div>
+
+        <button id="goto_form2">Continuar</button>
+    </div>
+
+    <div class="form2">
+        <p>Rede</p>
+        <p id="wifi"></p>
+
+        <div class="input">
+            <div class="password">
+                <input required type="password" name="password" id="password">
+                <label for="password">Password</label>
+            </div>
+            
+            <div class="reveal">
+                <input type="checkbox" name="show_password" id="show_password">
+                <label for="show_password">Mostrar password</label>
+            </div>
+            
+            <button id="provision">Continuar</button>
+            <button id="Cancel">Cancelar</button>
+        </div>
+
+        <div class="result">
+            <p>Estado</p>
+            <p id="state">A conectar-se à rede</p>
+            <p id="final">O dispositivo irá reiniciar dentro de 5 segundos</p>
+        </div>
+    </div>
+        
+</body>
+</html>

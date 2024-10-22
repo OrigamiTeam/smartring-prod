@@ -1,0 +1,210 @@
+\hypertarget{mqtt_8h}{}\doxysection{main/include/mqtt.h File Reference}
+\label{mqtt_8h}\index{main/include/mqtt.h@{main/include/mqtt.h}}
+
+
+MQTT Header.  
+
+
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmqtt__controller__t}{mqtt\+\_\+controller\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Object used to controll the device MQTT interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mqtt_8h_a6459fcfc94d1f93a57a4dcf419aa8beb}\label{mqtt_8h_a6459fcfc94d1f93a57a4dcf419aa8beb}} 
+\#define {\bfseries TOPIC\+\_\+\+OK}~0
+\begin{DoxyCompactList}\small\item\em The received topic equals the one we\textquotesingle{}re testing for. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mqtt_8h_a03acf61c3de2517e471494cea2f44755}\label{mqtt_8h_a03acf61c3de2517e471494cea2f44755}} 
+\#define {\bfseries MQTT\+\_\+\+BROKER}~\char`\"{}a2ed3xy6iprkkz-\/ats.\+iot.\+eu-\/central-\/1.amazonaws.\+com\char`\"{}
+\begin{DoxyCompactList}\small\item\em MQTT host. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mqtt_8h_aa8632baff6bbb5004385998918f1e6bd}\label{mqtt_8h_aa8632baff6bbb5004385998918f1e6bd}} 
+\#define {\bfseries MQTT\+\_\+\+PORT}~8883
+\begin{DoxyCompactList}\small\item\em MQTT port. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mqtt_8h_a9678aeec976e433841fe96834f83ab99}\label{mqtt_8h_a9678aeec976e433841fe96834f83ab99}} 
+\#define {\bfseries CLIENT\+\_\+\+ID\+\_\+\+PREFIX}~\char`\"{}smartring-\/\char`\"{}
+\begin{DoxyCompactList}\small\item\em MQTT client prefix to append the device mac address. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mqtt_8h_a38fbc8f8550bf8373afc017b4ab3f888}\label{mqtt_8h_a38fbc8f8550bf8373afc017b4ab3f888}} 
+\#define {\bfseries MQTT\+\_\+\+APP\+\_\+\+TASK\+\_\+\+STACK\+\_\+\+SIZE}~8192
+\begin{DoxyCompactList}\small\item\em Thread stack size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mqtt_8h_a84a442159d86866c07207a3f17ea48fd}\label{mqtt_8h_a84a442159d86866c07207a3f17ea48fd}} 
+\#define {\bfseries MQTT\+\_\+\+APP\+\_\+\+TASK\+\_\+\+PRIORITY}~2
+\begin{DoxyCompactList}\small\item\em Task priority. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mqtt_8h_a3858585ea9fdb3c7aaa21a63ae6f0773}\label{mqtt_8h_a3858585ea9fdb3c7aaa21a63ae6f0773}} 
+\#define {\bfseries MQTT\+\_\+\+APP\+\_\+\+TASK\+\_\+\+CORE\+\_\+\+ID}~0
+\begin{DoxyCompactList}\small\item\em Task runs on core 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393}{mqtt\+\_\+message\+\_\+type\+\_\+t}} \{ \newline
+\mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393ae96c21be1143826a85be491edc8ea6c0}{SEND\+\_\+\+SENSORS\+\_\+\+RESPONSE}}
+, \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393ac1d1e7d0880d70a14cc82c83ffd438f7}{SEND\+\_\+\+DEVICE\+\_\+\+INFORMATION}}
+, \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393aca35ed895b807fc1d08dd9450c0d8cfc}{SEND\+\_\+\+CALIBRATION}}
+, \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393ae3d91687daee76ab2e1fda76ea311120}{SEND\+\_\+\+SENSORS}}
+, \newline
+\mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393aad95a863bb2c4e8dee645c3cb0d67ce8}{SEND\+\_\+\+LOGIN}}
+, \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393af4063315a29aa6de966f6d9f68b67600}{SEND\+\_\+\+ORDER\+\_\+\+MODE}}
+, \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a0beda185bcdeaf90cac5cbcafc027903}{SEND\+\_\+\+STOCK}}
+, \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a6f20ca468884c8814be7213dabbff745}{SEND\+\_\+\+TICKET}}
+, \newline
+\mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a8aa07a7eade855563dcf7058cb01934c}{SEND\+\_\+\+NEW\+\_\+\+DELIVERY}}
+, \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a48c71018df3437b8d192d2c3b39480ce}{SEND\+\_\+\+CONFIRM\+\_\+\+DELIVERY}}
+, \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a65eedf5a4fcaa3e2609edb727c1b0d52}{SEND\+\_\+\+GET\+\_\+\+ORDERS}}
+, \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a201aa57e505dc9e267695b1d2ed50523}{SEND\+\_\+\+REQUEST\+\_\+\+DEVICE\+\_\+\+INFORMATION}}
+, \newline
+\mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a0a3809283c2e5548be5a2c8e21f52b31}{SEND\+\_\+\+REQUEST\+\_\+\+GROUP\+\_\+\+INFORMATION}}
+ \}
+\begin{DoxyCompactList}\small\item\em Type of MQTT message to create the correct message and topic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mqtt_8h_a438c025997ed311b0c6784e99e3a533b}\label{mqtt_8h_a438c025997ed311b0c6784e99e3a533b}} 
+const uint8\+\_\+t aws\+\_\+root\+\_\+ca\+\_\+pem\+\_\+start\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+aws\+\_\+root\+\_\+ca\+\_\+pem\+\_\+start\char`\"{})
+\begin{DoxyCompactList}\small\item\em Start of the AWS root certificate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mqtt_8h_a1399bdf60b45334deb5f2dae22e8cc81}\label{mqtt_8h_a1399bdf60b45334deb5f2dae22e8cc81}} 
+const uint8\+\_\+t aws\+\_\+root\+\_\+ca\+\_\+pem\+\_\+end\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+aws\+\_\+root\+\_\+ca\+\_\+pem\+\_\+end\char`\"{})
+\begin{DoxyCompactList}\small\item\em End of the AWS root certificate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mqtt_8h_aceb2b69866eec7882a0f6504a71b9fbc}\label{mqtt_8h_aceb2b69866eec7882a0f6504a71b9fbc}} 
+const uint8\+\_\+t certificate\+\_\+pem\+\_\+crt\+\_\+start\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+certificate\+\_\+pem\+\_\+crt\+\_\+start\char`\"{})
+\begin{DoxyCompactList}\small\item\em Start of the device certificate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mqtt_8h_a3342ca2832f956b7a57e16df166dee5c}\label{mqtt_8h_a3342ca2832f956b7a57e16df166dee5c}} 
+const uint8\+\_\+t certificate\+\_\+pem\+\_\+crt\+\_\+end\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+certificate\+\_\+pem\+\_\+crt\+\_\+end\char`\"{})
+\begin{DoxyCompactList}\small\item\em End of the device certificate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mqtt_8h_aa65275f55e0456a8c1dd6d4e758b5a42}\label{mqtt_8h_aa65275f55e0456a8c1dd6d4e758b5a42}} 
+const uint8\+\_\+t private\+\_\+pem\+\_\+key\+\_\+start\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+private\+\_\+pem\+\_\+key\+\_\+start\char`\"{})
+\begin{DoxyCompactList}\small\item\em Start of the device private key. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mqtt_8h_a67b7a6cb7cb3a2c6a8ead6f18bd9aa6c}\label{mqtt_8h_a67b7a6cb7cb3a2c6a8ead6f18bd9aa6c}} 
+const uint8\+\_\+t private\+\_\+pem\+\_\+key\+\_\+end\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+private\+\_\+pem\+\_\+key\+\_\+end\char`\"{})
+\begin{DoxyCompactList}\small\item\em End of the device private key. \end{DoxyCompactList}\item 
+Io\+T\+\_\+\+Error\+\_\+t \mbox{\hyperlink{mqtt_8h_a61c24a247f60d074364bf61710e775f8}{mqtt\+\_\+send\+\_\+message}} (enum \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393}{mqtt\+\_\+message\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Send a message using the MQTT protocol to AWS server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mqtt_8h_a86463e8b9af2f80f77472b6808637fbc}{mqtt\+\_\+aws\+\_\+thread}} (void $\ast$param)
+\begin{DoxyCompactList}\small\item\em The device thread (task) containing the functioning of the AWS MQTT communication. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+MQTT Header. 
+
+\begin{DoxyAuthor}{Author}
+David Abreu @ Quantum Leap (\href{mailto:david@quleap.com}{\texttt{ david@quleap.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/10-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{mqtt_8h_abfd91b9387e02ce013d441184cbe9393}\label{mqtt_8h_abfd91b9387e02ce013d441184cbe9393}} 
+\index{mqtt.h@{mqtt.h}!mqtt\_message\_type\_t@{mqtt\_message\_type\_t}}
+\index{mqtt\_message\_type\_t@{mqtt\_message\_type\_t}!mqtt.h@{mqtt.h}}
+\doxysubsubsection{\texorpdfstring{mqtt\_message\_type\_t}{mqtt\_message\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393}{mqtt\+\_\+message\+\_\+type\+\_\+t}}}
+
+
+
+Type of MQTT message to create the correct message and topic. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEND\_SENSORS\_RESPONSE@{SEND\_SENSORS\_RESPONSE}!mqtt.h@{mqtt.h}}\index{mqtt.h@{mqtt.h}!SEND\_SENSORS\_RESPONSE@{SEND\_SENSORS\_RESPONSE}}}\mbox{\Hypertarget{mqtt_8h_abfd91b9387e02ce013d441184cbe9393ae96c21be1143826a85be491edc8ea6c0}\label{mqtt_8h_abfd91b9387e02ce013d441184cbe9393ae96c21be1143826a85be491edc8ea6c0}} 
+SEND\+\_\+\+SENSORS\+\_\+\+RESPONSE&Send the sensors value when requested. Topic \+: d/\{device\+\_\+mac\}/wl Info \+: Sensor raw value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEND\_DEVICE\_INFORMATION@{SEND\_DEVICE\_INFORMATION}!mqtt.h@{mqtt.h}}\index{mqtt.h@{mqtt.h}!SEND\_DEVICE\_INFORMATION@{SEND\_DEVICE\_INFORMATION}}}\mbox{\Hypertarget{mqtt_8h_abfd91b9387e02ce013d441184cbe9393ac1d1e7d0880d70a14cc82c83ffd438f7}\label{mqtt_8h_abfd91b9387e02ce013d441184cbe9393ac1d1e7d0880d70a14cc82c83ffd438f7}} 
+SEND\+\_\+\+DEVICE\+\_\+\+INFORMATION&Send the device information, when connected. Topic \+: d/\{device\+\_\+mac\}/con Info \+: no deposit full deposit wifi rssi Firmware version connection type \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEND\_CALIBRATION@{SEND\_CALIBRATION}!mqtt.h@{mqtt.h}}\index{mqtt.h@{mqtt.h}!SEND\_CALIBRATION@{SEND\_CALIBRATION}}}\mbox{\Hypertarget{mqtt_8h_abfd91b9387e02ce013d441184cbe9393aca35ed895b807fc1d08dd9450c0d8cfc}\label{mqtt_8h_abfd91b9387e02ce013d441184cbe9393aca35ed895b807fc1d08dd9450c0d8cfc}} 
+SEND\+\_\+\+CALIBRATION&Send device calibration. Topic \+: d/\{device\+\_\+mac\}/c Info \+: no deposit full deposit \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEND\_SENSORS@{SEND\_SENSORS}!mqtt.h@{mqtt.h}}\index{mqtt.h@{mqtt.h}!SEND\_SENSORS@{SEND\_SENSORS}}}\mbox{\Hypertarget{mqtt_8h_abfd91b9387e02ce013d441184cbe9393ae3d91687daee76ab2e1fda76ea311120}\label{mqtt_8h_abfd91b9387e02ce013d441184cbe9393ae3d91687daee76ab2e1fda76ea311120}} 
+SEND\+\_\+\+SENSORS&Send device sensors. Topic \+: d/\{device\+\_\+mac\}/wl Info \+: Sensors raw value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEND\_LOGIN@{SEND\_LOGIN}!mqtt.h@{mqtt.h}}\index{mqtt.h@{mqtt.h}!SEND\_LOGIN@{SEND\_LOGIN}}}\mbox{\Hypertarget{mqtt_8h_abfd91b9387e02ce013d441184cbe9393aad95a863bb2c4e8dee645c3cb0d67ce8}\label{mqtt_8h_abfd91b9387e02ce013d441184cbe9393aad95a863bb2c4e8dee645c3cb0d67ce8}} 
+SEND\+\_\+\+LOGIN&Send device inserted login pin. Topic \+: d/\{device\+\_\+mac\}/pin Info \+: Inserted pin \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEND\_ORDER\_MODE@{SEND\_ORDER\_MODE}!mqtt.h@{mqtt.h}}\index{mqtt.h@{mqtt.h}!SEND\_ORDER\_MODE@{SEND\_ORDER\_MODE}}}\mbox{\Hypertarget{mqtt_8h_abfd91b9387e02ce013d441184cbe9393af4063315a29aa6de966f6d9f68b67600}\label{mqtt_8h_abfd91b9387e02ce013d441184cbe9393af4063315a29aa6de966f6d9f68b67600}} 
+SEND\+\_\+\+ORDER\+\_\+\+MODE&Send device order mode. Topic \+: d/\{device\+\_\+mac\}/o/mode Info \+: Device order mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEND\_STOCK@{SEND\_STOCK}!mqtt.h@{mqtt.h}}\index{mqtt.h@{mqtt.h}!SEND\_STOCK@{SEND\_STOCK}}}\mbox{\Hypertarget{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a0beda185bcdeaf90cac5cbcafc027903}\label{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a0beda185bcdeaf90cac5cbcafc027903}} 
+SEND\+\_\+\+STOCK&Send device stock. Topic \+: d/\{device\+\_\+mac\}/stock Info \+: Stock \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEND\_TICKET@{SEND\_TICKET}!mqtt.h@{mqtt.h}}\index{mqtt.h@{mqtt.h}!SEND\_TICKET@{SEND\_TICKET}}}\mbox{\Hypertarget{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a6f20ca468884c8814be7213dabbff745}\label{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a6f20ca468884c8814be7213dabbff745}} 
+SEND\+\_\+\+TICKET&Send support ticket. Topic \+: d/\{device\+\_\+mac\}/t Info \+: Support type id number \{smart\+\_\+ring\+\_\+support\+\_\+type\+\_\+t\} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEND\_NEW\_DELIVERY@{SEND\_NEW\_DELIVERY}!mqtt.h@{mqtt.h}}\index{mqtt.h@{mqtt.h}!SEND\_NEW\_DELIVERY@{SEND\_NEW\_DELIVERY}}}\mbox{\Hypertarget{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a8aa07a7eade855563dcf7058cb01934c}\label{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a8aa07a7eade855563dcf7058cb01934c}} 
+SEND\+\_\+\+NEW\+\_\+\+DELIVERY&Send new delivery request. Topic \+: d/\{device\+\_\+mac\}/o Info \+: Number of bottles Number of cups \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEND\_CONFIRM\_DELIVERY@{SEND\_CONFIRM\_DELIVERY}!mqtt.h@{mqtt.h}}\index{mqtt.h@{mqtt.h}!SEND\_CONFIRM\_DELIVERY@{SEND\_CONFIRM\_DELIVERY}}}\mbox{\Hypertarget{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a48c71018df3437b8d192d2c3b39480ce}\label{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a48c71018df3437b8d192d2c3b39480ce}} 
+SEND\+\_\+\+CONFIRM\+\_\+\+DELIVERY&Confirm new delivery. Topic \+: d/\{device\+\_\+mac\}/o/conf Info \+: Transaction ID Confirmation character \char`\"{}a\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEND\_GET\_ORDERS@{SEND\_GET\_ORDERS}!mqtt.h@{mqtt.h}}\index{mqtt.h@{mqtt.h}!SEND\_GET\_ORDERS@{SEND\_GET\_ORDERS}}}\mbox{\Hypertarget{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a65eedf5a4fcaa3e2609edb727c1b0d52}\label{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a65eedf5a4fcaa3e2609edb727c1b0d52}} 
+SEND\+\_\+\+GET\+\_\+\+ORDERS&Get orders. Topic \+: d/\{device\+\_\+mac\}/o/list Info \+: Empty (Since the library doesn\textquotesingle{}t allow, send a space \char`\"{} \char`\"{}) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEND\_REQUEST\_DEVICE\_INFORMATION@{SEND\_REQUEST\_DEVICE\_INFORMATION}!mqtt.h@{mqtt.h}}\index{mqtt.h@{mqtt.h}!SEND\_REQUEST\_DEVICE\_INFORMATION@{SEND\_REQUEST\_DEVICE\_INFORMATION}}}\mbox{\Hypertarget{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a201aa57e505dc9e267695b1d2ed50523}\label{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a201aa57e505dc9e267695b1d2ed50523}} 
+SEND\+\_\+\+REQUEST\+\_\+\+DEVICE\+\_\+\+INFORMATION&Request device information. Topic \+: d/\{device\+\_\+mac\}/s Info \+: 0 (Number 0 for device) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEND\_REQUEST\_GROUP\_INFORMATION@{SEND\_REQUEST\_GROUP\_INFORMATION}!mqtt.h@{mqtt.h}}\index{mqtt.h@{mqtt.h}!SEND\_REQUEST\_GROUP\_INFORMATION@{SEND\_REQUEST\_GROUP\_INFORMATION}}}\mbox{\Hypertarget{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a0a3809283c2e5548be5a2c8e21f52b31}\label{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a0a3809283c2e5548be5a2c8e21f52b31}} 
+SEND\+\_\+\+REQUEST\+\_\+\+GROUP\+\_\+\+INFORMATION&Request group information. Topic \+: d/\{device\+\_\+mac\}/s Info \+: 1 (Number 1 for group) \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mqtt_8h_a86463e8b9af2f80f77472b6808637fbc}\label{mqtt_8h_a86463e8b9af2f80f77472b6808637fbc}} 
+\index{mqtt.h@{mqtt.h}!mqtt\_aws\_thread@{mqtt\_aws\_thread}}
+\index{mqtt\_aws\_thread@{mqtt\_aws\_thread}!mqtt.h@{mqtt.h}}
+\doxysubsubsection{\texorpdfstring{mqtt\_aws\_thread()}{mqtt\_aws\_thread()}}
+{\footnotesize\ttfamily void mqtt\+\_\+aws\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{param }\end{DoxyParamCaption})}
+
+
+
+The device thread (task) containing the functioning of the AWS MQTT communication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & user data to be sent to the thread if needed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mqtt_8h_a61c24a247f60d074364bf61710e775f8}\label{mqtt_8h_a61c24a247f60d074364bf61710e775f8}} 
+\index{mqtt.h@{mqtt.h}!mqtt\_send\_message@{mqtt\_send\_message}}
+\index{mqtt\_send\_message@{mqtt\_send\_message}!mqtt.h@{mqtt.h}}
+\doxysubsubsection{\texorpdfstring{mqtt\_send\_message()}{mqtt\_send\_message()}}
+{\footnotesize\ttfamily Io\+T\+\_\+\+Error\+\_\+t mqtt\+\_\+send\+\_\+message (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393}{mqtt\+\_\+message\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Send a message using the MQTT protocol to AWS server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of message to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Io\+T\+\_\+\+Error\+\_\+t Result of the operation 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em Success} & Message sent \\
+\hline
+{\em Other} & Message not sent \\
+\hline
+\end{DoxyRetVals}

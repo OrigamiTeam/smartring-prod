@@ -1,0 +1,126 @@
+\hypertarget{http__server_8c}{}\doxysection{main/http\+\_\+server.c File Reference}
+\label{http__server_8c}\index{main/http\_server.c@{main/http\_server.c}}
+
+
+This file contains the functions responsible for the creation and handling of the HTTP server for the device provisioning.  
+
+
+{\ttfamily \#include \char`\"{}libs.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{http__server_8c_a00380e80a0d3835ba2c6b255110355a9}\label{http__server_8c_a00380e80a0d3835ba2c6b255110355a9}} 
+const uint8\+\_\+t jquery\+\_\+3\+\_\+6\+\_\+0\+\_\+min\+\_\+js\+\_\+start\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+jquery\+\_\+3\+\_\+6\+\_\+0\+\_\+min\+\_\+js\+\_\+start\char`\"{})
+\begin{DoxyCompactList}\small\item\em Start of JQUERY file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{http__server_8c_aa99c020e7b7120a74826824754d403ce}\label{http__server_8c_aa99c020e7b7120a74826824754d403ce}} 
+const uint8\+\_\+t jquery\+\_\+3\+\_\+6\+\_\+0\+\_\+min\+\_\+js\+\_\+end\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+jquery\+\_\+3\+\_\+6\+\_\+0\+\_\+min\+\_\+js\+\_\+end\char`\"{})
+\begin{DoxyCompactList}\small\item\em End of JQUERY file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{http__server_8c_aede8f0bb2c45776a5718d8e7b8acbb6a}\label{http__server_8c_aede8f0bb2c45776a5718d8e7b8acbb6a}} 
+const uint8\+\_\+t index\+\_\+html\+\_\+start\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+index\+\_\+html\+\_\+start\char`\"{})
+\begin{DoxyCompactList}\small\item\em Start of HTML file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{http__server_8c_a7b39f1fcc418da402de3d6966546ef7d}\label{http__server_8c_a7b39f1fcc418da402de3d6966546ef7d}} 
+const uint8\+\_\+t index\+\_\+html\+\_\+end\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+index\+\_\+html\+\_\+end\char`\"{})
+\begin{DoxyCompactList}\small\item\em End of HTML file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{http__server_8c_aa099253c5e023703495e82be0c2df3a8}\label{http__server_8c_aa099253c5e023703495e82be0c2df3a8}} 
+const uint8\+\_\+t index\+\_\+css\+\_\+start\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+index\+\_\+css\+\_\+start\char`\"{})
+\begin{DoxyCompactList}\small\item\em Start of CSS file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{http__server_8c_af1c0421b020f74a2e243569b0a77bef9}\label{http__server_8c_af1c0421b020f74a2e243569b0a77bef9}} 
+const uint8\+\_\+t index\+\_\+css\+\_\+end\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+index\+\_\+css\+\_\+end\char`\"{})
+\begin{DoxyCompactList}\small\item\em End of CSS file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{http__server_8c_ac26de1a80dac4a73d1b67c5008afc2e8}\label{http__server_8c_ac26de1a80dac4a73d1b67c5008afc2e8}} 
+const uint8\+\_\+t app\+\_\+js\+\_\+start\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+app\+\_\+js\+\_\+start\char`\"{})
+\begin{DoxyCompactList}\small\item\em Start of JS file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{http__server_8c_afb40daa6bc7c43c57851110ab190fc4b}\label{http__server_8c_afb40daa6bc7c43c57851110ab190fc4b}} 
+const uint8\+\_\+t app\+\_\+js\+\_\+end\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+app\+\_\+js\+\_\+end\char`\"{})
+\begin{DoxyCompactList}\small\item\em End of JS file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{http__server_8c_a5165b6602dfc228fb4b3083259cbc2e9}\label{http__server_8c_a5165b6602dfc228fb4b3083259cbc2e9}} 
+const uint8\+\_\+t quantum\+\_\+leap\+\_\+png\+\_\+start\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+quantum\+\_\+leap\+\_\+png\+\_\+start\char`\"{})
+\begin{DoxyCompactList}\small\item\em Start of QL image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{http__server_8c_af9cf5dcfbe8ccf06cbf7077979ebd467}\label{http__server_8c_af9cf5dcfbe8ccf06cbf7077979ebd467}} 
+const uint8\+\_\+t quantum\+\_\+leap\+\_\+png\+\_\+end\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+quantum\+\_\+leap\+\_\+png\+\_\+end\char`\"{})
+\begin{DoxyCompactList}\small\item\em End of QL image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{http__server_8c_a5d17d69a69b4f85ebfb812683cf781a8}\label{http__server_8c_a5d17d69a69b4f85ebfb812683cf781a8}} 
+const uint8\+\_\+t fonte\+\_\+viva\+\_\+png\+\_\+start\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+fonte\+\_\+viva\+\_\+png\+\_\+start\char`\"{})
+\begin{DoxyCompactList}\small\item\em Start of Fonte Viva image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{http__server_8c_aabbb0b491b897f3792bab42ab64624b1}\label{http__server_8c_aabbb0b491b897f3792bab42ab64624b1}} 
+const uint8\+\_\+t fonte\+\_\+viva\+\_\+png\+\_\+end\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+fonte\+\_\+viva\+\_\+png\+\_\+end\char`\"{})
+\begin{DoxyCompactList}\small\item\em End of Fonte Viva image. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{http__server_8c_a9fb8067f99901554a760651dc58e0ea9}{http\+\_\+server\+\_\+start}} ()
+\begin{DoxyCompactList}\small\item\em Start the HTTP server (only if there is no no server running) and return the result of the operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{http__server_8c_afffb5f05a179c9702078a824048dab36}{http\+\_\+server\+\_\+stop}} (void)
+\begin{DoxyCompactList}\small\item\em Stop the HTTP server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{http__server_8c_a7887781eef48c2a3592f137faff96f97}{provision\+\_\+set\+\_\+status}} (int state)
+\begin{DoxyCompactList}\small\item\em Set the current provision state to the given one. Used by the wifi controller to send to client browser after provision. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{http__server_8c_abea8beefdf2d19e4253902e844487a20}{provision\+\_\+get\+\_\+status}} (void)
+\begin{DoxyCompactList}\small\item\em Get the current provision status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the functions responsible for the creation and handling of the HTTP server for the device provisioning. 
+
+\begin{DoxyAuthor}{Author}
+David Abreu @ Quantum Leap (\href{mailto:david@quleap.com}{\texttt{ david@quleap.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/10-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{http__server_8c_a9fb8067f99901554a760651dc58e0ea9}\label{http__server_8c_a9fb8067f99901554a760651dc58e0ea9}} 
+\index{http\_server.c@{http\_server.c}!http\_server\_start@{http\_server\_start}}
+\index{http\_server\_start@{http\_server\_start}!http\_server.c@{http\_server.c}}
+\doxysubsubsection{\texorpdfstring{http\_server\_start()}{http\_server\_start()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t http\+\_\+server\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start the HTTP server (only if there is no no server running) and return the result of the operation. 
+
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t -\/ Result of the creation of the HTTP server 
+\end{DoxyReturn}
+\mbox{\Hypertarget{http__server_8c_afffb5f05a179c9702078a824048dab36}\label{http__server_8c_afffb5f05a179c9702078a824048dab36}} 
+\index{http\_server.c@{http\_server.c}!http\_server\_stop@{http\_server\_stop}}
+\index{http\_server\_stop@{http\_server\_stop}!http\_server.c@{http\_server.c}}
+\doxysubsubsection{\texorpdfstring{http\_server\_stop()}{http\_server\_stop()}}
+{\footnotesize\ttfamily void http\+\_\+server\+\_\+stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Stop the HTTP server. 
+
+\mbox{\Hypertarget{http__server_8c_abea8beefdf2d19e4253902e844487a20}\label{http__server_8c_abea8beefdf2d19e4253902e844487a20}} 
+\index{http\_server.c@{http\_server.c}!provision\_get\_status@{provision\_get\_status}}
+\index{provision\_get\_status@{provision\_get\_status}!http\_server.c@{http\_server.c}}
+\doxysubsubsection{\texorpdfstring{provision\_get\_status()}{provision\_get\_status()}}
+{\footnotesize\ttfamily int provision\+\_\+get\+\_\+status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the current provision status. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{http__server_8c_a7887781eef48c2a3592f137faff96f97}\label{http__server_8c_a7887781eef48c2a3592f137faff96f97}} 
+\index{http\_server.c@{http\_server.c}!provision\_set\_status@{provision\_set\_status}}
+\index{provision\_set\_status@{provision\_set\_status}!http\_server.c@{http\_server.c}}
+\doxysubsubsection{\texorpdfstring{provision\_set\_status()}{provision\_set\_status()}}
+{\footnotesize\ttfamily void provision\+\_\+set\+\_\+status (\begin{DoxyParamCaption}\item[{int}]{state }\end{DoxyParamCaption})}
+
+
+
+Set the current provision state to the given one. Used by the wifi controller to send to client browser after provision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}

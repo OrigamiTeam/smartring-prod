@@ -1,0 +1,76 @@
+\hypertarget{http__client_8h}{}\doxysection{main/include/http\+\_\+client.h File Reference}
+\label{http__client_8h}\index{main/include/http\_client.h@{main/include/http\_client.h}}
+
+
+HTTP client header.  
+
+
+{\ttfamily \#include \char`\"{}libs.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{http__client_8h_a01bbde4220be59dbfb3feaeb4e90c0ea}\label{http__client_8h_a01bbde4220be59dbfb3feaeb4e90c0ea}} 
+\#define {\bfseries HTTP\+\_\+\+CLIENT\+\_\+\+GET\+\_\+\+CHECK\+\_\+\+FIRMWARE}~0
+\begin{DoxyCompactList}\small\item\em Check firmware request type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{http__client_8h_a6b091e37d66987e4ce0f154f6cfc5982}\label{http__client_8h_a6b091e37d66987e4ce0f154f6cfc5982}} 
+\#define {\bfseries HTTP\+\_\+\+CLIENT\+\_\+\+GET\+\_\+\+UPDATE\+\_\+\+FIRMWARE}~1
+\begin{DoxyCompactList}\small\item\em Get firmware request type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{http__client_8h_a7518f88b39b8ffaf830fefd5943291bb}\label{http__client_8h_a7518f88b39b8ffaf830fefd5943291bb}} 
+\#define {\bfseries API\+\_\+\+ENDPOINT}~  \char`\"{}https\+://s23tn26sz7.\+execute-\/api.\+eu-\/central-\/1.amazonaws.\+com/stage\char`\"{}
+\begin{DoxyCompactList}\small\item\em API Endpoint the device will connect to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{http__client_8h_a187af7b881bea2905b906b75ac61c951}\label{http__client_8h_a187af7b881bea2905b906b75ac61c951}} 
+\#define {\bfseries API\+\_\+\+KEY}~\char`\"{}d\+Gt7ld\+Turh6hu5\+Ziu\+Xj\+Bm9ud\+As\+OBHl\+LA54\+Jp\+EPJX\char`\"{}
+\begin{DoxyCompactList}\small\item\em API KEY the devices will use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{http__client_8h_a436665475871d94972ea0a8cb4e9a318}\label{http__client_8h_a436665475871d94972ea0a8cb4e9a318}} 
+const uint8\+\_\+t ota\+\_\+root\+\_\+pem\+\_\+start\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+ota\+\_\+root\+\_\+pem\+\_\+start\char`\"{})
+\begin{DoxyCompactList}\small\item\em Certificate start for the OTA update. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{http__client_8h_afd09687a681887e8cd792557e978048b}\label{http__client_8h_afd09687a681887e8cd792557e978048b}} 
+const uint8\+\_\+t ota\+\_\+root\+\_\+pem\+\_\+end\mbox{[}$\,$\mbox{]} {\bfseries asm} (\char`\"{}\+\_\+binary\+\_\+ota\+\_\+root\+\_\+pem\+\_\+end\char`\"{})
+\begin{DoxyCompactList}\small\item\em Certificate end for the OTA update. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{http__client_8h_aa8a41cce8976aeaefe97ed79a37a19b5}{smart\+\_\+ring\+\_\+http\+\_\+client\+\_\+get\+\_\+check\+\_\+firmware}} ()
+\begin{DoxyCompactList}\small\item\em Check if there is a new firmware version available in the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{http__client_8h_a1f0d5c7d301ecc0180f027e62d316d33}{smart\+\_\+ring\+\_\+http\+\_\+client\+\_\+get\+\_\+update\+\_\+firmware}} ()
+\begin{DoxyCompactList}\small\item\em Update the device firmware to the latest on the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+HTTP client header. 
+
+\begin{DoxyAuthor}{Author}
+David Abreu (\href{mailto:david@quleap.com}{\texttt{ david@quleap.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/10-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{http__client_8h_aa8a41cce8976aeaefe97ed79a37a19b5}\label{http__client_8h_aa8a41cce8976aeaefe97ed79a37a19b5}} 
+\index{http\_client.h@{http\_client.h}!smart\_ring\_http\_client\_get\_check\_firmware@{smart\_ring\_http\_client\_get\_check\_firmware}}
+\index{smart\_ring\_http\_client\_get\_check\_firmware@{smart\_ring\_http\_client\_get\_check\_firmware}!http\_client.h@{http\_client.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_http\_client\_get\_check\_firmware()}{smart\_ring\_http\_client\_get\_check\_firmware()}}
+{\footnotesize\ttfamily void smart\+\_\+ring\+\_\+http\+\_\+client\+\_\+get\+\_\+check\+\_\+firmware (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if there is a new firmware version available in the server. 
+
+\mbox{\Hypertarget{http__client_8h_a1f0d5c7d301ecc0180f027e62d316d33}\label{http__client_8h_a1f0d5c7d301ecc0180f027e62d316d33}} 
+\index{http\_client.h@{http\_client.h}!smart\_ring\_http\_client\_get\_update\_firmware@{smart\_ring\_http\_client\_get\_update\_firmware}}
+\index{smart\_ring\_http\_client\_get\_update\_firmware@{smart\_ring\_http\_client\_get\_update\_firmware}!http\_client.h@{http\_client.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_http\_client\_get\_update\_firmware()}{smart\_ring\_http\_client\_get\_update\_firmware()}}
+{\footnotesize\ttfamily void smart\+\_\+ring\+\_\+http\+\_\+client\+\_\+get\+\_\+update\+\_\+firmware (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the device firmware to the latest on the server. 
+

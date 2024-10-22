@@ -1,0 +1,20 @@
+menu "SmartRing UI"
+    menu "Menus"
+        config SR_UI_CURRENT_COM_TYPE_MENU_TIMEOUT_WAIT_TIME
+            int "Current Com Type - timeout (ms)"
+            default 6000
+            help
+                Timeout to continue connection
+    endmenu
+    config SR_UI_ENABLE_SCREEN_ACTIVITY_CHECK
+        bool "Enable Screen Activity Check"
+        default true
+        help
+            Checks if the screen is active or innactive and responds to it after a certain timeout
+    config SR_UI_SCREEN_ACTIVITY_CHECK_TIMEOUT
+        depends on SR_UI_ENABLE_SCREEN_ACTIVITY_CHECK
+        int "Screen activity - timeout [ms]"
+        default 20000
+        help
+            Time before the screen hits the timeout in milliseconds. Default is 20000ms
+endmenu

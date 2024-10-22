@@ -1,0 +1,75 @@
+\hypertarget{structmqtt__controller__t}{}\doxysection{mqtt\+\_\+controller\+\_\+t Struct Reference}
+\label{structmqtt__controller__t}\index{mqtt\_controller\_t@{mqtt\_controller\_t}}
+
+
+Object used to controll the device MQTT interface.  
+
+
+
+
+{\ttfamily \#include $<$mqtt.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+AWS\+\_\+\+Io\+T\+\_\+\+Client \mbox{\hyperlink{structmqtt__controller__t_ab9473ad3a53045d1a5159dceb38b038d}{client}}
+\begin{DoxyCompactList}\small\item\em MQTT client handle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structmqtt__controller__t_a1975c52741b156a6f68c6f9df5103abf}{running}}\+: 1
+\begin{DoxyCompactList}\small\item\em Flag signaling the task is running. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structmqtt__controller__t_a32837a751c1e7335c001e05a1683467e}{auto\+\_\+reconnect}}\+: 1
+\begin{DoxyCompactList}\small\item\em Flag to auto-\/reconnect or not, used when to connect using HTTPs to update firmware. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structmqtt__controller__t_a6a8812cfb44eac49d5a00ce652ce6e42}{group\+\_\+id}} \mbox{[}40\mbox{]}
+\begin{DoxyCompactList}\small\item\em Group id string retrieved from server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Object used to controll the device MQTT interface. 
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structmqtt__controller__t_a32837a751c1e7335c001e05a1683467e}\label{structmqtt__controller__t_a32837a751c1e7335c001e05a1683467e}} 
+\index{mqtt\_controller\_t@{mqtt\_controller\_t}!auto\_reconnect@{auto\_reconnect}}
+\index{auto\_reconnect@{auto\_reconnect}!mqtt\_controller\_t@{mqtt\_controller\_t}}
+\doxysubsubsection{\texorpdfstring{auto\_reconnect}{auto\_reconnect}}
+{\footnotesize\ttfamily int mqtt\+\_\+controller\+\_\+t\+::auto\+\_\+reconnect}
+
+
+
+Flag to auto-\/reconnect or not, used when to connect using HTTPs to update firmware. 
+
+\mbox{\Hypertarget{structmqtt__controller__t_ab9473ad3a53045d1a5159dceb38b038d}\label{structmqtt__controller__t_ab9473ad3a53045d1a5159dceb38b038d}} 
+\index{mqtt\_controller\_t@{mqtt\_controller\_t}!client@{client}}
+\index{client@{client}!mqtt\_controller\_t@{mqtt\_controller\_t}}
+\doxysubsubsection{\texorpdfstring{client}{client}}
+{\footnotesize\ttfamily AWS\+\_\+\+Io\+T\+\_\+\+Client mqtt\+\_\+controller\+\_\+t\+::client}
+
+
+
+MQTT client handle. 
+
+\mbox{\Hypertarget{structmqtt__controller__t_a6a8812cfb44eac49d5a00ce652ce6e42}\label{structmqtt__controller__t_a6a8812cfb44eac49d5a00ce652ce6e42}} 
+\index{mqtt\_controller\_t@{mqtt\_controller\_t}!group\_id@{group\_id}}
+\index{group\_id@{group\_id}!mqtt\_controller\_t@{mqtt\_controller\_t}}
+\doxysubsubsection{\texorpdfstring{group\_id}{group\_id}}
+{\footnotesize\ttfamily char mqtt\+\_\+controller\+\_\+t\+::group\+\_\+id\mbox{[}40\mbox{]}}
+
+
+
+Group id string retrieved from server. 
+
+\mbox{\Hypertarget{structmqtt__controller__t_a1975c52741b156a6f68c6f9df5103abf}\label{structmqtt__controller__t_a1975c52741b156a6f68c6f9df5103abf}} 
+\index{mqtt\_controller\_t@{mqtt\_controller\_t}!running@{running}}
+\index{running@{running}!mqtt\_controller\_t@{mqtt\_controller\_t}}
+\doxysubsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily int mqtt\+\_\+controller\+\_\+t\+::running}
+
+
+
+Flag signaling the task is running. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/include/\mbox{\hyperlink{mqtt_8h}{mqtt.\+h}}\end{DoxyCompactItemize}

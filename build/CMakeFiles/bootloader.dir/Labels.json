@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/mateus-ql/Documents/SmartRing_FV_FW/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/home/mateus-ql/Documents/SmartRing_FV_FW/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/home/mateus-ql/Documents/SmartRing_FV_FW/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/home/mateus-ql/Documents/SmartRing_FV_FW/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/home/mateus-ql/Documents/SmartRing_FV_FW/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/home/mateus-ql/Documents/SmartRing_FV_FW/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/home/mateus-ql/Documents/SmartRing_FV_FW/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/home/mateus-ql/Documents/SmartRing_FV_FW/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/home/mateus-ql/Documents/SmartRing_FV_FW/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/home/mateus-ql/Documents/SmartRing_FV_FW/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

@@ -1,0 +1,89 @@
+\hypertarget{mqtt_8h_source}{}\doxysection{mqtt.\+h}
+\label{mqtt_8h_source}\index{main/include/mqtt.h@{main/include/mqtt.h}}
+\mbox{\hyperlink{mqtt_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef \_\_MQTT\_H\_}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define \_\_MQTT\_H\_}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define TOPIC\_OK 0}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{comment}{// MQTT host broker}}
+\DoxyCodeLine{20 \textcolor{comment}{}\textcolor{preprocessor}{\#define MQTT\_BROKER "{}a2ed3xy6iprkkz-\/ats.iot.eu-\/central-\/1.amazonaws.com"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define MQTT\_PORT 8883}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define CLIENT\_ID\_PREFIX "{}smartring-\/"{}}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{comment}{// MQTT thread configuration}}
+\DoxyCodeLine{28 \textcolor{comment}{}\textcolor{preprocessor}{\#define MQTT\_APP\_TASK\_STACK\_SIZE 8192}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define MQTT\_APP\_TASK\_PRIORITY 2}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define MQTT\_APP\_TASK\_CORE\_ID 0}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{comment}{// Certificates}}
+\DoxyCodeLine{36 \textcolor{comment}{}\textcolor{keyword}{extern} \textcolor{keyword}{const} uint8\_t}
+\DoxyCodeLine{37     aws\_root\_ca\_pem\_start[] \textcolor{keyword}{asm}(\textcolor{stringliteral}{"{}\_binary\_aws\_root\_ca\_pem\_start"{}});}
+\DoxyCodeLine{39 \textcolor{keyword}{extern} \textcolor{keyword}{const} uint8\_t aws\_root\_ca\_pem\_end[] \textcolor{keyword}{asm}(\textcolor{stringliteral}{"{}\_binary\_aws\_root\_ca\_pem\_end"{}});}
+\DoxyCodeLine{41 \textcolor{keyword}{extern} \textcolor{keyword}{const} uint8\_t}
+\DoxyCodeLine{42     certificate\_pem\_crt\_start[] \textcolor{keyword}{asm}(\textcolor{stringliteral}{"{}\_binary\_certificate\_pem\_crt\_start"{}});}
+\DoxyCodeLine{44 \textcolor{keyword}{extern} \textcolor{keyword}{const} uint8\_t}
+\DoxyCodeLine{45     certificate\_pem\_crt\_end[] \textcolor{keyword}{asm}(\textcolor{stringliteral}{"{}\_binary\_certificate\_pem\_crt\_end"{}});}
+\DoxyCodeLine{47 \textcolor{keyword}{extern} \textcolor{keyword}{const} uint8\_t}
+\DoxyCodeLine{48     private\_pem\_key\_start[] \textcolor{keyword}{asm}(\textcolor{stringliteral}{"{}\_binary\_private\_pem\_key\_start"{}});}
+\DoxyCodeLine{50 \textcolor{keyword}{extern} \textcolor{keyword}{const} uint8\_t private\_pem\_key\_end[] \textcolor{keyword}{asm}(\textcolor{stringliteral}{"{}\_binary\_private\_pem\_key\_end"{}});}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{57 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393}{mqtt\_message\_type\_t}} \{}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{67   \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393ae96c21be1143826a85be491edc8ea6c0}{SEND\_SENSORS\_RESPONSE}},}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{81   \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393ac1d1e7d0880d70a14cc82c83ffd438f7}{SEND\_DEVICE\_INFORMATION}},}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{92   \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393aca35ed895b807fc1d08dd9450c0d8cfc}{SEND\_CALIBRATION}},}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{102   \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393ae3d91687daee76ab2e1fda76ea311120}{SEND\_SENSORS}},}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{112   \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393aad95a863bb2c4e8dee645c3cb0d67ce8}{SEND\_LOGIN}},}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{122   \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393af4063315a29aa6de966f6d9f68b67600}{SEND\_ORDER\_MODE}},}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{132   \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a0beda185bcdeaf90cac5cbcafc027903}{SEND\_STOCK}},}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{142   \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a6f20ca468884c8814be7213dabbff745}{SEND\_TICKET}},}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{153   \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a8aa07a7eade855563dcf7058cb01934c}{SEND\_NEW\_DELIVERY}},}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{164   \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a48c71018df3437b8d192d2c3b39480ce}{SEND\_CONFIRM\_DELIVERY}},}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{174   \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a65eedf5a4fcaa3e2609edb727c1b0d52}{SEND\_GET\_ORDERS}},}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{184   \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a201aa57e505dc9e267695b1d2ed50523}{SEND\_REQUEST\_DEVICE\_INFORMATION}},}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{194   \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393a0a3809283c2e5548be5a2c8e21f52b31}{SEND\_REQUEST\_GROUP\_INFORMATION}}}
+\DoxyCodeLine{195 \};}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{202 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structmqtt__controller__t}{mqtt\_controller\_t}} \{}
+\DoxyCodeLine{208   AWS\_IoT\_Client \mbox{\hyperlink{structmqtt__controller__t_ab9473ad3a53045d1a5159dceb38b038d}{client}};}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{215   \textcolor{keywordtype}{int} \mbox{\hyperlink{structmqtt__controller__t_a1975c52741b156a6f68c6f9df5103abf}{running}} : 1;}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{223   \textcolor{keywordtype}{int} \mbox{\hyperlink{structmqtt__controller__t_a32837a751c1e7335c001e05a1683467e}{auto\_reconnect}} : 1;}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{230   \textcolor{keywordtype}{char} \mbox{\hyperlink{structmqtt__controller__t_a6a8812cfb44eac49d5a00ce652ce6e42}{group\_id}}[40];}
+\DoxyCodeLine{231 \};}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{242 IoT\_Error\_t \mbox{\hyperlink{mqtt_8h_a61c24a247f60d074364bf61710e775f8}{mqtt\_send\_message}}(\textcolor{keyword}{enum} \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393}{mqtt\_message\_type\_t}} type);}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{254 \textcolor{keyword}{static} \textcolor{keywordtype}{void} mqtt\_subscribed\_handler(AWS\_IoT\_Client *client, \textcolor{keywordtype}{char} *topic,}
+\DoxyCodeLine{255                                     uint16\_t topic\_length,}
+\DoxyCodeLine{256                                     IoT\_Publish\_Message\_Params *params,}
+\DoxyCodeLine{257                                     \textcolor{keywordtype}{void} *data);}
+\DoxyCodeLine{258 }
+\DoxyCodeLine{270 \textcolor{keyword}{static} \textcolor{keywordtype}{void} mqtt\_group\_subscribed\_handler(AWS\_IoT\_Client *client,}
+\DoxyCodeLine{271                                           \textcolor{keywordtype}{char} *received\_topic,}
+\DoxyCodeLine{272                                           uint16\_t topic\_length,}
+\DoxyCodeLine{273                                           IoT\_Publish\_Message\_Params *params,}
+\DoxyCodeLine{274                                           \textcolor{keywordtype}{void} *data);}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{283 \textcolor{keywordtype}{void} \mbox{\hyperlink{mqtt_8h_a86463e8b9af2f80f77472b6808637fbc}{mqtt\_aws\_thread}}(\textcolor{keywordtype}{void} *param);}
+\DoxyCodeLine{284 }
+\DoxyCodeLine{285 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

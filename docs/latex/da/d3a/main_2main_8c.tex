@@ -1,0 +1,43 @@
+\hypertarget{main_2main_8c}{}\doxysection{main/main.c File Reference}
+\label{main_2main_8c}\index{main/main.c@{main/main.c}}
+
+
+Main program of the device, responsible for initializing the remaining threads and communication.  
+
+
+{\ttfamily \#include \char`\"{}libs.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_2main_8c_ac21da912866307d73ff8f0f22c7f10b6}\label{main_2main_8c_ac21da912866307d73ff8f0f22c7f10b6}} 
+void {\bfseries initial\+\_\+config} ()
+\item 
+\mbox{\Hypertarget{main_2main_8c_a10d49e3ebad0f0ea0bcb8ff1579f2136}\label{main_2main_8c_a10d49e3ebad0f0ea0bcb8ff1579f2136}} 
+void {\bfseries heap\+\_\+caps\+\_\+alloc\+\_\+failed\+\_\+hook} (size\+\_\+t requested\+\_\+size, uint32\+\_\+t caps, const char $\ast$function\+\_\+name)
+\item 
+\mbox{\Hypertarget{main_2main_8c_abf86b8af48c467f0dbd2faa42d160c1d}\label{main_2main_8c_abf86b8af48c467f0dbd2faa42d160c1d}} 
+esp\+\_\+err\+\_\+t {\bfseries app\+\_\+main} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_2main_8c_a2a1ad60c25ec8207f8d723197855a1a1}\label{main_2main_8c_a2a1ad60c25ec8207f8d723197855a1a1}} 
+Semaphore\+Handle\+\_\+t {\bfseries x\+Gui\+Semaphore}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main program of the device, responsible for initializing the remaining threads and communication. 
+
+\begin{DoxyAuthor}{Author}
+David Abreu @ Quantum Leap (\href{mailto:david@quleap.com}{\texttt{ david@quleap.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/06-\/22
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}

@@ -1,0 +1,321 @@
+\hypertarget{vars_8h}{}\doxysection{main/include/vars.h File Reference}
+\label{vars_8h}\index{main/include/vars.h@{main/include/vars.h}}
+
+
+Variables header.  
+
+
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsmart__ring__wifi__controller__t}{smart\+\_\+ring\+\_\+wifi\+\_\+controller\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Controller used to store the wifi interface data. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsmart__ring__connection__controller__t}{smart\+\_\+ring\+\_\+connection\+\_\+controller\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Main structures that groups the entire connection information of the device. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsmart__ring__flags__t}{smart\+\_\+ring\+\_\+flags\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Device system main flags, used to signal state of the device from other controllers, such as wifi or sensors. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsmart__ring__order__t}{smart\+\_\+ring\+\_\+order\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Order information object structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsmart__ring__sensor__t}{smart\+\_\+ring\+\_\+sensor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Sensor controller object. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t}{smart\+\_\+ring\+\_\+sensor\+\_\+t\+::smart\+\_\+ring\+\_\+sensor\+\_\+calirabting\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Calibrating process structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsmart__ring__controller__t}{smart\+\_\+ring\+\_\+controller\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Smart ring main controller to group all the information on one place. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionsmart__ring__controller__t_1_1main__flags}{smart\+\_\+ring\+\_\+controller\+\_\+t\+::main\+\_\+flags}}
+\begin{DoxyCompactList}\small\item\em Device main flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{vars_8h_aa14dc39d52ab121ceb570f1a265385e0}\label{vars_8h_aa14dc39d52ab121ceb570f1a265385e0}} 
+\#define {\bfseries FIRMWARE\+\_\+\+VERSION}~\char`\"{}2.\+1.\+0\char`\"{}
+\begin{DoxyCompactList}\small\item\em Firmware version to be used on the UI, version check and Back-\/\+Office. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{vars_8h_a31c507ab1a1074ac1ab0a4ce6bbba2f6}\label{vars_8h_a31c507ab1a1074ac1ab0a4ce6bbba2f6}} 
+\#define {\bfseries LV\+\_\+\+TICK\+\_\+\+PERIOD\+\_\+\+MS}~1
+\begin{DoxyCompactList}\small\item\em Refresh rate for the display interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{vars_8h_a8e19d13af09f7ed0afad391730f1e3e7}\label{vars_8h_a8e19d13af09f7ed0afad391730f1e3e7}} 
+\#define {\bfseries WIFI\+\_\+\+AP\+\_\+\+SSID}~\char`\"{}Smartring\char`\"{}
+\begin{DoxyCompactList}\small\item\em Provision AP network name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{vars_8h_ac80c92af8bf29cfe0442a28b6a7ec5a3}\label{vars_8h_ac80c92af8bf29cfe0442a28b6a7ec5a3}} 
+\#define {\bfseries WIFI\+\_\+\+AP\+\_\+\+PASSWORD}~\char`\"{}fonteviva\char`\"{}
+\begin{DoxyCompactList}\small\item\em Provision AP network password. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{vars_8h_ac0a1dba58f0e6d7f07d3050fa0291dd0}\label{vars_8h_ac0a1dba58f0e6d7f07d3050fa0291dd0}} 
+\#define {\bfseries WIFI\+\_\+\+AP\+\_\+\+CHANNEL}~1
+\begin{DoxyCompactList}\small\item\em Provision AP network channel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{vars_8h_a02f4226bd6b0e2adad29fddd345a0918}\label{vars_8h_a02f4226bd6b0e2adad29fddd345a0918}} 
+\#define {\bfseries WIFI\+\_\+\+AP\+\_\+\+SSID\+\_\+\+HIDDEN}~0
+\begin{DoxyCompactList}\small\item\em Provision AP network visibility. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{vars_8h_ab689d29cda2d350ce6652141df530fd0}\label{vars_8h_ab689d29cda2d350ce6652141df530fd0}} 
+\#define {\bfseries WIFI\+\_\+\+AP\+\_\+\+MAX\+\_\+\+CONNECTIONS}~5
+\begin{DoxyCompactList}\small\item\em Provision AP network max connections. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{vars_8h_a532527c416f545aaa0b3adf4185ed3f4}\label{vars_8h_a532527c416f545aaa0b3adf4185ed3f4}} 
+\#define {\bfseries WIFI\+\_\+\+AP\+\_\+\+BEACON\+\_\+\+INTERVAL}~100
+\begin{DoxyCompactList}\small\item\em Provision AP network beacon interval. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{vars_8h_a067a8d9ec14859ad6237320d2cec686a}\label{vars_8h_a067a8d9ec14859ad6237320d2cec686a}} 
+\#define {\bfseries WIFI\+\_\+\+AP\+\_\+\+IP}~\char`\"{}192.\+168.\+0.\+1\char`\"{}
+\begin{DoxyCompactList}\small\item\em Provision AP network device ip. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{vars_8h_a2782b50f9a156696a1708c61823aa3a3}\label{vars_8h_a2782b50f9a156696a1708c61823aa3a3}} 
+\#define {\bfseries WIFI\+\_\+\+AP\+\_\+\+GATEWAY}~\char`\"{}192.\+168.\+0.\+1\char`\"{}
+\begin{DoxyCompactList}\small\item\em Provision AP network device ip. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{vars_8h_af48472f62a4bab9896e181b25d439f34}\label{vars_8h_af48472f62a4bab9896e181b25d439f34}} 
+\#define {\bfseries WIFI\+\_\+\+AP\+\_\+\+NETMASK}~\char`\"{}255.\+255.\+255.\+0\char`\"{}
+\begin{DoxyCompactList}\small\item\em Provision AP network mask. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{vars_8h_a7581843f542963f235dd70d339f106f5}\label{vars_8h_a7581843f542963f235dd70d339f106f5}} 
+\#define {\bfseries WIFI\+\_\+\+AP\+\_\+\+BANDWIDTH}~WIFI\+\_\+\+BW\+\_\+\+HT20
+\begin{DoxyCompactList}\small\item\em Provision AP network bandwidtch. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{vars_8h_a08b834aec05f183ace828469af10b817}\label{vars_8h_a08b834aec05f183ace828469af10b817}} 
+\#define {\bfseries WIFI\+\_\+\+STA\+\_\+\+POWER\+\_\+\+SAVE}~WIFI\+\_\+\+PS\+\_\+\+NONE
+\begin{DoxyCompactList}\small\item\em Provision AP network power save mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{vars_8h_a7b3139bab2de384dfbbd65208c158488}{configure\+\_\+mac\+\_\+address}} (void)
+\begin{DoxyCompactList}\small\item\em Get mac address from wifi interface and store it. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsmart__ring__controller__t}{smart\+\_\+ring\+\_\+controller\+\_\+t}} $\ast$ \mbox{\hyperlink{vars_8h_ac30de65af91cc1a972b1655c11ef856d}{smart\+\_\+ring\+\_\+get\+\_\+controller}} ()
+\begin{DoxyCompactList}\small\item\em Get the device main controller pointer. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{vars_8h_a54a28bdba79f53a1a4ed73408dae70b3}{smart\+\_\+ring\+\_\+get\+\_\+mac\+\_\+address}} ()
+\begin{DoxyCompactList}\small\item\em Get device mac address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vars_8h_a8ec04d417027cd6fe710389833adf307}{smart\+\_\+ring\+\_\+set\+\_\+device\+\_\+name}} (char $\ast$device\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Set device name to be shown on UI. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{vars_8h_a1b32e674250a551d9adbc5412fb354b2}{smart\+\_\+ring\+\_\+get\+\_\+device\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em Get device name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vars_8h_af6ce824d3fab4174ac0abb16d96f3399}{smart\+\_\+ring\+\_\+set\+\_\+user\+\_\+name}} (char $\ast$user\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Set user name. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{vars_8h_a606948185a2db44e2dfa88c82b1a8e20}{smart\+\_\+ring\+\_\+get\+\_\+user\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em Get user name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vars_8h_ab92d95265018108fd5ac7ff722b749d2}{smart\+\_\+ring\+\_\+set\+\_\+user\+\_\+role}} (char user\+\_\+role)
+\begin{DoxyCompactList}\small\item\em Set user role. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{vars_8h_a00b8d3990504e98728e6a5337d9feb1f}{smart\+\_\+ring\+\_\+get\+\_\+user\+\_\+role}} ()
+\begin{DoxyCompactList}\small\item\em Get user role. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{vars_8h_a2ff910e3c5dd7a7c3ea357782349b2d0}{smart\+\_\+ring\+\_\+get\+\_\+stock}} ()
+\begin{DoxyCompactList}\small\item\em Get device stock. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vars_8h_aa002da2ac90dd819d113b2c81dee1e5c}{smart\+\_\+ring\+\_\+set\+\_\+stock}} (uint8\+\_\+t stock)
+\begin{DoxyCompactList}\small\item\em Set device stock. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vars_8h_afff954d940c3db1ec3e4ce51dff5ef34}{smart\+\_\+ring\+\_\+set\+\_\+order\+\_\+mode}} (char order\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Set device order mode. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{vars_8h_ad8f677d61386e2d7b301971df24a9fa2}{smart\+\_\+ring\+\_\+get\+\_\+order\+\_\+mode}} ()
+\begin{DoxyCompactList}\small\item\em Get device order mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Variables header. 
+
+\begin{DoxyAuthor}{Author}
+David Abreu @ Quantum Leap (\href{mailto:david@quleap.com}{\texttt{ david@quleap.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/10-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{vars_8h_a7b3139bab2de384dfbbd65208c158488}\label{vars_8h_a7b3139bab2de384dfbbd65208c158488}} 
+\index{vars.h@{vars.h}!configure\_mac\_address@{configure\_mac\_address}}
+\index{configure\_mac\_address@{configure\_mac\_address}!vars.h@{vars.h}}
+\doxysubsubsection{\texorpdfstring{configure\_mac\_address()}{configure\_mac\_address()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t configure\+\_\+mac\+\_\+address (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get mac address from wifi interface and store it. 
+
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t Result of retrieving mac address 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em ESP\+\_\+\+OK} & Mac address stored successfully \\
+\hline
+{\em Other} & Error getting mac address \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{vars_8h_ac30de65af91cc1a972b1655c11ef856d}\label{vars_8h_ac30de65af91cc1a972b1655c11ef856d}} 
+\index{vars.h@{vars.h}!smart\_ring\_get\_controller@{smart\_ring\_get\_controller}}
+\index{smart\_ring\_get\_controller@{smart\_ring\_get\_controller}!vars.h@{vars.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_get\_controller()}{smart\_ring\_get\_controller()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structsmart__ring__controller__t}{smart\+\_\+ring\+\_\+controller\+\_\+t}} $\ast$ smart\+\_\+ring\+\_\+get\+\_\+controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the device main controller pointer. 
+
+\begin{DoxyReturn}{Returns}
+struct smart\+\_\+ring\+\_\+controller\+\_\+t$\ast$ -\/ Main controller pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vars_8h_a1b32e674250a551d9adbc5412fb354b2}\label{vars_8h_a1b32e674250a551d9adbc5412fb354b2}} 
+\index{vars.h@{vars.h}!smart\_ring\_get\_device\_name@{smart\_ring\_get\_device\_name}}
+\index{smart\_ring\_get\_device\_name@{smart\_ring\_get\_device\_name}!vars.h@{vars.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_get\_device\_name()}{smart\_ring\_get\_device\_name()}}
+{\footnotesize\ttfamily char $\ast$ smart\+\_\+ring\+\_\+get\+\_\+device\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get device name. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em device\+\_\+name} & Device name \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{vars_8h_a54a28bdba79f53a1a4ed73408dae70b3}\label{vars_8h_a54a28bdba79f53a1a4ed73408dae70b3}} 
+\index{vars.h@{vars.h}!smart\_ring\_get\_mac\_address@{smart\_ring\_get\_mac\_address}}
+\index{smart\_ring\_get\_mac\_address@{smart\_ring\_get\_mac\_address}!vars.h@{vars.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_get\_mac\_address()}{smart\_ring\_get\_mac\_address()}}
+{\footnotesize\ttfamily char $\ast$ smart\+\_\+ring\+\_\+get\+\_\+mac\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get device mac address. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em mac\+\_\+address} & Device mac address \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{vars_8h_ad8f677d61386e2d7b301971df24a9fa2}\label{vars_8h_ad8f677d61386e2d7b301971df24a9fa2}} 
+\index{vars.h@{vars.h}!smart\_ring\_get\_order\_mode@{smart\_ring\_get\_order\_mode}}
+\index{smart\_ring\_get\_order\_mode@{smart\_ring\_get\_order\_mode}!vars.h@{vars.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_get\_order\_mode()}{smart\_ring\_get\_order\_mode()}}
+{\footnotesize\ttfamily char smart\+\_\+ring\+\_\+get\+\_\+order\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get device order mode. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em m} & Manual \\
+\hline
+{\em a} & Automatic \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{vars_8h_a2ff910e3c5dd7a7c3ea357782349b2d0}\label{vars_8h_a2ff910e3c5dd7a7c3ea357782349b2d0}} 
+\index{vars.h@{vars.h}!smart\_ring\_get\_stock@{smart\_ring\_get\_stock}}
+\index{smart\_ring\_get\_stock@{smart\_ring\_get\_stock}!vars.h@{vars.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_get\_stock()}{smart\_ring\_get\_stock()}}
+{\footnotesize\ttfamily uint8\+\_\+t smart\+\_\+ring\+\_\+get\+\_\+stock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get device stock. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Stock} & Device stock \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{vars_8h_a606948185a2db44e2dfa88c82b1a8e20}\label{vars_8h_a606948185a2db44e2dfa88c82b1a8e20}} 
+\index{vars.h@{vars.h}!smart\_ring\_get\_user\_name@{smart\_ring\_get\_user\_name}}
+\index{smart\_ring\_get\_user\_name@{smart\_ring\_get\_user\_name}!vars.h@{vars.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_get\_user\_name()}{smart\_ring\_get\_user\_name()}}
+{\footnotesize\ttfamily char $\ast$ smart\+\_\+ring\+\_\+get\+\_\+user\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get user name. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em user\+\_\+name} & User name \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{vars_8h_a00b8d3990504e98728e6a5337d9feb1f}\label{vars_8h_a00b8d3990504e98728e6a5337d9feb1f}} 
+\index{vars.h@{vars.h}!smart\_ring\_get\_user\_role@{smart\_ring\_get\_user\_role}}
+\index{smart\_ring\_get\_user\_role@{smart\_ring\_get\_user\_role}!vars.h@{vars.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_get\_user\_role()}{smart\_ring\_get\_user\_role()}}
+{\footnotesize\ttfamily char smart\+\_\+ring\+\_\+get\+\_\+user\+\_\+role (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get user role. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em m} & Master \\
+\hline
+{\em a} & Admin \\
+\hline
+{\em u} & User \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{vars_8h_a8ec04d417027cd6fe710389833adf307}\label{vars_8h_a8ec04d417027cd6fe710389833adf307}} 
+\index{vars.h@{vars.h}!smart\_ring\_set\_device\_name@{smart\_ring\_set\_device\_name}}
+\index{smart\_ring\_set\_device\_name@{smart\_ring\_set\_device\_name}!vars.h@{vars.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_set\_device\_name()}{smart\_ring\_set\_device\_name()}}
+{\footnotesize\ttfamily void smart\+\_\+ring\+\_\+set\+\_\+device\+\_\+name (\begin{DoxyParamCaption}\item[{char $\ast$}]{device\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Set device name to be shown on UI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+\_\+name} & \{String\} -\/ Device name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vars_8h_afff954d940c3db1ec3e4ce51dff5ef34}\label{vars_8h_afff954d940c3db1ec3e4ce51dff5ef34}} 
+\index{vars.h@{vars.h}!smart\_ring\_set\_order\_mode@{smart\_ring\_set\_order\_mode}}
+\index{smart\_ring\_set\_order\_mode@{smart\_ring\_set\_order\_mode}!vars.h@{vars.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_set\_order\_mode()}{smart\_ring\_set\_order\_mode()}}
+{\footnotesize\ttfamily void smart\+\_\+ring\+\_\+set\+\_\+order\+\_\+mode (\begin{DoxyParamCaption}\item[{char}]{order\+\_\+mode }\end{DoxyParamCaption})}
+
+
+
+Set device order mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+\_\+mode} & \{char\} -\/ Order mode \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vars_8h_aa002da2ac90dd819d113b2c81dee1e5c}\label{vars_8h_aa002da2ac90dd819d113b2c81dee1e5c}} 
+\index{vars.h@{vars.h}!smart\_ring\_set\_stock@{smart\_ring\_set\_stock}}
+\index{smart\_ring\_set\_stock@{smart\_ring\_set\_stock}!vars.h@{vars.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_set\_stock()}{smart\_ring\_set\_stock()}}
+{\footnotesize\ttfamily void smart\+\_\+ring\+\_\+set\+\_\+stock (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{stock }\end{DoxyParamCaption})}
+
+
+
+Set device stock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stock} & \{int\} -\/ Stock \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vars_8h_af6ce824d3fab4174ac0abb16d96f3399}\label{vars_8h_af6ce824d3fab4174ac0abb16d96f3399}} 
+\index{vars.h@{vars.h}!smart\_ring\_set\_user\_name@{smart\_ring\_set\_user\_name}}
+\index{smart\_ring\_set\_user\_name@{smart\_ring\_set\_user\_name}!vars.h@{vars.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_set\_user\_name()}{smart\_ring\_set\_user\_name()}}
+{\footnotesize\ttfamily void smart\+\_\+ring\+\_\+set\+\_\+user\+\_\+name (\begin{DoxyParamCaption}\item[{char $\ast$}]{user\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Set user name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+\_\+name} & \{String\} -\/ User name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vars_8h_ab92d95265018108fd5ac7ff722b749d2}\label{vars_8h_ab92d95265018108fd5ac7ff722b749d2}} 
+\index{vars.h@{vars.h}!smart\_ring\_set\_user\_role@{smart\_ring\_set\_user\_role}}
+\index{smart\_ring\_set\_user\_role@{smart\_ring\_set\_user\_role}!vars.h@{vars.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_set\_user\_role()}{smart\_ring\_set\_user\_role()}}
+{\footnotesize\ttfamily void smart\+\_\+ring\+\_\+set\+\_\+user\+\_\+role (\begin{DoxyParamCaption}\item[{char}]{user\+\_\+role }\end{DoxyParamCaption})}
+
+
+
+Set user role. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+\_\+role} & \{char\} -\/ User role \\
+\hline
+\end{DoxyParams}

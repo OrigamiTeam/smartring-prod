@@ -1,0 +1,524 @@
+\hypertarget{smart__ring__ui_8h}{}\doxysection{components/smart\+\_\+ring\+\_\+ui/smart\+\_\+ring\+\_\+ui.h File Reference}
+\label{smart__ring__ui_8h}\index{components/smart\_ring\_ui/smart\_ring\_ui.h@{components/smart\_ring\_ui/smart\_ring\_ui.h}}
+
+
+Smart Ring UI header file.  
+
+
+{\ttfamily \#include \char`\"{}driver/gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+log.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$esp\+\_\+system.\+h$>$}\newline
+{\ttfamily \#include $<$esp\+\_\+timer.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}./menus/boot.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./menus/calibration.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./menus/main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./menus/modal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./menus/order.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./menus/pin.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./menus/reset.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./menus/stock.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./menus/support.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./menus/update.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lvgl.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsmart__ring__ui__flags__t}{smart\+\_\+ring\+\_\+ui\+\_\+flags\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Flags to integrate the UI component with the rtest of the firmware and assure that the actions are taken at the right time by the LVGL library. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsmart__ring__ui__delivery__t}{smart\+\_\+ring\+\_\+ui\+\_\+delivery\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Pending delivery information. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsmart__ring__ui__order__t}{smart\+\_\+ring\+\_\+ui\+\_\+order\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structsmart__ring__ui__styles__t}{smart\+\_\+ring\+\_\+ui\+\_\+styles\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structsmart__ring__ui__standby__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+standby\+\_\+controller\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Controller that has the main information needed about the UI system, to prevent unnecessary functions. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionsmart__ring__ui__controller__t_1_1map}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t\+::map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_aeb969ed28dcc60bcc5b0b185642105e7}\label{smart__ring__ui_8h_aeb969ed28dcc60bcc5b0b185642105e7}} 
+\#define {\bfseries NO\+\_\+\+UPDATE}~-\/1
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a047d279cfdae373f08778d8c9b018ba3}\label{smart__ring__ui_8h_a047d279cfdae373f08778d8c9b018ba3}} 
+\#define {\bfseries SLEEP\+\_\+\+TIMEOUT}~60
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a87721b387feed737afb898d6c0a6df36}\label{smart__ring__ui_8h_a87721b387feed737afb898d6c0a6df36}} 
+\#define {\bfseries STANDBY\+\_\+\+TIMEOUT}~10
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a1c0ae5c057d7067f6405a43747fef241}\label{smart__ring__ui_8h_a1c0ae5c057d7067f6405a43747fef241}} 
+\#define {\bfseries SR\+\_\+\+DEFAULT\+\_\+\+BTN\+\_\+\+RADIUS}~5
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_aec4728f39e9f02ea1d6d2f168b8d46b2}\label{smart__ring__ui_8h_aec4728f39e9f02ea1d6d2f168b8d46b2}} 
+\#define {\bfseries SR\+\_\+\+DEFAULT\+\_\+\+BTN\+\_\+\+WIDTH}~96
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_ae9c47b25863405a642c0717a7e6cf59c}\label{smart__ring__ui_8h_ae9c47b25863405a642c0717a7e6cf59c}} 
+\#define {\bfseries SR\+\_\+\+DEFAULT\+\_\+\+BTN\+\_\+\+HEIGHT}~35
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a2b956a23253f14f65738103e37a2c4a4}\label{smart__ring__ui_8h_a2b956a23253f14f65738103e37a2c4a4}} 
+\#define {\bfseries SR\+\_\+\+SMALL\+\_\+\+BTN\+\_\+\+SIZE}~SR\+\_\+\+DEFAULT\+\_\+\+BTN\+\_\+\+WIDTH, SR\+\_\+\+DEFAULT\+\_\+\+BTN\+\_\+\+HEIGHT
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_ace471f6457fc297422be9a326604d2b5}\label{smart__ring__ui_8h_ace471f6457fc297422be9a326604d2b5}} 
+\#define {\bfseries SR\+\_\+\+MEDIUM\+\_\+\+BTN\+\_\+\+SIZE}~    SR\+\_\+\+DEFAULT\+\_\+\+BTN\+\_\+\+WIDTH $\ast$ 5 / 4, SR\+\_\+\+DEFAULT\+\_\+\+BTN\+\_\+\+HEIGHT $\ast$ 5 / 4
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_af27f7c0a42702fdfabff7f30602660a3}\label{smart__ring__ui_8h_af27f7c0a42702fdfabff7f30602660a3}} 
+\#define {\bfseries SR\+\_\+\+BIG\+\_\+\+BTN\+\_\+\+SIZE}~    SR\+\_\+\+DEFAULT\+\_\+\+BTN\+\_\+\+WIDTH $\ast$ 3 / 2, SR\+\_\+\+DEFAULT\+\_\+\+BTN\+\_\+\+HEIGHT $\ast$ 3 / 2
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_abc523464ebe122120ba9da180418f173}\label{smart__ring__ui_8h_abc523464ebe122120ba9da180418f173}} 
+\#define {\bfseries SR\+\_\+\+BIG\+\_\+\+BTN\+\_\+\+SIZE\+\_\+\+STRETCH}~250, SR\+\_\+\+DEFAULT\+\_\+\+BTN\+\_\+\+HEIGHT $\ast$ 3 / 2
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_aaf9026b48d76195f1973dfa7bcaefde2}\label{smart__ring__ui_8h_aaf9026b48d76195f1973dfa7bcaefde2}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+BOOT}~0
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a2031cdb0fd4f6c73a768d9803dfbcafc}\label{smart__ring__ui_8h_a2031cdb0fd4f6c73a768d9803dfbcafc}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+SELECT\+\_\+\+COMMUNICATION}~1
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a90976b20fcacc5a877fd73a439e00e6c}\label{smart__ring__ui_8h_a90976b20fcacc5a877fd73a439e00e6c}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+SELECTED\+\_\+\+COMMUNICATION}~2
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a08851220bc5440c52f2e93112bfea3b7}\label{smart__ring__ui_8h_a08851220bc5440c52f2e93112bfea3b7}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+SLEEP}~3
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a85fbeba4f149c6c91f645e214fd59329}\label{smart__ring__ui_8h_a85fbeba4f149c6c91f645e214fd59329}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+MAIN}~10
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_abfdb070fa8ca941f5f64f638fa4ef2bd}\label{smart__ring__ui_8h_abfdb070fa8ca941f5f64f638fa4ef2bd}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+DASHBOARD}~11
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a9048bdec81b6ecb7c773277d19145659}\label{smart__ring__ui_8h_a9048bdec81b6ecb7c773277d19145659}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+PIN}~12
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a64c955aa47755b46f6eb0cf4f6a34cd1}\label{smart__ring__ui_8h_a64c955aa47755b46f6eb0cf4f6a34cd1}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+SETTINGS}~13
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a2bace6d28119df669d2d00bd80b90ffa}\label{smart__ring__ui_8h_a2bace6d28119df669d2d00bd80b90ffa}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+INFO}~14
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a0971c612543b9e9bea4560576f699f28}\label{smart__ring__ui_8h_a0971c612543b9e9bea4560576f699f28}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+SUPPORT\+\_\+\+REVIEW}~20
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a5aff0e2bb70d16aea979ef35297aa03e}\label{smart__ring__ui_8h_a5aff0e2bb70d16aea979ef35297aa03e}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+SUPPORT\+\_\+\+SUBMITED}~21
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_adace2c29430dfcb77265089a4497e2da}\label{smart__ring__ui_8h_adace2c29430dfcb77265089a4497e2da}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+CHANGED\+\_\+\+STOCK}~30
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a0946429336d4c68416dcbd0ea082dfc4}\label{smart__ring__ui_8h_a0946429336d4c68416dcbd0ea082dfc4}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+CALIBRATION\+\_\+\+EMPTY}~40
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_aee45fe74f80473534c04e67e92a48ea1}\label{smart__ring__ui_8h_aee45fe74f80473534c04e67e92a48ea1}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+CALIBRATION\+\_\+\+FULL}~41
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_aa9b50f3150bef76798256bec341990a1}\label{smart__ring__ui_8h_aa9b50f3150bef76798256bec341990a1}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+CALIBRATION\+\_\+\+PROGRESS}~42
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a32ddf9025faa562ab260a4a156bb9dcc}\label{smart__ring__ui_8h_a32ddf9025faa562ab260a4a156bb9dcc}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+CALIBRATION\+\_\+\+FINISHED}~43
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a4a0f70d0562994b96ad1b80c700985c8}\label{smart__ring__ui_8h_a4a0f70d0562994b96ad1b80c700985c8}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+RESET}~50
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_af3fc86e88f1a7a47ea928d110daf1329}\label{smart__ring__ui_8h_af3fc86e88f1a7a47ea928d110daf1329}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+RESET\+\_\+\+DEVICE}~51
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a074b5c70483a14526a36712ee992a2ac}\label{smart__ring__ui_8h_a074b5c70483a14526a36712ee992a2ac}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+RESET\+\_\+\+WIFI}~52
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a413d9252d43e9b0dbf20a8ba5a92c2df}\label{smart__ring__ui_8h_a413d9252d43e9b0dbf20a8ba5a92c2df}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+RESET\+\_\+\+PROGRESS}~53
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_abe910982f7147d1fcaadd48579c75fb6}\label{smart__ring__ui_8h_abe910982f7147d1fcaadd48579c75fb6}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+RESET\+\_\+\+SUCCESS}~54
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a915a20a07abb91230c1989211ff8651e}\label{smart__ring__ui_8h_a915a20a07abb91230c1989211ff8651e}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+RESET\+\_\+\+FAILED}~55
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a52a9fc548c6b943ace9cb9600509ef5b}\label{smart__ring__ui_8h_a52a9fc548c6b943ace9cb9600509ef5b}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+NEW\+\_\+\+ORDER}~60
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a74e86208b46068c85238b02bef942613}\label{smart__ring__ui_8h_a74e86208b46068c85238b02bef942613}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+REVIEW\+\_\+\+ORDER}~61
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a092acedd55a7ecee326d39d9193881ee}\label{smart__ring__ui_8h_a092acedd55a7ecee326d39d9193881ee}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+PROCESSING\+\_\+\+ORDER}~62
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_ae4cbb4773bd477582d12b1cab504542d}\label{smart__ring__ui_8h_ae4cbb4773bd477582d12b1cab504542d}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+SUCCESSFULL\+\_\+\+ORDER}~63
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a9213fa3b05e1c5a670cd45efcfb10479}\label{smart__ring__ui_8h_a9213fa3b05e1c5a670cd45efcfb10479}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+CANCELED\+\_\+\+ORDER}~64
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_aac8a8094e4b619805b56d7d0e848aba5}\label{smart__ring__ui_8h_aac8a8094e4b619805b56d7d0e848aba5}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+ERROR\+\_\+\+ORDER}~65
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_aa7307a9b3e0eaebd4b1d654f9d87b5cb}\label{smart__ring__ui_8h_aa7307a9b3e0eaebd4b1d654f9d87b5cb}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+MANAGE\+\_\+\+ORDERS}~66
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_ae90f05b0cdd4b5f02940216ff656e444}\label{smart__ring__ui_8h_ae90f05b0cdd4b5f02940216ff656e444}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+ERROR\+\_\+\+MANAGE}~67
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_afaa313c68aa962db76e72f93e65d487c}\label{smart__ring__ui_8h_afaa313c68aa962db76e72f93e65d487c}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+CHANGE\+\_\+\+ORDER\+\_\+\+MODE}~68
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_ae258be32c4ffdf310f68641b03165152}\label{smart__ring__ui_8h_ae258be32c4ffdf310f68641b03165152}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+SUCCESSFULL\+\_\+\+MODE\+\_\+\+CHANGE}~69
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a6f0ab7094763edc85af83f78f5f82cd3}\label{smart__ring__ui_8h_a6f0ab7094763edc85af83f78f5f82cd3}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+UPDATE}~70
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a88f70f5b91338d21c8fba9a06f79de28}\label{smart__ring__ui_8h_a88f70f5b91338d21c8fba9a06f79de28}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+UPDATE\+\_\+\+COMPLETE}~71
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_ae6d2215f68777e56f67dfae6aacc4a1e}\label{smart__ring__ui_8h_ae6d2215f68777e56f67dfae6aacc4a1e}} 
+\#define {\bfseries MENU\+\_\+\+ID\+\_\+\+UPDATE\+\_\+\+FAILED}~72
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{smart__ring__ui_8h_a43d6e8cef5b37d8eeb14b61edd993555}{smart\+\_\+ring\+\_\+ui\+\_\+timer\+\_\+type\+\_\+t}} \{ \newline
+{\bfseries CLOSE\+\_\+\+MODAL}
+, {\bfseries BOOT\+\_\+\+START\+\_\+\+COMMUNICATION}
+, {\bfseries LOGIN\+\_\+\+VALIDATION}
+, {\bfseries LOGIN\+\_\+\+SUCCESSFULL}
+, \newline
+{\bfseries REQUESTING\+\_\+\+ORDERS}
+, {\bfseries CALIBRATION\+\_\+\+EMPTY}
+, {\bfseries CALIBRATION\+\_\+\+FULL}
+, {\bfseries SLEEP}
+, \newline
+{\bfseries STANDBY}
+, {\bfseries STANDBY\+\_\+\+DASHBOARD}
+, {\bfseries CONFIRM\+\_\+\+ORDER}
+ \}
+\begin{DoxyCompactList}\small\item\em Timer type to define the behavior on the timer trigger. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{smart__ring__ui_8h_a595709b215c99f9fd590e8057ec80d99}{smart\+\_\+ring\+\_\+ui\+\_\+state\+\_\+machine\+\_\+t}} \{ \newline
+{\bfseries STATE\+\_\+0}
+, {\bfseries STATE\+\_\+1}
+, {\bfseries STATE\+\_\+2}
+, {\bfseries STATE\+\_\+3}
+, \newline
+{\bfseries STATE\+\_\+4}
+, {\bfseries STATE\+\_\+5}
+, {\bfseries STATE\+\_\+6}
+, {\bfseries STATE\+\_\+7}
+, \newline
+{\bfseries STATE\+\_\+8}
+, {\bfseries STATE\+\_\+9}
+, {\bfseries STATE\+\_\+10}
+, {\bfseries STATE\+\_\+11}
+, \newline
+{\bfseries STATE\+\_\+12}
+, {\bfseries STATE\+\_\+13}
+, {\bfseries STATE\+\_\+14}
+, {\bfseries STATE\+\_\+15}
+, \newline
+{\bfseries STATE\+\_\+16}
+, {\bfseries STATE\+\_\+17}
+, {\bfseries STATE\+\_\+18}
+, {\bfseries STATE\+\_\+19}
+, \newline
+{\bfseries STATE\+\_\+20}
+, {\bfseries STATE\+\_\+21}
+, {\bfseries STATE\+\_\+22}
+, {\bfseries STATE\+\_\+23}
+, \newline
+{\bfseries STATE\+\_\+24}
+, {\bfseries STATE\+\_\+25}
+, {\bfseries STATE\+\_\+26}
+, {\bfseries STATE\+\_\+27}
+, \newline
+{\bfseries STATE\+\_\+28}
+, {\bfseries STATE\+\_\+29}
+, {\bfseries STATE\+\_\+30}
+, {\bfseries STATE\+\_\+31}
+, \newline
+{\bfseries STATE\+\_\+32}
+, {\bfseries STATE\+\_\+33}
+, {\bfseries STATE\+\_\+34}
+, {\bfseries STATE\+\_\+35}
+, \newline
+{\bfseries STATE\+\_\+36}
+, {\bfseries STATE\+\_\+37}
+, {\bfseries STATE\+\_\+38}
+, {\bfseries STATE\+\_\+39}
+, \newline
+{\bfseries STATE\+\_\+40}
+, {\bfseries STATE\+\_\+41}
+, {\bfseries STATE\+\_\+42}
+ \}
+\begin{DoxyCompactList}\small\item\em States for the Finite State Machine to control the display information and next screen or actions to be taken. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{smart__ring__ui_8h_a0f618723ce0645dd3c10b3df6ba7f639}{smart\+\_\+ring\+\_\+ui\+\_\+init\+\_\+system}} ()
+\begin{DoxyCompactList}\small\item\em Responsible for the ui system initialization and first configuration. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{smart__ring__ui_8h_a7e06ae0033ba7e9d5dd002b26a845576}{smart\+\_\+ring\+\_\+ui\+\_\+get\+\_\+firwmare}} (void)
+\begin{DoxyCompactList}\small\item\em Get the ui firmware version to print on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{smart__ring__ui_8h_a0c5cc3bd5d2d4714350b3e4aedfabba4}{smart\+\_\+ring\+\_\+ui\+\_\+set\+\_\+firmware}} (char $\ast$version)
+\begin{DoxyCompactList}\small\item\em Set the ui firmware version to print on screen. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{smart__ring__ui_8h_ac79482e386de6b4801e8b23fa855491f}{smart\+\_\+ring\+\_\+ui\+\_\+get\+\_\+device\+\_\+name}} (void)
+\begin{DoxyCompactList}\small\item\em Get the ui device name to print on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{smart__ring__ui_8h_a880b4511203c11b23c2dd60b081d7e1a}{smart\+\_\+ring\+\_\+ui\+\_\+set\+\_\+device\+\_\+name}} (char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Set the ui device name to print on screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_aa227355ced106b8939be1fb9a98649a1}\label{smart__ring__ui_8h_aa227355ced106b8939be1fb9a98649a1}} 
+char $\ast$ {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+get\+\_\+mac\+\_\+address} (void)
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a85ac96ee89d17398188a2cdb8fce9b04}\label{smart__ring__ui_8h_a85ac96ee89d17398188a2cdb8fce9b04}} 
+void {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+set\+\_\+mac\+\_\+address} (char $\ast$name)
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a8fd4867155d7f4f23b9b61cc029ff56f}\label{smart__ring__ui_8h_a8fd4867155d7f4f23b9b61cc029ff56f}} 
+char $\ast$ {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+get\+\_\+ssid} (void)
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a43330220028244418cd9d5db60b496a1}\label{smart__ring__ui_8h_a43330220028244418cd9d5db60b496a1}} 
+void {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+set\+\_\+ssid} (char $\ast$name)
+\item 
+char \mbox{\hyperlink{smart__ring__ui_8h_af00fab142b472b10f7513e057e418d06}{smart\+\_\+ring\+\_\+ui\+\_\+get\+\_\+order\+\_\+mode}} (void)
+\begin{DoxyCompactList}\small\item\em Get the ui order mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{smart__ring__ui_8h_a16f6a88769185cb8f0fd0a133c41a681}{smart\+\_\+ring\+\_\+ui\+\_\+set\+\_\+order\+\_\+mode}} (char mode)
+\begin{DoxyCompactList}\small\item\em Set the ui order mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a404072b63e458044a93dacf0bb29ea2b}\label{smart__ring__ui_8h_a404072b63e458044a93dacf0bb29ea2b}} 
+char {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+get\+\_\+connection\+\_\+type} (void)
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a6b6bbd2b24a542503924f0863c821df3}\label{smart__ring__ui_8h_a6b6bbd2b24a542503924f0863c821df3}} 
+void {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+set\+\_\+connection\+\_\+type} (char mode)
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a2f08e4515ecb24dce3dc9adf87a7ae4e}\label{smart__ring__ui_8h_a2f08e4515ecb24dce3dc9adf87a7ae4e}} 
+void {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+set\+\_\+calibration} (int no\+\_\+deposit, int full\+\_\+deposit, bool is\+\_\+stable)
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_ac92fa5ddd56812d62b7964de8823bb03}\label{smart__ring__ui_8h_ac92fa5ddd56812d62b7964de8823bb03}} 
+void {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+set\+\_\+current\+\_\+deposit} (int current\+\_\+deposit)
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a529f1c18396218d5ed1be57bfded49ea}\label{smart__ring__ui_8h_a529f1c18396218d5ed1be57bfded49ea}} 
+void {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+set\+\_\+stock} (int stock)
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_abfe4894c727fecac1c76fe17a95d58ce}\label{smart__ring__ui_8h_abfe4894c727fecac1c76fe17a95d58ce}} 
+uint8\+\_\+t {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+get\+\_\+rssi\+\_\+level} ()
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_ac0ad9750e67ffa7f7901e37dd8724e00}\label{smart__ring__ui_8h_ac0ad9750e67ffa7f7901e37dd8724e00}} 
+void {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+set\+\_\+rssi\+\_\+level} (uint8\+\_\+t rssi\+\_\+level)
+\item 
+void \mbox{\hyperlink{smart__ring__ui_8h_a782ef09ff442ab3a894276ba809cf3c2}{create\+\_\+header}} (lv\+\_\+obj\+\_\+t $\ast$parent, char $\ast$title, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\begin{DoxyCompactList}\small\item\em Create the header for the screens. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{smart__ring__ui_8h_aba5b4c55bf7b9664e8ecdc332de76c6f}{smart\+\_\+ring\+\_\+ui\+\_\+check\+\_\+flags}} ()
+\begin{DoxyCompactList}\small\item\em Function to check for existing flags and execute the proper functionality. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_a6c1f0e10838bf5b5aecd075d3905fbf3}\label{smart__ring__ui_8h_a6c1f0e10838bf5b5aecd075d3905fbf3}} 
+void {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+update\+\_\+state} (enum \mbox{\hyperlink{smart__ring__ui_8h_a595709b215c99f9fd590e8057ec80d99}{smart\+\_\+ring\+\_\+ui\+\_\+state\+\_\+machine\+\_\+t}} state)
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_afb5a80148190b817c2d4a873d2fe8ce5}\label{smart__ring__ui_8h_afb5a80148190b817c2d4a873d2fe8ce5}} 
+struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ {\bfseries smart\+\_\+ring\+\_\+ui\+\_\+get\+\_\+controller} ()
+\item 
+\mbox{\Hypertarget{smart__ring__ui_8h_aa8c65c100f3c5dd2959ef1bc9307b7b4}\label{smart__ring__ui_8h_aa8c65c100f3c5dd2959ef1bc9307b7b4}} 
+float {\bfseries map} (int x, int in\+\_\+min, int in\+\_\+max, int out\+\_\+min, int out\+\_\+max)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Smart Ring UI header file. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{smart__ring__ui_8h_a595709b215c99f9fd590e8057ec80d99}\label{smart__ring__ui_8h_a595709b215c99f9fd590e8057ec80d99}} 
+\index{smart\_ring\_ui.h@{smart\_ring\_ui.h}!smart\_ring\_ui\_state\_machine\_t@{smart\_ring\_ui\_state\_machine\_t}}
+\index{smart\_ring\_ui\_state\_machine\_t@{smart\_ring\_ui\_state\_machine\_t}!smart\_ring\_ui.h@{smart\_ring\_ui.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_ui\_state\_machine\_t}{smart\_ring\_ui\_state\_machine\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{smart__ring__ui_8h_a595709b215c99f9fd590e8057ec80d99}{smart\+\_\+ring\+\_\+ui\+\_\+state\+\_\+machine\+\_\+t}}}
+
+
+
+States for the Finite State Machine to control the display information and next screen or actions to be taken. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+\mbox{\Hypertarget{smart__ring__ui_8h_a43d6e8cef5b37d8eeb14b61edd993555}\label{smart__ring__ui_8h_a43d6e8cef5b37d8eeb14b61edd993555}} 
+\index{smart\_ring\_ui.h@{smart\_ring\_ui.h}!smart\_ring\_ui\_timer\_type\_t@{smart\_ring\_ui\_timer\_type\_t}}
+\index{smart\_ring\_ui\_timer\_type\_t@{smart\_ring\_ui\_timer\_type\_t}!smart\_ring\_ui.h@{smart\_ring\_ui.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_ui\_timer\_type\_t}{smart\_ring\_ui\_timer\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{smart__ring__ui_8h_a43d6e8cef5b37d8eeb14b61edd993555}{smart\+\_\+ring\+\_\+ui\+\_\+timer\+\_\+type\+\_\+t}}}
+
+
+
+Timer type to define the behavior on the timer trigger. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{smart__ring__ui_8h_a782ef09ff442ab3a894276ba809cf3c2}\label{smart__ring__ui_8h_a782ef09ff442ab3a894276ba809cf3c2}} 
+\index{smart\_ring\_ui.h@{smart\_ring\_ui.h}!create\_header@{create\_header}}
+\index{create\_header@{create\_header}!smart\_ring\_ui.h@{smart\_ring\_ui.h}}
+\doxysubsubsection{\texorpdfstring{create\_header()}{create\_header()}}
+{\footnotesize\ttfamily void create\+\_\+header (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t $\ast$}]{parent,  }\item[{char $\ast$}]{title,  }\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller }\end{DoxyParamCaption})}
+
+
+
+Create the header for the screens. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & Screen object \\
+\hline
+{\em $\ast$title} & Title String \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{smart__ring__ui_8h_aba5b4c55bf7b9664e8ecdc332de76c6f}\label{smart__ring__ui_8h_aba5b4c55bf7b9664e8ecdc332de76c6f}} 
+\index{smart\_ring\_ui.h@{smart\_ring\_ui.h}!smart\_ring\_ui\_check\_flags@{smart\_ring\_ui\_check\_flags}}
+\index{smart\_ring\_ui\_check\_flags@{smart\_ring\_ui\_check\_flags}!smart\_ring\_ui.h@{smart\_ring\_ui.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_ui\_check\_flags()}{smart\_ring\_ui\_check\_flags()}}
+{\footnotesize\ttfamily void smart\+\_\+ring\+\_\+ui\+\_\+check\+\_\+flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to check for existing flags and execute the proper functionality. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{smart__ring__ui_8h_ac79482e386de6b4801e8b23fa855491f}\label{smart__ring__ui_8h_ac79482e386de6b4801e8b23fa855491f}} 
+\index{smart\_ring\_ui.h@{smart\_ring\_ui.h}!smart\_ring\_ui\_get\_device\_name@{smart\_ring\_ui\_get\_device\_name}}
+\index{smart\_ring\_ui\_get\_device\_name@{smart\_ring\_ui\_get\_device\_name}!smart\_ring\_ui.h@{smart\_ring\_ui.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_ui\_get\_device\_name()}{smart\_ring\_ui\_get\_device\_name()}}
+{\footnotesize\ttfamily char $\ast$ smart\+\_\+ring\+\_\+ui\+\_\+get\+\_\+device\+\_\+name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the ui device name to print on screen. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Device} & name \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{smart__ring__ui_8h_a7e06ae0033ba7e9d5dd002b26a845576}\label{smart__ring__ui_8h_a7e06ae0033ba7e9d5dd002b26a845576}} 
+\index{smart\_ring\_ui.h@{smart\_ring\_ui.h}!smart\_ring\_ui\_get\_firwmare@{smart\_ring\_ui\_get\_firwmare}}
+\index{smart\_ring\_ui\_get\_firwmare@{smart\_ring\_ui\_get\_firwmare}!smart\_ring\_ui.h@{smart\_ring\_ui.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_ui\_get\_firwmare()}{smart\_ring\_ui\_get\_firwmare()}}
+{\footnotesize\ttfamily char $\ast$ smart\+\_\+ring\+\_\+ui\+\_\+get\+\_\+firwmare (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the ui firmware version to print on screen. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Ui} & version \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{smart__ring__ui_8h_af00fab142b472b10f7513e057e418d06}\label{smart__ring__ui_8h_af00fab142b472b10f7513e057e418d06}} 
+\index{smart\_ring\_ui.h@{smart\_ring\_ui.h}!smart\_ring\_ui\_get\_order\_mode@{smart\_ring\_ui\_get\_order\_mode}}
+\index{smart\_ring\_ui\_get\_order\_mode@{smart\_ring\_ui\_get\_order\_mode}!smart\_ring\_ui.h@{smart\_ring\_ui.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_ui\_get\_order\_mode()}{smart\_ring\_ui\_get\_order\_mode()}}
+{\footnotesize\ttfamily char smart\+\_\+ring\+\_\+ui\+\_\+get\+\_\+order\+\_\+mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the ui order mode. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Order} & mode \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{smart__ring__ui_8h_a0f618723ce0645dd3c10b3df6ba7f639}\label{smart__ring__ui_8h_a0f618723ce0645dd3c10b3df6ba7f639}} 
+\index{smart\_ring\_ui.h@{smart\_ring\_ui.h}!smart\_ring\_ui\_init\_system@{smart\_ring\_ui\_init\_system}}
+\index{smart\_ring\_ui\_init\_system@{smart\_ring\_ui\_init\_system}!smart\_ring\_ui.h@{smart\_ring\_ui.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_ui\_init\_system()}{smart\_ring\_ui\_init\_system()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t smart\+\_\+ring\+\_\+ui\+\_\+init\+\_\+system (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Responsible for the ui system initialization and first configuration. 
+
+\begin{DoxyNote}{Note}
+It may change during the course of the firmware integration 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em if} & the initialization was configured sucessfully \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{smart__ring__ui_8h_a880b4511203c11b23c2dd60b081d7e1a}\label{smart__ring__ui_8h_a880b4511203c11b23c2dd60b081d7e1a}} 
+\index{smart\_ring\_ui.h@{smart\_ring\_ui.h}!smart\_ring\_ui\_set\_device\_name@{smart\_ring\_ui\_set\_device\_name}}
+\index{smart\_ring\_ui\_set\_device\_name@{smart\_ring\_ui\_set\_device\_name}!smart\_ring\_ui.h@{smart\_ring\_ui.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_ui\_set\_device\_name()}{smart\_ring\_ui\_set\_device\_name()}}
+{\footnotesize\ttfamily void smart\+\_\+ring\+\_\+ui\+\_\+set\+\_\+device\+\_\+name (\begin{DoxyParamCaption}\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Set the ui device name to print on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$name} & Device name \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{smart__ring__ui_8h_a0c5cc3bd5d2d4714350b3e4aedfabba4}\label{smart__ring__ui_8h_a0c5cc3bd5d2d4714350b3e4aedfabba4}} 
+\index{smart\_ring\_ui.h@{smart\_ring\_ui.h}!smart\_ring\_ui\_set\_firmware@{smart\_ring\_ui\_set\_firmware}}
+\index{smart\_ring\_ui\_set\_firmware@{smart\_ring\_ui\_set\_firmware}!smart\_ring\_ui.h@{smart\_ring\_ui.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_ui\_set\_firmware()}{smart\_ring\_ui\_set\_firmware()}}
+{\footnotesize\ttfamily void smart\+\_\+ring\+\_\+ui\+\_\+set\+\_\+firmware (\begin{DoxyParamCaption}\item[{char $\ast$}]{version }\end{DoxyParamCaption})}
+
+
+
+Set the ui firmware version to print on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$version} & Firmware version \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{smart__ring__ui_8h_a16f6a88769185cb8f0fd0a133c41a681}\label{smart__ring__ui_8h_a16f6a88769185cb8f0fd0a133c41a681}} 
+\index{smart\_ring\_ui.h@{smart\_ring\_ui.h}!smart\_ring\_ui\_set\_order\_mode@{smart\_ring\_ui\_set\_order\_mode}}
+\index{smart\_ring\_ui\_set\_order\_mode@{smart\_ring\_ui\_set\_order\_mode}!smart\_ring\_ui.h@{smart\_ring\_ui.h}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_ui\_set\_order\_mode()}{smart\_ring\_ui\_set\_order\_mode()}}
+{\footnotesize\ttfamily void smart\+\_\+ring\+\_\+ui\+\_\+set\+\_\+order\+\_\+mode (\begin{DoxyParamCaption}\item[{char}]{mode }\end{DoxyParamCaption})}
+
+
+
+Set the ui order mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Order mode -\/ Manual (m) or Automatic (a) \\
+\hline
+\end{DoxyParams}

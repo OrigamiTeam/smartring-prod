@@ -1,0 +1,61 @@
+\hypertarget{main_8h_source}{}\doxysection{main.\+h}
+\label{main_8h_source}\index{components/smart\_ring\_ui/menus/main.h@{components/smart\_ring\_ui/menus/main.h}}
+\mbox{\hyperlink{main_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef \_\_MAIN\_H\_}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define \_\_MAIN\_H\_}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}lvgl.h"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{smart__ring__ui_8h}{smart\_ring\_ui.h}}"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} smart\_ring\_support\_type\_t \{}
+\DoxyCodeLine{19     BAD\_TASTE\_WATER,}
+\DoxyCodeLine{20     BOTH\_TAPS\_COLD,}
+\DoxyCodeLine{21     NO\_COLD,}
+\DoxyCodeLine{22     LEAKING\_WATER,}
+\DoxyCodeLine{23     OTHER}
+\DoxyCodeLine{24 \};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structsmart__ring__support__option__t}{smart\_ring\_support\_option\_t}} \{}
+\DoxyCodeLine{27     \textcolor{keyword}{enum} smart\_ring\_support\_type\_t type;}
+\DoxyCodeLine{28     \textcolor{keywordtype}{char}                           text[32];}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keywordtype}{void} smart\_ring\_ui\_check\_handler(lv\_obj\_t *button, lv\_event\_t event);}
+\DoxyCodeLine{32 \textcolor{keywordtype}{void} main\_logout\_handler(lv\_obj\_t *button, lv\_event\_t event);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keywordtype}{void} smart\_ring\_ui\_main\_update\_stock\_value(\textcolor{keywordtype}{int} stock);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{43 \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8h_a20791444c5e414136e8f63cfaff07b5e}{main\_create\_screen}}(lv\_obj\_t                          *parent,}
+\DoxyCodeLine{44                         \textcolor{keyword}{struct} \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\_ring\_ui\_controller\_t}} *ui\_controller);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{53 \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8h_a78134d3d2fab911a3f47eae729d473ba}{main\_create\_dashboard\_menu}}(}
+\DoxyCodeLine{54     lv\_obj\_t *parent, \textcolor{keyword}{struct} \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\_ring\_ui\_controller\_t}} *ui\_controller);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{keywordtype}{void} smart\_ring\_main\_debug\_update\_sensor\_values(\textcolor{keywordtype}{int} old\_value, \textcolor{keywordtype}{int} new\_value,}
+\DoxyCodeLine{57                                                 \textcolor{keywordtype}{bool} stable);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{67 \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8h_a64294fa9afe784b30f5e7f431fa12293}{main\_create\_debug\_menu}}(lv\_obj\_t                          *parent,}
+\DoxyCodeLine{68                             \textcolor{keyword}{struct} \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\_ring\_ui\_controller\_t}} *ui\_controller);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{77 \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8h_ac55ae64967a0190aa36254e2e90a7187}{main\_create\_reset\_menu}}(lv\_obj\_t                          *parent,}
+\DoxyCodeLine{78                             \textcolor{keyword}{struct} \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\_ring\_ui\_controller\_t}} *ui\_controller);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{87 \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8h_a4d6e11073cb975fa5dcf3e60cc09fb29}{main\_create\_info\_screen}}(lv\_obj\_t                          *parent,}
+\DoxyCodeLine{88                              \textcolor{keyword}{struct} \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\_ring\_ui\_controller\_t}} *ui\_controller);}
+\DoxyCodeLine{89 \textcolor{keywordtype}{void} main\_home\_handler(lv\_obj\_t *button, lv\_event\_t event);}
+\DoxyCodeLine{90 \textcolor{keywordtype}{void} main\_update\_rssi\_signal(uint8\_t rssi\_level);}
+\DoxyCodeLine{91 \textcolor{keywordtype}{void} main\_update\_device\_name(\textcolor{keywordtype}{char} *device\_name);}
+\DoxyCodeLine{92 \textcolor{keywordtype}{void} main\_update\_eta\_information(\textcolor{keywordtype}{char} *information);}
+\DoxyCodeLine{93 \textcolor{keywordtype}{void} main\_update\_bottle\_icon(\textcolor{keyword}{struct} \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\_ring\_ui\_controller\_t}} *ui\_controller);}
+\DoxyCodeLine{94 \textcolor{keywordtype}{void} main\_update\_stock(\textcolor{keywordtype}{int} stock);}
+\DoxyCodeLine{95 \textcolor{keywordtype}{void} main\_update\_order\_mode(\textcolor{keywordtype}{char} order\_mode);}
+\DoxyCodeLine{96 \textcolor{keywordtype}{void} smart\_ring\_ui\_create\_sleep\_screen(}
+\DoxyCodeLine{97     lv\_obj\_t *parent, \textcolor{keyword}{struct} \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\_ring\_ui\_controller\_t}} *ui\_controller);}
+\DoxyCodeLine{98 \textcolor{keywordtype}{void} smart\_ring\_ui\_main\_update\_next\_eta();}
+\DoxyCodeLine{99 \textcolor{keywordtype}{void} smart\_ring\_ui\_main\_clear\_next\_eta();}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_MAIN\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

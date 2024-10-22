@@ -1,0 +1,34 @@
+\hypertarget{http__server_8h_source}{}\doxysection{http\+\_\+server.\+h}
+\label{http__server_8h_source}\index{main/include/http\_server.h@{main/include/http\_server.h}}
+\mbox{\hyperlink{http__server_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef \_\_HTTP\_SERVER\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define \_\_HTTP\_SERVER\_H}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{comment}{// HTTP Server task}}
+\DoxyCodeLine{17 \textcolor{comment}{}\textcolor{preprocessor}{\#define HTTP\_SERVER\_TASK\_STACK\_SIZE 8192}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define HTTP\_SERVER\_TASK\_PRIORITY 4}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define HTTP\_SERVER\_TASK\_CORE\_ID 0}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{28 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{http__server_8h_a986bcaf60b76f63b3711cd56dbf7ae9f}{smart\_ring\_provision\_status\_t}} \{}
+\DoxyCodeLine{34   \mbox{\hyperlink{http__server_8h_a986bcaf60b76f63b3711cd56dbf7ae9fac0081e28a29f9387eb68fd544a426a7a}{PROVISION\_CONNECTING}},}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{41   \mbox{\hyperlink{http__server_8h_a986bcaf60b76f63b3711cd56dbf7ae9fa8ef2328d7300801d4d226f431e206688}{PROVISION\_SUCCESSFUL}},}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{48   \mbox{\hyperlink{http__server_8h_a986bcaf60b76f63b3711cd56dbf7ae9fa39f3a0c7813c83b8af7f8f96505eacde}{PROVISION\_FAILED}}}
+\DoxyCodeLine{49 \};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{58 \textcolor{keyword}{static} esp\_err\_t http\_server\_configure(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{67 esp\_err\_t \mbox{\hyperlink{http__server_8h_a9fb8067f99901554a760651dc58e0ea9}{http\_server\_start}}();}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{74 \textcolor{keywordtype}{void} \mbox{\hyperlink{http__server_8h_afffb5f05a179c9702078a824048dab36}{http\_server\_stop}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{83 \textcolor{keywordtype}{void} \mbox{\hyperlink{http__server_8h_a7887781eef48c2a3592f137faff96f97}{provision\_set\_status}}(\textcolor{keywordtype}{int} state);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{91 \textcolor{keywordtype}{int} \mbox{\hyperlink{http__server_8h_abea8beefdf2d19e4253902e844487a20}{provision\_get\_status}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

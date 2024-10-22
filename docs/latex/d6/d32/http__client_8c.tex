@@ -1,0 +1,107 @@
+\hypertarget{http__client_8c}{}\doxysection{main/http\+\_\+client.c File Reference}
+\label{http__client_8c}\index{main/http\_client.c@{main/http\_client.c}}
+
+
+This file contains the functions responsible for the FOTA update of the device and the HTTP communication with the AWS.  
+
+
+{\ttfamily \#include \char`\"{}http\+\_\+client.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsmart__ring__http__client__ota__information}{smart\+\_\+ring\+\_\+http\+\_\+client\+\_\+ota\+\_\+information}}
+\begin{DoxyCompactList}\small\item\em Object structure to store the information about the ongoing device firmware update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{http__client_8c_a1ff1be37d369774fbd2b9b272b633142}{smart\+\_\+ring\+\_\+http\+\_\+client\+\_\+event\+\_\+handler}} (esp\+\_\+http\+\_\+client\+\_\+event\+\_\+t $\ast$event)
+\begin{DoxyCompactList}\small\item\em Handle the responses from the AWS and trigger the corresponding callbacks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{http__client_8c_aa8a41cce8976aeaefe97ed79a37a19b5}{smart\+\_\+ring\+\_\+http\+\_\+client\+\_\+get\+\_\+check\+\_\+firmware}} ()
+\begin{DoxyCompactList}\small\item\em Check if there is a new firmware version available in the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{http__client_8c_a1f0d5c7d301ecc0180f027e62d316d33}{smart\+\_\+ring\+\_\+http\+\_\+client\+\_\+get\+\_\+update\+\_\+firmware}} ()
+\begin{DoxyCompactList}\small\item\em Update the device firmware to the latest on the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsmart__ring__http__client__ota__information}{smart\+\_\+ring\+\_\+http\+\_\+client\+\_\+ota\+\_\+information}} \mbox{\hyperlink{http__client_8c_a2a0be951d7fb5b6edf723a30591cd292}{ota\+\_\+information}}
+\begin{DoxyCompactList}\small\item\em Object to process ongoing firmware updates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the functions responsible for the FOTA update of the device and the HTTP communication with the AWS. 
+
+\begin{DoxyAuthor}{Author}
+David Abreu (\href{mailto:david@quleap.com}{\texttt{ david@quleap.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/10-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{http__client_8c_a1ff1be37d369774fbd2b9b272b633142}\label{http__client_8c_a1ff1be37d369774fbd2b9b272b633142}} 
+\index{http\_client.c@{http\_client.c}!smart\_ring\_http\_client\_event\_handler@{smart\_ring\_http\_client\_event\_handler}}
+\index{smart\_ring\_http\_client\_event\_handler@{smart\_ring\_http\_client\_event\_handler}!http\_client.c@{http\_client.c}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_http\_client\_event\_handler()}{smart\_ring\_http\_client\_event\_handler()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t smart\+\_\+ring\+\_\+http\+\_\+client\+\_\+event\+\_\+handler (\begin{DoxyParamCaption}\item[{esp\+\_\+http\+\_\+client\+\_\+event\+\_\+t $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Handle the responses from the AWS and trigger the corresponding callbacks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \{esp\+\_\+http\+\_\+client\+\_\+event\+\_\+t\} -\/ Event containing data and client handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t -\/ Should return ESP-\/\+OK to continue correct functioning 
+\end{DoxyReturn}
+\mbox{\Hypertarget{http__client_8c_aa8a41cce8976aeaefe97ed79a37a19b5}\label{http__client_8c_aa8a41cce8976aeaefe97ed79a37a19b5}} 
+\index{http\_client.c@{http\_client.c}!smart\_ring\_http\_client\_get\_check\_firmware@{smart\_ring\_http\_client\_get\_check\_firmware}}
+\index{smart\_ring\_http\_client\_get\_check\_firmware@{smart\_ring\_http\_client\_get\_check\_firmware}!http\_client.c@{http\_client.c}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_http\_client\_get\_check\_firmware()}{smart\_ring\_http\_client\_get\_check\_firmware()}}
+{\footnotesize\ttfamily void smart\+\_\+ring\+\_\+http\+\_\+client\+\_\+get\+\_\+check\+\_\+firmware (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if there is a new firmware version available in the server. 
+
+\mbox{\Hypertarget{http__client_8c_a1f0d5c7d301ecc0180f027e62d316d33}\label{http__client_8c_a1f0d5c7d301ecc0180f027e62d316d33}} 
+\index{http\_client.c@{http\_client.c}!smart\_ring\_http\_client\_get\_update\_firmware@{smart\_ring\_http\_client\_get\_update\_firmware}}
+\index{smart\_ring\_http\_client\_get\_update\_firmware@{smart\_ring\_http\_client\_get\_update\_firmware}!http\_client.c@{http\_client.c}}
+\doxysubsubsection{\texorpdfstring{smart\_ring\_http\_client\_get\_update\_firmware()}{smart\_ring\_http\_client\_get\_update\_firmware()}}
+{\footnotesize\ttfamily void smart\+\_\+ring\+\_\+http\+\_\+client\+\_\+get\+\_\+update\+\_\+firmware (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the device firmware to the latest on the server. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{http__client_8c_a2a0be951d7fb5b6edf723a30591cd292}\label{http__client_8c_a2a0be951d7fb5b6edf723a30591cd292}} 
+\index{http\_client.c@{http\_client.c}!ota\_information@{ota\_information}}
+\index{ota\_information@{ota\_information}!http\_client.c@{http\_client.c}}
+\doxysubsubsection{\texorpdfstring{ota\_information}{ota\_information}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structsmart__ring__http__client__ota__information}{smart\+\_\+ring\+\_\+http\+\_\+client\+\_\+ota\+\_\+information}} ota\+\_\+information}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    .current\_position = 0,}
+\DoxyCodeLine{    .last\_percentage = 0,}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Object to process ongoing firmware updates. 
+

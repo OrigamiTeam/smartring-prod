@@ -1,0 +1,346 @@
+\hypertarget{smart__ring__ui_8h_source}{}\doxysection{smart\+\_\+ring\+\_\+ui.\+h}
+\label{smart__ring__ui_8h_source}\index{components/smart\_ring\_ui/smart\_ring\_ui.h@{components/smart\_ring\_ui/smart\_ring\_ui.h}}
+\mbox{\hyperlink{smart__ring__ui_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef SMART\_RING\_UI\_H\_}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define SMART\_RING\_UI\_H\_}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{11 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{comment}{//===================//}}
+\DoxyCodeLine{15 \textcolor{comment}{//      INCLUDES     //}}
+\DoxyCodeLine{16 \textcolor{comment}{//===================//}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}driver/gpio.h"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}esp\_log.h"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <esp\_system.h>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <esp\_timer.h>}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{boot_8h}{./menus/boot.h}}"{}}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{calibration_8h}{./menus/calibration.h}}"{}}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{main_8h}{./menus/main.h}}"{}}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{modal_8h}{./menus/modal.h}}"{}}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{order_8h}{./menus/order.h}}"{}}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{pin_8h}{./menus/pin.h}}"{}}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{reset_8h}{./menus/reset.h}}"{}}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stock_8h}{./menus/stock.h}}"{}}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{support_8h}{./menus/support.h}}"{}}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{update_8h}{./menus/update.h}}"{}}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include "{}lvgl.h"{}}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{comment}{//===================//}}
+\DoxyCodeLine{36 \textcolor{comment}{//      DEFINES      //}}
+\DoxyCodeLine{37 \textcolor{comment}{//===================//}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define NO\_UPDATE -\/1}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define SLEEP\_TIMEOUT 60}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define STANDBY\_TIMEOUT 10}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define SR\_DEFAULT\_BTN\_RADIUS 5}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define SR\_DEFAULT\_BTN\_WIDTH 96}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define SR\_DEFAULT\_BTN\_HEIGHT 35}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define SR\_SMALL\_BTN\_SIZE SR\_DEFAULT\_BTN\_WIDTH, SR\_DEFAULT\_BTN\_HEIGHT}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define SR\_MEDIUM\_BTN\_SIZE                                                     \(\backslash\)}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{    SR\_DEFAULT\_BTN\_WIDTH * 5 / 4, SR\_DEFAULT\_BTN\_HEIGHT * 5 / 4}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define SR\_BIG\_BTN\_SIZE                                                        \(\backslash\)}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{    SR\_DEFAULT\_BTN\_WIDTH * 3 / 2, SR\_DEFAULT\_BTN\_HEIGHT * 3 / 2}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define SR\_BIG\_BTN\_SIZE\_STRETCH 250, SR\_DEFAULT\_BTN\_HEIGHT * 3 / 2}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{comment}{/* MENU IDs */}}
+\DoxyCodeLine{54 \textcolor{comment}{/* BOOTING SCREENS */}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#define MENU\_ID\_BOOT 0}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define MENU\_ID\_SELECT\_COMMUNICATION 1}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define MENU\_ID\_SELECTED\_COMMUNICATION 2}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define MENU\_ID\_SLEEP 3}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{comment}{/* MAIN SCREENS */}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define MENU\_ID\_MAIN 10}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define MENU\_ID\_DASHBOARD 11}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define MENU\_ID\_PIN 12}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#define MENU\_ID\_SETTINGS 13}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define MENU\_ID\_INFO 14}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{comment}{/* SUPPORT */}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define MENU\_ID\_SUPPORT\_REVIEW 20}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define MENU\_ID\_SUPPORT\_SUBMITED 21}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{comment}{/* STOCK */}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define MENU\_ID\_CHANGED\_STOCK 30}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{comment}{/* CALIBRATION */}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define MENU\_ID\_CALIBRATION\_EMPTY 40}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define MENU\_ID\_CALIBRATION\_FULL 41}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define MENU\_ID\_CALIBRATION\_PROGRESS 42}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define MENU\_ID\_CALIBRATION\_FINISHED 43}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{comment}{/* RESET */}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define MENU\_ID\_RESET 50}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define MENU\_ID\_RESET\_DEVICE 51}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define MENU\_ID\_RESET\_WIFI 52}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define MENU\_ID\_RESET\_PROGRESS 53}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define MENU\_ID\_RESET\_SUCCESS 54}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define MENU\_ID\_RESET\_FAILED 55}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{comment}{/* ORDER */}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define MENU\_ID\_NEW\_ORDER 60}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define MENU\_ID\_REVIEW\_ORDER 61}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define MENU\_ID\_PROCESSING\_ORDER 62}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define MENU\_ID\_SUCCESSFULL\_ORDER 63}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define MENU\_ID\_CANCELED\_ORDER 64}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define MENU\_ID\_ERROR\_ORDER 65}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define MENU\_ID\_MANAGE\_ORDERS 66}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define MENU\_ID\_ERROR\_MANAGE 67}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define MENU\_ID\_CHANGE\_ORDER\_MODE 68}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define MENU\_ID\_SUCCESSFULL\_MODE\_CHANGE 69}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{comment}{/* UPDATE*/}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define MENU\_ID\_UPDATE 70}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define MENU\_ID\_UPDATE\_COMPLETE 71}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define MENU\_ID\_UPDATE\_FAILED 72}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{comment}{/**********************}}
+\DoxyCodeLine{106 \textcolor{comment}{ *      TYPEDEFS}}
+\DoxyCodeLine{107 \textcolor{comment}{ **********************/}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{115 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structsmart__ring__ui__flags__t}{smart\_ring\_ui\_flags\_t}} \{}
+\DoxyCodeLine{116     \textcolor{keywordtype}{int} update\_state : 1; \textcolor{comment}{// Update the state the UI is on}}
+\DoxyCodeLine{117     \textcolor{keywordtype}{int} select\_communication : 1;}
+\DoxyCodeLine{118     \textcolor{keywordtype}{int} start\_communication : 1;}
+\DoxyCodeLine{119     \textcolor{keywordtype}{int} sign\_in : 1;}
+\DoxyCodeLine{120     \textcolor{keywordtype}{int} check\_option : 1;}
+\DoxyCodeLine{121     \textcolor{keywordtype}{int} cancel\_option : 1;}
+\DoxyCodeLine{122     \textcolor{keywordtype}{int} change\_stock : 1;}
+\DoxyCodeLine{123     \textcolor{keywordtype}{int} send\_ticket : 1;}
+\DoxyCodeLine{124     \textcolor{keywordtype}{int} change\_order\_mode : 1;}
+\DoxyCodeLine{125     \textcolor{keywordtype}{int} manage\_orders : 1;}
+\DoxyCodeLine{126     \textcolor{keywordtype}{int} reset\_device : 1;}
+\DoxyCodeLine{127     \textcolor{keywordtype}{int} reset\_wifi : 1;}
+\DoxyCodeLine{128     \textcolor{keywordtype}{int} update : 1;}
+\DoxyCodeLine{129     \textcolor{keywordtype}{int} cancel\_update : 1;}
+\DoxyCodeLine{130     \textcolor{keywordtype}{int} success : 1;}
+\DoxyCodeLine{131     \textcolor{keywordtype}{int} start\_login : 1;}
+\DoxyCodeLine{132     \textcolor{keywordtype}{int} start\_order : 1;}
+\DoxyCodeLine{133     \textcolor{keywordtype}{int} start\_calibration : 1;}
+\DoxyCodeLine{134     \textcolor{keywordtype}{int} cancel\_calibration : 1;}
+\DoxyCodeLine{135     \textcolor{keywordtype}{int} empty\_calibration : 1;}
+\DoxyCodeLine{136     \textcolor{keywordtype}{int} confirm\_order : 1;}
+\DoxyCodeLine{137     \textcolor{keywordtype}{int} touch\_pressed : 1;}
+\DoxyCodeLine{138     \textcolor{keywordtype}{int} touch\_released : 1;}
+\DoxyCodeLine{139     \textcolor{keywordtype}{int} flag\_24 : 1;}
+\DoxyCodeLine{140     \textcolor{keywordtype}{int} flag\_25 : 1;}
+\DoxyCodeLine{141     \textcolor{keywordtype}{int} flag\_26 : 1;}
+\DoxyCodeLine{142     \textcolor{keywordtype}{int} flag\_27 : 1;}
+\DoxyCodeLine{143     \textcolor{keywordtype}{int} flag\_28 : 1;}
+\DoxyCodeLine{144     \textcolor{keywordtype}{int} flag\_29 : 1;}
+\DoxyCodeLine{145     \textcolor{keywordtype}{int} flag\_30 : 1;}
+\DoxyCodeLine{146     \textcolor{keywordtype}{int} flag\_31 : 1;}
+\DoxyCodeLine{147     \textcolor{keywordtype}{int} flag\_32 : 1;}
+\DoxyCodeLine{148 \};}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{154 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structsmart__ring__ui__delivery__t}{smart\_ring\_ui\_delivery\_t}} \{}
+\DoxyCodeLine{155     \textcolor{keywordtype}{char}     date[8];}
+\DoxyCodeLine{156     \textcolor{keywordtype}{char}     ordered\_date[8];}
+\DoxyCodeLine{157     uint8\_t  bottles;}
+\DoxyCodeLine{158     uint16\_t cups;}
+\DoxyCodeLine{159     \textcolor{keywordtype}{char}     status[16];}
+\DoxyCodeLine{160 \};}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structsmart__ring__ui__order__t}{smart\_ring\_ui\_order\_t}} \{}
+\DoxyCodeLine{163     uint8\_t  bottles;}
+\DoxyCodeLine{164     uint16\_t cups;}
+\DoxyCodeLine{165     \textcolor{keywordtype}{float}    price;}
+\DoxyCodeLine{166     \textcolor{keywordtype}{char}     transaction\_id[50];}
+\DoxyCodeLine{167     \textcolor{keywordtype}{int}      changing\_bottles : 1;}
+\DoxyCodeLine{168     \textcolor{keywordtype}{char}     confirmation;}
+\DoxyCodeLine{169 \};}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{176 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{smart__ring__ui_8h_a43d6e8cef5b37d8eeb14b61edd993555}{smart\_ring\_ui\_timer\_type\_t}} \{}
+\DoxyCodeLine{177     CLOSE\_MODAL,}
+\DoxyCodeLine{178     BOOT\_START\_COMMUNICATION,}
+\DoxyCodeLine{179     LOGIN\_VALIDATION,}
+\DoxyCodeLine{180     LOGIN\_SUCCESSFULL,}
+\DoxyCodeLine{181     REQUESTING\_ORDERS,}
+\DoxyCodeLine{182     CALIBRATION\_EMPTY,}
+\DoxyCodeLine{183     CALIBRATION\_FULL,}
+\DoxyCodeLine{184     SLEEP,}
+\DoxyCodeLine{185     STANDBY,}
+\DoxyCodeLine{186     STANDBY\_DASHBOARD,}
+\DoxyCodeLine{187     CONFIRM\_ORDER,}
+\DoxyCodeLine{188 \};}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{195 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{smart__ring__ui_8h_a595709b215c99f9fd590e8057ec80d99}{smart\_ring\_ui\_state\_machine\_t}} \{}
+\DoxyCodeLine{196     STATE\_0,  \textcolor{comment}{// State 0 -\/> Boot screen with the fonte viva logo}}
+\DoxyCodeLine{197     STATE\_1,  \textcolor{comment}{// State 1 -\/> Select communication}}
+\DoxyCodeLine{198     STATE\_2,  \textcolor{comment}{// State 2 -\/> Communication selected}}
+\DoxyCodeLine{199     STATE\_3,  \textcolor{comment}{// State 3 -\/> Provision}}
+\DoxyCodeLine{200     STATE\_4,  \textcolor{comment}{// State 4 -\/> Connecting device to internet and back-\/end}}
+\DoxyCodeLine{201     STATE\_5,  \textcolor{comment}{// State 5 -\/> Main screen}}
+\DoxyCodeLine{202     STATE\_6,  \textcolor{comment}{// State 6 -\/> No connection modal}}
+\DoxyCodeLine{203     STATE\_7,  \textcolor{comment}{// State 7 -\/> Login}}
+\DoxyCodeLine{204     STATE\_8,  \textcolor{comment}{// State 8 -\/> Validating pin}}
+\DoxyCodeLine{205     STATE\_9,  \textcolor{comment}{// State 9 -\/> Wrong pin}}
+\DoxyCodeLine{206     STATE\_10, \textcolor{comment}{// State 10 -\/> Correct pin}}
+\DoxyCodeLine{207     STATE\_11, \textcolor{comment}{// State 11 -\/> Dashboard screen}}
+\DoxyCodeLine{208     STATE\_12, \textcolor{comment}{// State 12 -\/> Information screen}}
+\DoxyCodeLine{209     STATE\_13, \textcolor{comment}{// State 13 -\/> Stock view}}
+\DoxyCodeLine{210     STATE\_14, \textcolor{comment}{// State 14 -\/> Stock value successfully changed}}
+\DoxyCodeLine{211     STATE\_15, \textcolor{comment}{// State 15 -\/> Support view}}
+\DoxyCodeLine{212     STATE\_16, \textcolor{comment}{// State 16 -\/> Support submition}}
+\DoxyCodeLine{213     STATE\_17, \textcolor{comment}{// State 17 -\/> Support request confirmation}}
+\DoxyCodeLine{214     STATE\_18, \textcolor{comment}{// State 18 -\/> Manage orders}}
+\DoxyCodeLine{215     STATE\_19, \textcolor{comment}{// State 19 -\/> Manage orders error}}
+\DoxyCodeLine{216     STATE\_20, \textcolor{comment}{// State 20 -\/> Change order mode}}
+\DoxyCodeLine{217     STATE\_21, \textcolor{comment}{// State 21 -\/> Confirm order mode change}}
+\DoxyCodeLine{218     STATE\_22, \textcolor{comment}{// State 22 -\/> New order}}
+\DoxyCodeLine{219     STATE\_23, \textcolor{comment}{// State 23 -\/> New order review}}
+\DoxyCodeLine{220     STATE\_24, \textcolor{comment}{// State 24 -\/> Order canceled}}
+\DoxyCodeLine{221     STATE\_25, \textcolor{comment}{// State 25 -\/> Order processing}}
+\DoxyCodeLine{222     STATE\_26, \textcolor{comment}{// State 26 -\/> Order error}}
+\DoxyCodeLine{223     STATE\_27, \textcolor{comment}{// State 27 -\/> Order successfull}}
+\DoxyCodeLine{224     STATE\_28, \textcolor{comment}{// State 28 -\/> Settings screen}}
+\DoxyCodeLine{225     STATE\_29, \textcolor{comment}{// State 29 -\/> Calibrate no\_deposit}}
+\DoxyCodeLine{226     STATE\_30, \textcolor{comment}{// State 30 -\/> Calibrate step processing}}
+\DoxyCodeLine{227     STATE\_31, \textcolor{comment}{// State 31 -\/> Calibrate step successfull}}
+\DoxyCodeLine{228     STATE\_32, \textcolor{comment}{// State 32 -\/> Calibrate full\_deposit}}
+\DoxyCodeLine{229     STATE\_33, \textcolor{comment}{// State 33 -\/> Calibrate succcessfull}}
+\DoxyCodeLine{230     STATE\_34, \textcolor{comment}{// State 34 -\/> Firmware update processing}}
+\DoxyCodeLine{231     STATE\_35, \textcolor{comment}{// State 35 -\/> Firmware update successfull}}
+\DoxyCodeLine{232     STATE\_36, \textcolor{comment}{// State 36 -\/> Reset screen}}
+\DoxyCodeLine{233     STATE\_37, \textcolor{comment}{// State 37 -\/> Reset device}}
+\DoxyCodeLine{234     STATE\_38, \textcolor{comment}{// State 38 -\/> Reset WiFi}}
+\DoxyCodeLine{235     STATE\_39, \textcolor{comment}{// State 39 -\/> Reset WiFi processing}}
+\DoxyCodeLine{236     STATE\_40, \textcolor{comment}{// State 40 -\/> Reset WiFi successfull}}
+\DoxyCodeLine{237     STATE\_41, \textcolor{comment}{// State 41 -\/> Reset WiFi error}}
+\DoxyCodeLine{238     STATE\_42, \textcolor{comment}{// State 42 -\/> Standby}}
+\DoxyCodeLine{239 \};}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structsmart__ring__ui__styles__t}{smart\_ring\_ui\_styles\_t}} \{}
+\DoxyCodeLine{242     lv\_style\_t blank\_page;}
+\DoxyCodeLine{243     lv\_style\_t blue\_button;}
+\DoxyCodeLine{244     lv\_style\_t white\_button;}
+\DoxyCodeLine{245     lv\_style\_t boot\_button;}
+\DoxyCodeLine{246     lv\_style\_t boot\_communications;}
+\DoxyCodeLine{247     lv\_style\_t header\_and\_footer;}
+\DoxyCodeLine{248     lv\_style\_t font\_12\_normal;}
+\DoxyCodeLine{249     lv\_style\_t font\_14\_normal;}
+\DoxyCodeLine{250     lv\_style\_t font\_16\_normal;}
+\DoxyCodeLine{251     lv\_style\_t font\_16\_bold;}
+\DoxyCodeLine{252     lv\_style\_t font\_18\_normal;}
+\DoxyCodeLine{253     lv\_style\_t font\_18\_bold;}
+\DoxyCodeLine{254     lv\_style\_t font\_22\_normal;}
+\DoxyCodeLine{255     lv\_style\_t font\_24\_normal;}
+\DoxyCodeLine{256     lv\_style\_t font\_26\_normal;}
+\DoxyCodeLine{257 \};}
+\DoxyCodeLine{258 }
+\DoxyCodeLine{259 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structsmart__ring__ui__standby__controller__t}{smart\_ring\_ui\_standby\_controller\_t}} \{}
+\DoxyCodeLine{260     \textcolor{keywordtype}{bool} standby\_active;}
+\DoxyCodeLine{261     \textcolor{keywordtype}{bool} standby\_dashboard\_active;}
+\DoxyCodeLine{262     \textcolor{keywordtype}{bool} sleep\_active;}
+\DoxyCodeLine{263     \textcolor{keywordtype}{bool} has\_callback;}
+\DoxyCodeLine{264     \textcolor{keywordtype}{bool} timer\_active;}
+\DoxyCodeLine{265 \};}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{290 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\_ring\_ui\_controller\_t}} \{}
+\DoxyCodeLine{291     lv\_obj\_t                          *screen;}
+\DoxyCodeLine{292     uint16\_t                           menu;}
+\DoxyCodeLine{293     \textcolor{keyword}{enum} \mbox{\hyperlink{smart__ring__ui_8h_a595709b215c99f9fd590e8057ec80d99}{smart\_ring\_ui\_state\_machine\_t}} state;}
+\DoxyCodeLine{294     \textcolor{keyword}{enum} \mbox{\hyperlink{smart__ring__ui_8h_a595709b215c99f9fd590e8057ec80d99}{smart\_ring\_ui\_state\_machine\_t}} old\_state;}
+\DoxyCodeLine{295     \textcolor{keyword}{union }\mbox{\hyperlink{unionsmart__ring__ui__controller__t_1_1map}{map}} \{}
+\DoxyCodeLine{296         \textcolor{keyword}{struct }\mbox{\hyperlink{structsmart__ring__ui__flags__t}{smart\_ring\_ui\_flags\_t}} flag;}
+\DoxyCodeLine{297         \textcolor{keywordtype}{int}                          has\_flags;}
+\DoxyCodeLine{298     \} flags;}
+\DoxyCodeLine{299     \textcolor{keyword}{enum} \mbox{\hyperlink{smart__ring__ui_8h_a43d6e8cef5b37d8eeb14b61edd993555}{smart\_ring\_ui\_timer\_type\_t}}           timer\_type;}
+\DoxyCodeLine{300     esp\_timer\_handle\_t                        timer;}
+\DoxyCodeLine{301     \textcolor{keyword}{enum} \mbox{\hyperlink{smart__ring__ui_8h_a43d6e8cef5b37d8eeb14b61edd993555}{smart\_ring\_ui\_timer\_type\_t}}           standby\_timer\_type;}
+\DoxyCodeLine{302     esp\_timer\_handle\_t                        standby\_timer;}
+\DoxyCodeLine{303     \textcolor{keywordtype}{char}                                      firmware\_version[9];}
+\DoxyCodeLine{304     \textcolor{keywordtype}{char}                                      device\_name[32];}
+\DoxyCodeLine{305     \textcolor{keywordtype}{char}                                      mac\_address[18];}
+\DoxyCodeLine{306     \textcolor{keyword}{struct }\mbox{\hyperlink{structsmart__ring__ui__styles__t}{smart\_ring\_ui\_styles\_t}}             styles;}
+\DoxyCodeLine{307     uint8\_t                                   stock;}
+\DoxyCodeLine{308     uint8\_t                                   updated\_stock;}
+\DoxyCodeLine{309     uint8\_t                                   support\_type;}
+\DoxyCodeLine{310     \textcolor{keywordtype}{char}                                      order\_mode;}
+\DoxyCodeLine{311     \textcolor{keywordtype}{char}                                      updated\_order\_mode;}
+\DoxyCodeLine{312     \textcolor{keywordtype}{char}                                      ssid[32];}
+\DoxyCodeLine{313     \textcolor{keywordtype}{char}                                      connection\_type;}
+\DoxyCodeLine{314     \textcolor{keywordtype}{int}                                       no\_deposit;}
+\DoxyCodeLine{315     \textcolor{keywordtype}{int}                                       full\_deposit;}
+\DoxyCodeLine{316     \textcolor{keywordtype}{int}                                       current\_deposit;}
+\DoxyCodeLine{317     \textcolor{keywordtype}{bool}                                      is\_stable;}
+\DoxyCodeLine{318     uint8\_t                                   rssi\_level;}
+\DoxyCodeLine{319     \textcolor{keywordtype}{bool}                                      is\_admin;}
+\DoxyCodeLine{320     \textcolor{keywordtype}{bool}                                      is\_master;}
+\DoxyCodeLine{321     \textcolor{keyword}{struct }\mbox{\hyperlink{structsmart__ring__ui__delivery__t}{smart\_ring\_ui\_delivery\_t}}          *deliveries;}
+\DoxyCodeLine{322     \textcolor{keywordtype}{int}                                       number\_of\_deliveries;}
+\DoxyCodeLine{323     \textcolor{keyword}{struct }\mbox{\hyperlink{structsmart__ring__ui__order__t}{smart\_ring\_ui\_order\_t}}              order;}
+\DoxyCodeLine{324     uint8\_t                                   calibration\_step;}
+\DoxyCodeLine{325     \textcolor{keyword}{struct }\mbox{\hyperlink{structsmart__ring__ui__standby__controller__t}{smart\_ring\_ui\_standby\_controller\_t}} standby\_controller;}
+\DoxyCodeLine{326 \};}
+\DoxyCodeLine{327 }
+\DoxyCodeLine{328 \textcolor{comment}{//=======================//}}
+\DoxyCodeLine{329 \textcolor{comment}{//   GLOBAL PROTOTYPES   //}}
+\DoxyCodeLine{330 \textcolor{comment}{//=======================//}}
+\DoxyCodeLine{331 }
+\DoxyCodeLine{337 esp\_err\_t \mbox{\hyperlink{smart__ring__ui_8h_a0f618723ce0645dd3c10b3df6ba7f639}{smart\_ring\_ui\_init\_system}}();}
+\DoxyCodeLine{338 }
+\DoxyCodeLine{345 \textcolor{keyword}{static} \textcolor{keywordtype}{void} smart\_ring\_ui\_select\_menu(\textcolor{keywordtype}{int} menu\_id);}
+\DoxyCodeLine{346 }
+\DoxyCodeLine{351 \textcolor{keywordtype}{char} *\mbox{\hyperlink{smart__ring__ui_8h_a7e06ae0033ba7e9d5dd002b26a845576}{smart\_ring\_ui\_get\_firwmare}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{352 }
+\DoxyCodeLine{358 \textcolor{keywordtype}{void} \mbox{\hyperlink{smart__ring__ui_8h_a0c5cc3bd5d2d4714350b3e4aedfabba4}{smart\_ring\_ui\_set\_firmware}}(\textcolor{keywordtype}{char} *version);}
+\DoxyCodeLine{359 }
+\DoxyCodeLine{364 \textcolor{keywordtype}{char} *\mbox{\hyperlink{smart__ring__ui_8h_ac79482e386de6b4801e8b23fa855491f}{smart\_ring\_ui\_get\_device\_name}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{365 }
+\DoxyCodeLine{371 \textcolor{keywordtype}{void} \mbox{\hyperlink{smart__ring__ui_8h_a880b4511203c11b23c2dd60b081d7e1a}{smart\_ring\_ui\_set\_device\_name}}(\textcolor{keywordtype}{char} *name);}
+\DoxyCodeLine{372 }
+\DoxyCodeLine{373 \textcolor{keywordtype}{char} *smart\_ring\_ui\_get\_mac\_address(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{374 \textcolor{keywordtype}{void}  smart\_ring\_ui\_set\_mac\_address(\textcolor{keywordtype}{char} *name);}
+\DoxyCodeLine{375 }
+\DoxyCodeLine{376 \textcolor{keywordtype}{char} *smart\_ring\_ui\_get\_ssid(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{377 \textcolor{keywordtype}{void}  smart\_ring\_ui\_set\_ssid(\textcolor{keywordtype}{char} *name);}
+\DoxyCodeLine{378 }
+\DoxyCodeLine{383 \textcolor{keywordtype}{char} \mbox{\hyperlink{smart__ring__ui_8h_af00fab142b472b10f7513e057e418d06}{smart\_ring\_ui\_get\_order\_mode}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{384 }
+\DoxyCodeLine{389 \textcolor{keywordtype}{void} \mbox{\hyperlink{smart__ring__ui_8h_a16f6a88769185cb8f0fd0a133c41a681}{smart\_ring\_ui\_set\_order\_mode}}(\textcolor{keywordtype}{char} mode);}
+\DoxyCodeLine{390 }
+\DoxyCodeLine{391 \textcolor{keywordtype}{char} smart\_ring\_ui\_get\_connection\_type(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{392 \textcolor{keywordtype}{void} smart\_ring\_ui\_set\_connection\_type(\textcolor{keywordtype}{char} mode);}
+\DoxyCodeLine{393 }
+\DoxyCodeLine{394 \textcolor{keywordtype}{void} smart\_ring\_ui\_set\_calibration(\textcolor{keywordtype}{int} no\_deposit, \textcolor{keywordtype}{int} full\_deposit,}
+\DoxyCodeLine{395                                    \textcolor{keywordtype}{bool} is\_stable);}
+\DoxyCodeLine{396 \textcolor{keywordtype}{void} smart\_ring\_ui\_set\_current\_deposit(\textcolor{keywordtype}{int} current\_deposit);}
+\DoxyCodeLine{397 }
+\DoxyCodeLine{398 \textcolor{keywordtype}{void} smart\_ring\_ui\_set\_stock(\textcolor{keywordtype}{int} stock);}
+\DoxyCodeLine{399 }
+\DoxyCodeLine{400 uint8\_t smart\_ring\_ui\_get\_rssi\_level();}
+\DoxyCodeLine{401 \textcolor{keywordtype}{void}    smart\_ring\_ui\_set\_rssi\_level(uint8\_t rssi\_level);}
+\DoxyCodeLine{402 }
+\DoxyCodeLine{410 \textcolor{keywordtype}{void} \mbox{\hyperlink{smart__ring__ui_8h_a782ef09ff442ab3a894276ba809cf3c2}{create\_header}}(lv\_obj\_t *parent, \textcolor{keywordtype}{char} *title,}
+\DoxyCodeLine{411                    \textcolor{keyword}{struct} \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\_ring\_ui\_controller\_t}} *ui\_controller);}
+\DoxyCodeLine{412 }
+\DoxyCodeLine{419 \textcolor{keywordtype}{void} \mbox{\hyperlink{smart__ring__ui_8h_aba5b4c55bf7b9664e8ecdc332de76c6f}{smart\_ring\_ui\_check\_flags}}();}
+\DoxyCodeLine{420 }
+\DoxyCodeLine{421 \textcolor{keywordtype}{void} smart\_ring\_ui\_update\_state(\textcolor{keyword}{enum} \mbox{\hyperlink{smart__ring__ui_8h_a595709b215c99f9fd590e8057ec80d99}{smart\_ring\_ui\_state\_machine\_t}} state);}
+\DoxyCodeLine{422 \textcolor{keyword}{struct }\mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\_ring\_ui\_controller\_t}} *smart\_ring\_ui\_get\_controller();}
+\DoxyCodeLine{423 }
+\DoxyCodeLine{424 \textcolor{keyword}{static} \textcolor{keywordtype}{void} ui\_callback\_standby\_timer\_callback(\textcolor{keywordtype}{void} *arg);}
+\DoxyCodeLine{425 }
+\DoxyCodeLine{432 \textcolor{keyword}{static} \textcolor{keywordtype}{void} ui\_callback\_timer\_callback(\textcolor{keywordtype}{void} *arg);}
+\DoxyCodeLine{433 }
+\DoxyCodeLine{434 \textcolor{keywordtype}{float} map(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} in\_min, \textcolor{keywordtype}{int} in\_max, \textcolor{keywordtype}{int} out\_min, \textcolor{keywordtype}{int} out\_max);}
+\DoxyCodeLine{435 }
+\DoxyCodeLine{436 \textcolor{comment}{//====================//}}
+\DoxyCodeLine{437 \textcolor{comment}{//       MACROS       //}}
+\DoxyCodeLine{438 \textcolor{comment}{//====================//}}
+\DoxyCodeLine{439 }
+\DoxyCodeLine{440 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{441 \} \textcolor{comment}{/* extern "{}C"{} */}}
+\DoxyCodeLine{442 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{443 }
+\DoxyCodeLine{444 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* SMART\_RING\_UI\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

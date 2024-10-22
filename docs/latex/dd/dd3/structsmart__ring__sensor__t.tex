@@ -1,0 +1,146 @@
+\hypertarget{structsmart__ring__sensor__t}{}\doxysection{smart\+\_\+ring\+\_\+sensor\+\_\+t Struct Reference}
+\label{structsmart__ring__sensor__t}\index{smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}}
+
+
+Sensor controller object.  
+
+
+
+
+{\ttfamily \#include $<$vars.\+h$>$}
+
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t}{smart\+\_\+ring\+\_\+sensor\+\_\+calirabting\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Calibrating process structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsmart__ring__sensor__t_a6d7a1362fed7f37024e6c712f6f6c199}\label{structsmart__ring__sensor__t_a6d7a1362fed7f37024e6c712f6f6c199}} 
+struct \mbox{\hyperlink{structsmart__ring__sensor__t_1_1smart__ring__sensor__calirabting__t}{smart\+\_\+ring\+\_\+sensor\+\_\+t\+::smart\+\_\+ring\+\_\+sensor\+\_\+calirabting\+\_\+t}} {\bfseries calibration}
+\item 
+int \mbox{\hyperlink{structsmart__ring__sensor__t_ae12bcb84a213726c279af30af9282af7}{full\+\_\+deposit}}
+\begin{DoxyCompactList}\small\item\em Sensor raw value when the bottle is full. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsmart__ring__sensor__t_ae3aba1346848f5e4835175bc55872e64}{no\+\_\+deposit}}
+\begin{DoxyCompactList}\small\item\em Sensor raw value when the bottle is empty. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsmart__ring__sensor__t_a73580755fd8da734384d11baddd223ae}{current\+\_\+deposit}}
+\begin{DoxyCompactList}\small\item\em Current sensor raw value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsmart__ring__sensor__t_a5646bfca38aff83acd6f0f3689a968cf}{current\+\_\+liters}}
+\begin{DoxyCompactList}\small\item\em Current liters in the bottle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsmart__ring__sensor__t_ac9a800d031093d1ea724a7226a45ab9d}{new\+\_\+reading}}
+\begin{DoxyCompactList}\small\item\em New raw value read from sensor, to compare to the saved one. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsmart__ring__sensor__t_af90a4691f357f2b62cacdb56ea7a12b2}{old\+\_\+reading}}
+\begin{DoxyCompactList}\small\item\em Saved raw value from the sensor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsmart__ring__sensor__t_ac6f683515646a8a99bff033b45a26424}{last\+\_\+sensor\+\_\+sent}}
+\begin{DoxyCompactList}\small\item\em Last raw value sent to AWS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structsmart__ring__sensor__t_a1c715b5eae0c3e2596c8f942cdf72cd3}\label{structsmart__ring__sensor__t_a1c715b5eae0c3e2596c8f942cdf72cd3}} 
+uint8\+\_\+t {\bfseries static\+\_\+counter}
+\begin{DoxyCompactList}\small\item\em Counter used to detect static value to re-\/send the value to a\+WS. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsmart__ring__sensor__t_a2304119c7790c8df020e3c0b76519636}{stable}}\+: 1
+\begin{DoxyCompactList}\small\item\em Flag signaling the sensor is stable. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsmart__ring__sensor__t_a7e2171ef02a8a4541228da7649bb0ee1}{no\+\_\+bottle}}\+: 1
+\begin{DoxyCompactList}\small\item\em Flag signaling there is no bottle, to calculate stock changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sensor controller object. 
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structsmart__ring__sensor__t_a73580755fd8da734384d11baddd223ae}\label{structsmart__ring__sensor__t_a73580755fd8da734384d11baddd223ae}} 
+\index{smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}!current\_deposit@{current\_deposit}}
+\index{current\_deposit@{current\_deposit}!smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}}
+\doxysubsubsection{\texorpdfstring{current\_deposit}{current\_deposit}}
+{\footnotesize\ttfamily int smart\+\_\+ring\+\_\+sensor\+\_\+t\+::current\+\_\+deposit}
+
+
+
+Current sensor raw value. 
+
+\mbox{\Hypertarget{structsmart__ring__sensor__t_a5646bfca38aff83acd6f0f3689a968cf}\label{structsmart__ring__sensor__t_a5646bfca38aff83acd6f0f3689a968cf}} 
+\index{smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}!current\_liters@{current\_liters}}
+\index{current\_liters@{current\_liters}!smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}}
+\doxysubsubsection{\texorpdfstring{current\_liters}{current\_liters}}
+{\footnotesize\ttfamily int smart\+\_\+ring\+\_\+sensor\+\_\+t\+::current\+\_\+liters}
+
+
+
+Current liters in the bottle. 
+
+\mbox{\Hypertarget{structsmart__ring__sensor__t_ae12bcb84a213726c279af30af9282af7}\label{structsmart__ring__sensor__t_ae12bcb84a213726c279af30af9282af7}} 
+\index{smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}!full\_deposit@{full\_deposit}}
+\index{full\_deposit@{full\_deposit}!smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}}
+\doxysubsubsection{\texorpdfstring{full\_deposit}{full\_deposit}}
+{\footnotesize\ttfamily int smart\+\_\+ring\+\_\+sensor\+\_\+t\+::full\+\_\+deposit}
+
+
+
+Sensor raw value when the bottle is full. 
+
+\mbox{\Hypertarget{structsmart__ring__sensor__t_ac6f683515646a8a99bff033b45a26424}\label{structsmart__ring__sensor__t_ac6f683515646a8a99bff033b45a26424}} 
+\index{smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}!last\_sensor\_sent@{last\_sensor\_sent}}
+\index{last\_sensor\_sent@{last\_sensor\_sent}!smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_sensor\_sent}{last\_sensor\_sent}}
+{\footnotesize\ttfamily int smart\+\_\+ring\+\_\+sensor\+\_\+t\+::last\+\_\+sensor\+\_\+sent}
+
+
+
+Last raw value sent to AWS. 
+
+\mbox{\Hypertarget{structsmart__ring__sensor__t_ac9a800d031093d1ea724a7226a45ab9d}\label{structsmart__ring__sensor__t_ac9a800d031093d1ea724a7226a45ab9d}} 
+\index{smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}!new\_reading@{new\_reading}}
+\index{new\_reading@{new\_reading}!smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}}
+\doxysubsubsection{\texorpdfstring{new\_reading}{new\_reading}}
+{\footnotesize\ttfamily int smart\+\_\+ring\+\_\+sensor\+\_\+t\+::new\+\_\+reading}
+
+
+
+New raw value read from sensor, to compare to the saved one. 
+
+\mbox{\Hypertarget{structsmart__ring__sensor__t_a7e2171ef02a8a4541228da7649bb0ee1}\label{structsmart__ring__sensor__t_a7e2171ef02a8a4541228da7649bb0ee1}} 
+\index{smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}!no\_bottle@{no\_bottle}}
+\index{no\_bottle@{no\_bottle}!smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}}
+\doxysubsubsection{\texorpdfstring{no\_bottle}{no\_bottle}}
+{\footnotesize\ttfamily int smart\+\_\+ring\+\_\+sensor\+\_\+t\+::no\+\_\+bottle}
+
+
+
+Flag signaling there is no bottle, to calculate stock changes. 
+
+\mbox{\Hypertarget{structsmart__ring__sensor__t_ae3aba1346848f5e4835175bc55872e64}\label{structsmart__ring__sensor__t_ae3aba1346848f5e4835175bc55872e64}} 
+\index{smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}!no\_deposit@{no\_deposit}}
+\index{no\_deposit@{no\_deposit}!smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}}
+\doxysubsubsection{\texorpdfstring{no\_deposit}{no\_deposit}}
+{\footnotesize\ttfamily int smart\+\_\+ring\+\_\+sensor\+\_\+t\+::no\+\_\+deposit}
+
+
+
+Sensor raw value when the bottle is empty. 
+
+\mbox{\Hypertarget{structsmart__ring__sensor__t_af90a4691f357f2b62cacdb56ea7a12b2}\label{structsmart__ring__sensor__t_af90a4691f357f2b62cacdb56ea7a12b2}} 
+\index{smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}!old\_reading@{old\_reading}}
+\index{old\_reading@{old\_reading}!smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}}
+\doxysubsubsection{\texorpdfstring{old\_reading}{old\_reading}}
+{\footnotesize\ttfamily int smart\+\_\+ring\+\_\+sensor\+\_\+t\+::old\+\_\+reading}
+
+
+
+Saved raw value from the sensor. 
+
+\mbox{\Hypertarget{structsmart__ring__sensor__t_a2304119c7790c8df020e3c0b76519636}\label{structsmart__ring__sensor__t_a2304119c7790c8df020e3c0b76519636}} 
+\index{smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}!stable@{stable}}
+\index{stable@{stable}!smart\_ring\_sensor\_t@{smart\_ring\_sensor\_t}}
+\doxysubsubsection{\texorpdfstring{stable}{stable}}
+{\footnotesize\ttfamily int smart\+\_\+ring\+\_\+sensor\+\_\+t\+::stable}
+
+
+
+Flag signaling the sensor is stable. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/include/\mbox{\hyperlink{vars_8h}{vars.\+h}}\end{DoxyCompactItemize}

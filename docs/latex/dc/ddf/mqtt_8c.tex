@@ -1,0 +1,75 @@
+\hypertarget{mqtt_8c}{}\doxysection{main/mqtt.c File Reference}
+\label{mqtt_8c}\index{main/mqtt.c@{main/mqtt.c}}
+
+
+This file contains the functions responsible for the creation and handling of the MQTT communication with the server.  
+
+
+{\ttfamily \#include \char`\"{}libs.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Io\+T\+\_\+\+Error\+\_\+t \mbox{\hyperlink{mqtt_8c_a61c24a247f60d074364bf61710e775f8}{mqtt\+\_\+send\+\_\+message}} (enum \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393}{mqtt\+\_\+message\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Send a message using the MQTT protocol to AWS server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mqtt_8c_a86463e8b9af2f80f77472b6808637fbc}{mqtt\+\_\+aws\+\_\+thread}} (void $\ast$param)
+\begin{DoxyCompactList}\small\item\em The device thread (task) containing the functioning of the AWS MQTT communication. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the functions responsible for the creation and handling of the MQTT communication with the server. 
+
+\begin{DoxyAuthor}{Author}
+David Abreu @ Quantum Leap (\href{mailto:david@quleap.com}{\texttt{ david@quleap.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/10-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mqtt_8c_a86463e8b9af2f80f77472b6808637fbc}\label{mqtt_8c_a86463e8b9af2f80f77472b6808637fbc}} 
+\index{mqtt.c@{mqtt.c}!mqtt\_aws\_thread@{mqtt\_aws\_thread}}
+\index{mqtt\_aws\_thread@{mqtt\_aws\_thread}!mqtt.c@{mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_aws\_thread()}{mqtt\_aws\_thread()}}
+{\footnotesize\ttfamily void mqtt\+\_\+aws\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{param }\end{DoxyParamCaption})}
+
+
+
+The device thread (task) containing the functioning of the AWS MQTT communication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & user data to be sent to the thread if needed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mqtt_8c_a61c24a247f60d074364bf61710e775f8}\label{mqtt_8c_a61c24a247f60d074364bf61710e775f8}} 
+\index{mqtt.c@{mqtt.c}!mqtt\_send\_message@{mqtt\_send\_message}}
+\index{mqtt\_send\_message@{mqtt\_send\_message}!mqtt.c@{mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_send\_message()}{mqtt\_send\_message()}}
+{\footnotesize\ttfamily Io\+T\+\_\+\+Error\+\_\+t mqtt\+\_\+send\+\_\+message (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{mqtt_8h_abfd91b9387e02ce013d441184cbe9393}{mqtt\+\_\+message\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Send a message using the MQTT protocol to AWS server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of message to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Io\+T\+\_\+\+Error\+\_\+t Result of the operation 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em Success} & Message sent \\
+\hline
+{\em Other} & Message not sent \\
+\hline
+\end{DoxyRetVals}

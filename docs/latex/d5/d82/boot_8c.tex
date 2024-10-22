@@ -1,0 +1,96 @@
+\hypertarget{boot_8c}{}\doxysection{components/smart\+\_\+ring\+\_\+ui/menus/boot.c File Reference}
+\label{boot_8c}\index{components/smart\_ring\_ui/menus/boot.c@{components/smart\_ring\_ui/menus/boot.c}}
+
+
+This file contains the functions responsible for the creation of the boot screens.  
+
+
+{\ttfamily \#include \char`\"{}boot.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{boot_8c_a6eff088c43097c3df2d46276608459ad}{boot\+\_\+update\+\_\+warning\+\_\+label}} (char $\ast$text)
+\begin{DoxyCompactList}\small\item\em Update the warning label text on the boot screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{boot_8c_ac43512e70be9d9cee2bbc8fabbd21164}{boot\+\_\+update\+\_\+connection\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em Update the boot screen, hide the buttons and update the label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{boot_8c_a05c8be5b42917b2caa38ea8b3710199e}{create\+\_\+booting\+\_\+up\+\_\+screen}} (lv\+\_\+obj\+\_\+t $\ast$parent, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\begin{DoxyCompactList}\small\item\em Create booting up screen with logo and information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{boot_8c_a0542c25c9284c00c0107a7320ef327ea}{create\+\_\+selected\+\_\+communication}} (lv\+\_\+obj\+\_\+t $\ast$parent, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\begin{DoxyCompactList}\small\item\em Create the boot menu where the communication is selected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{boot_8c_a1a633d1bfd2ef794df7741a27f7236be}{create\+\_\+communication\+\_\+selection}} (lv\+\_\+obj\+\_\+t $\ast$parent, struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$ui\+\_\+controller)
+\begin{DoxyCompactList}\small\item\em Create the screen for the user to choose the communication type pretended. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the functions responsible for the creation of the boot screens. 
+
+\begin{DoxyAuthor}{Author}
+David Abreu @ Quantum Leap (\href{mailto:david@quleap.com}{\texttt{ david@quleap.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/10-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{boot_8c_ac43512e70be9d9cee2bbc8fabbd21164}\label{boot_8c_ac43512e70be9d9cee2bbc8fabbd21164}} 
+\index{boot.c@{boot.c}!boot\_update\_connection\_screen@{boot\_update\_connection\_screen}}
+\index{boot\_update\_connection\_screen@{boot\_update\_connection\_screen}!boot.c@{boot.c}}
+\doxysubsubsection{\texorpdfstring{boot\_update\_connection\_screen()}{boot\_update\_connection\_screen()}}
+{\footnotesize\ttfamily void boot\+\_\+update\+\_\+connection\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the boot screen, hide the buttons and update the label. 
+
+\mbox{\Hypertarget{boot_8c_a6eff088c43097c3df2d46276608459ad}\label{boot_8c_a6eff088c43097c3df2d46276608459ad}} 
+\index{boot.c@{boot.c}!boot\_update\_warning\_label@{boot\_update\_warning\_label}}
+\index{boot\_update\_warning\_label@{boot\_update\_warning\_label}!boot.c@{boot.c}}
+\doxysubsubsection{\texorpdfstring{boot\_update\_warning\_label()}{boot\_update\_warning\_label()}}
+{\footnotesize\ttfamily void boot\+\_\+update\+\_\+warning\+\_\+label (\begin{DoxyParamCaption}\item[{char $\ast$}]{text }\end{DoxyParamCaption})}
+
+
+
+Update the warning label text on the boot screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & -\/ Message to be written on screen \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boot_8c_a05c8be5b42917b2caa38ea8b3710199e}\label{boot_8c_a05c8be5b42917b2caa38ea8b3710199e}} 
+\index{boot.c@{boot.c}!create\_booting\_up\_screen@{create\_booting\_up\_screen}}
+\index{create\_booting\_up\_screen@{create\_booting\_up\_screen}!boot.c@{boot.c}}
+\doxysubsubsection{\texorpdfstring{create\_booting\_up\_screen()}{create\_booting\_up\_screen()}}
+{\footnotesize\ttfamily void create\+\_\+booting\+\_\+up\+\_\+screen (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t $\ast$}]{parent,  }\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller }\end{DoxyParamCaption})}
+
+
+
+Create booting up screen with logo and information. 
+
+\mbox{\Hypertarget{boot_8c_a1a633d1bfd2ef794df7741a27f7236be}\label{boot_8c_a1a633d1bfd2ef794df7741a27f7236be}} 
+\index{boot.c@{boot.c}!create\_communication\_selection@{create\_communication\_selection}}
+\index{create\_communication\_selection@{create\_communication\_selection}!boot.c@{boot.c}}
+\doxysubsubsection{\texorpdfstring{create\_communication\_selection()}{create\_communication\_selection()}}
+{\footnotesize\ttfamily void create\+\_\+communication\+\_\+selection (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t $\ast$}]{parent,  }\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller }\end{DoxyParamCaption})}
+
+
+
+Create the screen for the user to choose the communication type pretended. 
+
+\mbox{\Hypertarget{boot_8c_a0542c25c9284c00c0107a7320ef327ea}\label{boot_8c_a0542c25c9284c00c0107a7320ef327ea}} 
+\index{boot.c@{boot.c}!create\_selected\_communication@{create\_selected\_communication}}
+\index{create\_selected\_communication@{create\_selected\_communication}!boot.c@{boot.c}}
+\doxysubsubsection{\texorpdfstring{create\_selected\_communication()}{create\_selected\_communication()}}
+{\footnotesize\ttfamily void create\+\_\+selected\+\_\+communication (\begin{DoxyParamCaption}\item[{lv\+\_\+obj\+\_\+t $\ast$}]{parent,  }\item[{struct \mbox{\hyperlink{structsmart__ring__ui__controller__t}{smart\+\_\+ring\+\_\+ui\+\_\+controller\+\_\+t}} $\ast$}]{ui\+\_\+controller }\end{DoxyParamCaption})}
+
+
+
+Create the boot menu where the communication is selected. 
+
