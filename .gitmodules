@@ -1,0 +1,12 @@
+[submodule "lvgl"]
+	path = components/lvgl
+	url = https://github.com/littlevgl/lvgl.git
+ignore = dirty
+[submodule "lvgl_esp32_drivers"]
+	path = components/lvgl_esp32_drivers
+	url = https://github.com/lvgl/lvgl_esp32_drivers.git
+ignore = dirty
+[submodule "esp-aws-iot"]
+	path = components/esp-aws-iot
+	url = https://github.com/espressif/esp-aws-iot
+ignore = dirty

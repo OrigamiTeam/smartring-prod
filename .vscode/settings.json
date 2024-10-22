@@ -1,0 +1,29 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "event_groups.h": "c",
+        "esp_vfs_fat.h": "c",
+        "esp_log.h": "c",
+        "gpio.h": "c",
+        "libs.h": "c",
+        "*.ipp": "c",
+        "aws_iot_mqtt_client_interface.h": "c",
+        "array": "c",
+        "chrono": "c",
+        "functional": "c",
+        "istream": "c",
+        "ostream": "c",
+        "ratio": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "*.inc": "c",
+        "cstdio": "cpp",
+        "fstream": "cpp",
+        "*.tcc": "c"
+    },
+    "cmake.configureOnOpen": false,
+    "idf.adapterTargetName": "esp32",
+    "idf.port": "/dev/ttyUSB0",
+    "idf.flashType": "UART"
+}
