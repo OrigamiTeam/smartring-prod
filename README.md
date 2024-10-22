@@ -1,6 +1,4 @@
 # SmartRing Firmware 🟣
-<img src="https://github.com/OrigamiTeam/SmartRing_FV_FW/assets/165775110/cd0ca7c8-dbfd-4871-b7d5-e363b4d39d7f.png" width="1000">
-
 ## Cloning the Repository
 
    > :warning: Since the **AWS Library components** are linked repository folders we need to clone the project recursively **(This is an important step)**.
